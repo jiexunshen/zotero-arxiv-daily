@@ -20,6 +20,26 @@ def _parse_json_object(content: str) -> dict[str, Any]:
             raise
         return json.loads(match.group(0))
 
+
+def _as_plain_dict(value: Any) -> dict[str, Any]:
+    if value is None:
+        return {}
+    return dict(value)
+
+
+def _analysis_generation_kwargs(llm_params: dict, *, prefer_json: bool = True) -> dict[str, Any]:
+    kwargs = _as_plain_dict(llm_params.get('generation_kwargs', {}))
+    kwargs.update(_as_plain_dict(llm_params.get('analysis_generation_kwargs', {})))
+    if prefer_json and "response_format" not in kwargs:
+        kwargs["response_format"] = {"type": "json_object"}
+    return kwargs
+
+
+def _validate_analysis_payload(analysis: dict[str, Any]) -> dict[str, Any]:
+    if not isinstance(analysis.get("category"), dict) or not isinstance(analysis.get("analysis"), dict):
+        raise ValueError("LLM analysis response must contain category and analysis objects")
+    return analysis
+
 @dataclass
 class Paper:
     source: str
@@ -170,24 +190,63 @@ Preview of main content: {self.full_text or ''}
         prompt_tokens = enc.encode(prompt)
         prompt = enc.decode(prompt_tokens[:6000])
 
-        response = openai_client.chat.completions.create(
-            messages=[
+        messages = [
+            {
+                "role": "system",
+                "content": (
+                    "You classify scientific papers into the user's Zotero taxonomy and "
+                    "write concise, researcher-facing analysis. Return valid JSON only."
+                ),
+            },
+            {"role": "user", "content": prompt},
+        ]
+        kwargs = _analysis_generation_kwargs(llm_params, prefer_json=True)
+        try:
+            response = openai_client.chat.completions.create(
+                messages=messages,
+                **kwargs
+            )
+        except Exception as exc:
+            if "response_format" not in kwargs:
+                raise
+            logger.warning(f"Analysis JSON mode failed for {self.url}: {exc}. Retrying without response_format.")
+            kwargs.pop("response_format", None)
+            response = openai_client.chat.completions.create(
+                messages=messages,
+                **kwargs
+            )
+        content = response.choices[0].message.content
+        try:
+            return _validate_analysis_payload(_parse_json_object(content))
+        except Exception as parse_exc:
+            logger.warning(f"Failed to parse analysis JSON for {self.url}: {parse_exc}. Asking LLM to repair JSON.")
+            repair_messages = [
                 {
                     "role": "system",
                     "content": (
-                        "You classify scientific papers into the user's Zotero taxonomy and "
-                        "write concise, researcher-facing analysis. Return valid JSON only."
+                        "Convert the user's text into one valid JSON object. "
+                        "Return only JSON with top-level keys category and analysis."
                     ),
                 },
-                {"role": "user", "content": prompt},
-            ],
-            **llm_params.get('generation_kwargs', {})
-        )
-        content = response.choices[0].message.content
-        analysis = _parse_json_object(content)
-        if not isinstance(analysis.get("category"), dict) or not isinstance(analysis.get("analysis"), dict):
-            raise ValueError("LLM analysis response must contain category and analysis objects")
-        return analysis
+                {"role": "user", "content": content},
+            ]
+            repair_kwargs = _analysis_generation_kwargs(llm_params, prefer_json=True)
+            try:
+                repair_response = openai_client.chat.completions.create(
+                    messages=repair_messages,
+                    **repair_kwargs
+                )
+            except Exception as exc:
+                if "response_format" not in repair_kwargs:
+                    raise
+                logger.warning(f"Analysis JSON repair mode failed for {self.url}: {exc}. Retrying repair without response_format.")
+                repair_kwargs.pop("response_format", None)
+                repair_response = openai_client.chat.completions.create(
+                    messages=repair_messages,
+                    **repair_kwargs
+                )
+            repair_content = repair_response.choices[0].message.content
+            return _validate_analysis_payload(_parse_json_object(repair_content))
 
     def generate_analysis(
         self,

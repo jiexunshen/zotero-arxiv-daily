@@ -31,6 +31,9 @@ llm:
   language: English # Preferred language for the TL;DR. Example: English
   enable_deep_analysis: true # Whether to generate category recommendation, detailed interpretation, and reading advice.
   analysis_top_k_similar: 5 # Number of most similar Zotero papers passed to the analysis prompt.
+  analysis_generation_kwargs:
+    response_format:
+      type: json_object
 
 reranker:
   local:

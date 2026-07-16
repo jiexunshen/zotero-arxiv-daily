@@ -126,7 +126,15 @@ class Executor:
                 p.generate_tldr(self.openai_client, self.config.llm)
                 p.generate_affiliations(self.openai_client, self.config.llm)
                 if self.config.llm.get("enable_deep_analysis", True):
-                    p.generate_analysis(self.openai_client, self.config.llm, zotero_taxonomy)
+                    logger.info(f"Generating deep analysis for {p.title}")
+                    analysis = p.generate_analysis(self.openai_client, self.config.llm, zotero_taxonomy)
+                    if analysis is None:
+                        logger.warning(f"Deep analysis was not generated for {p.title}")
+                    else:
+                        logger.info(
+                            f"Deep analysis generated for {p.title}: "
+                            f"{analysis.get('category', {}).get('recommended_path', 'Unknown')}"
+                        )
         elif not self.config.executor.send_empty:
             logger.info("No new papers found. No email will be sent.")
             return
