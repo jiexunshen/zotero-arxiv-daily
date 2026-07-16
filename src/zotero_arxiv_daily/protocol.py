@@ -1,5 +1,5 @@
-from dataclasses import dataclass
-from typing import Optional, TypeVar
+from dataclasses import dataclass, field
+from typing import Any, Optional, TypeVar
 from datetime import datetime
 import re
 import tiktoken
@@ -7,6 +7,18 @@ from openai import OpenAI
 from loguru import logger
 import json
 RawPaperItem = TypeVar('RawPaperItem')
+
+
+def _parse_json_object(content: str) -> dict[str, Any]:
+    """Extract and parse the first JSON object from an LLM response."""
+    content = content.strip()
+    try:
+        return json.loads(content)
+    except json.JSONDecodeError:
+        match = re.search(r'\{.*\}', content, flags=re.DOTALL)
+        if match is None:
+            raise
+        return json.loads(match.group(0))
 
 @dataclass
 class Paper:
@@ -19,6 +31,8 @@ class Paper:
     full_text: Optional[str] = None
     tldr: Optional[str] = None
     affiliations: Optional[list[str]] = None
+    analysis: Optional[dict[str, Any]] = None
+    similar_corpus: list[dict[str, Any]] = field(default_factory=list)
     score: Optional[float] = None
 
     def _generate_tldr_with_llm(self, openai_client:OpenAI,llm_params:dict) -> str:
@@ -103,6 +117,100 @@ class Paper:
             logger.warning(f"Failed to generate affiliations of {self.url}: {e}")
             self.affiliations = None
             return None
+
+    def _generate_analysis_with_llm(
+        self,
+        openai_client: OpenAI,
+        llm_params: dict,
+        zotero_taxonomy: list[dict[str, Any]],
+        similar_corpus: list[dict[str, Any]] | None = None,
+    ) -> dict[str, Any]:
+        lang = llm_params.get('language', 'English')
+        similar_corpus = similar_corpus if similar_corpus is not None else self.similar_corpus
+        prompt = f"""
+You need to recommend the best Zotero collection for a newly recommended paper and briefly interpret the paper for a researcher.
+
+Use the user's existing Zotero collection taxonomy first. Only propose a new collection when no existing collection accurately summarizes the paper. If you propose a new collection:
+1. Put it under the most appropriate existing parent path.
+2. Follow the existing naming style, such as "中文 English".
+3. Explain briefly why the new collection is needed.
+4. Do not create a new collection for minor wording differences.
+
+Answer in {lang}. Return only one JSON object with this exact shape:
+{{
+  "category": {{
+    "recommended_path": "existing or new Zotero path",
+    "is_new": false,
+    "parent_path": "parent path when is_new is true, otherwise null",
+    "confidence": "high|medium|low",
+    "reason": "brief reason"
+  }},
+  "analysis": {{
+    "problem": "What problem does the paper try to solve?",
+    "method": "How does it solve the problem?",
+    "inspiration": "What research inspiration can it bring?",
+    "reading_suggestion": "精读，适合学习框架并进一步实验 | 精读，适合复现实验 | 粗读即可 | 收藏观察"
+  }}
+}}
+
+Existing Zotero taxonomy with paper counts:
+{json.dumps(zotero_taxonomy, ensure_ascii=False, indent=2)}
+
+Most similar papers from the user's Zotero library:
+{json.dumps(similar_corpus, ensure_ascii=False, indent=2)}
+
+Recommended paper:
+Title: {self.title}
+Authors: {', '.join(self.authors)}
+Abstract: {self.abstract}
+Preview of main content: {self.full_text or ''}
+"""
+
+        enc = tiktoken.encoding_for_model("gpt-4o")
+        prompt_tokens = enc.encode(prompt)
+        prompt = enc.decode(prompt_tokens[:6000])
+
+        response = openai_client.chat.completions.create(
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "You classify scientific papers into the user's Zotero taxonomy and "
+                        "write concise, researcher-facing analysis. Return valid JSON only."
+                    ),
+                },
+                {"role": "user", "content": prompt},
+            ],
+            **llm_params.get('generation_kwargs', {})
+        )
+        content = response.choices[0].message.content
+        analysis = _parse_json_object(content)
+        if not isinstance(analysis.get("category"), dict) or not isinstance(analysis.get("analysis"), dict):
+            raise ValueError("LLM analysis response must contain category and analysis objects")
+        return analysis
+
+    def generate_analysis(
+        self,
+        openai_client: OpenAI,
+        llm_params: dict,
+        zotero_taxonomy: list[dict[str, Any]],
+        similar_corpus: list[dict[str, Any]] | None = None,
+    ) -> Optional[dict[str, Any]]:
+        try:
+            analysis = self._generate_analysis_with_llm(
+                openai_client,
+                llm_params,
+                zotero_taxonomy,
+                similar_corpus,
+            )
+            self.analysis = analysis
+            return analysis
+        except Exception as e:
+            logger.warning(f"Failed to generate analysis of {self.url}: {e}")
+            self.analysis = None
+            return None
+
+
 @dataclass
 class CorpusPaper:
     title: str

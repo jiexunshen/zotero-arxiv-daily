@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "id": "service:tests/utils/mock_zotero/Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "tests/utils/mock_zotero/Dockerfile",
+      "summary": "Test support or pytest coverage for the recommendation pipeline and its utility modules.",
+      "tags": [
+        "dockerfile",
+        "infra",
+        "test"
+      ],
+      "complexity": "simple",
+      "language": "dockerfile",
+      "startLine": 1,
+      "endLine": 31,
+      "sizeLines": 31
+    }
+  ],
+  "edges": []
+}

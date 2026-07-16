@@ -1,0 +1,115 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "config/base.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 51,
+      "nonEmptyLines": 46,
+      "sections": [
+        {
+          "heading": "zotero",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "source",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "email",
+          "level": 1,
+          "line": 16
+        },
+        {
+          "heading": "llm",
+          "level": 1,
+          "line": 23
+        },
+        {
+          "heading": "reranker",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "executor",
+          "level": 1,
+          "line": 46
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "config/custom.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 26,
+      "nonEmptyLines": 22,
+      "sections": [
+        {
+          "heading": "zotero",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "email",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "llm",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "source",
+          "level": 1,
+          "line": 20
+        },
+        {
+          "heading": "executor",
+          "level": 1,
+          "line": 24
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "config/default.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 3,
+      "nonEmptyLines": 3,
+      "sections": [
+        {
+          "heading": "defaults",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    }
+  ]
+}

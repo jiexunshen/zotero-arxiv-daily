@@ -1,0 +1,1012 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/zotero_arxiv_daily/protocol.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 111,
+      "nonEmptyLines": 99,
+      "classes": [
+        {
+          "name": "Paper",
+          "startLine": 12,
+          "endLine": 105,
+          "methods": [
+            "_generate_tldr_with_llm",
+            "generate_tldr",
+            "_generate_affiliations_with_llm",
+            "generate_affiliations"
+          ],
+          "properties": [
+            "source",
+            "title",
+            "authors",
+            "abstract",
+            "url",
+            "pdf_url",
+            "full_text",
+            "tldr",
+            "affiliations",
+            "score"
+          ]
+        },
+        {
+          "name": "CorpusPaper",
+          "startLine": 107,
+          "endLine": 111,
+          "methods": [],
+          "properties": [
+            "title",
+            "abstract",
+            "added_date",
+            "paths"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Paper",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "CorpusPaper",
+          "line": 106,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_generate_tldr_with_llm",
+          "callee": "llm_params.get",
+          "lineNumber": 25
+        },
+        {
+          "caller": "_generate_tldr_with_llm",
+          "callee": "logger.warning",
+          "lineNumber": 37
+        },
+        {
+          "caller": "_generate_tldr_with_llm",
+          "callee": "tiktoken.encoding_for_model",
+          "lineNumber": 41
+        },
+        {
+          "caller": "_generate_tldr_with_llm",
+          "callee": "enc.encode",
+          "lineNumber": 42
+        },
+        {
+          "caller": "_generate_tldr_with_llm",
+          "callee": "enc.decode",
+          "lineNumber": 44
+        },
+        {
+          "caller": "_generate_tldr_with_llm",
+          "callee": "openai_client.chat.completions.create",
+          "lineNumber": 46
+        },
+        {
+          "caller": "_generate_tldr_with_llm",
+          "callee": "llm_params.get",
+          "lineNumber": 54
+        },
+        {
+          "caller": "generate_tldr",
+          "callee": "self._generate_tldr_with_llm",
+          "lineNumber": 61
+        },
+        {
+          "caller": "generate_tldr",
+          "callee": "logger.warning",
+          "lineNumber": 65
+        },
+        {
+          "caller": "_generate_affiliations_with_llm",
+          "callee": "tiktoken.encoding_for_model",
+          "lineNumber": 74
+        },
+        {
+          "caller": "_generate_affiliations_with_llm",
+          "callee": "enc.encode",
+          "lineNumber": 75
+        },
+        {
+          "caller": "_generate_affiliations_with_llm",
+          "callee": "enc.decode",
+          "lineNumber": 77
+        },
+        {
+          "caller": "_generate_affiliations_with_llm",
+          "callee": "openai_client.chat.completions.create",
+          "lineNumber": 78
+        },
+        {
+          "caller": "_generate_affiliations_with_llm",
+          "callee": "llm_params.get",
+          "lineNumber": 86
+        },
+        {
+          "caller": "_generate_affiliations_with_llm",
+          "callee": "re.search(r'\\[.*?\\]', affiliations, flags=re.DOTALL).group",
+          "lineNumber": 90
+        },
+        {
+          "caller": "_generate_affiliations_with_llm",
+          "callee": "re.search",
+          "lineNumber": 90
+        },
+        {
+          "caller": "_generate_affiliations_with_llm",
+          "callee": "json.loads",
+          "lineNumber": 91
+        },
+        {
+          "caller": "_generate_affiliations_with_llm",
+          "callee": "list",
+          "lineNumber": 92
+        },
+        {
+          "caller": "_generate_affiliations_with_llm",
+          "callee": "set",
+          "lineNumber": 92
+        },
+        {
+          "caller": "_generate_affiliations_with_llm",
+          "callee": "str",
+          "lineNumber": 93
+        },
+        {
+          "caller": "generate_affiliations",
+          "callee": "self._generate_affiliations_with_llm",
+          "lineNumber": 99
+        },
+        {
+          "caller": "generate_affiliations",
+          "callee": "logger.warning",
+          "lineNumber": 103
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "src/zotero_arxiv_daily/retriever/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 2,
+      "nonEmptyLines": 2,
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 213,
+      "nonEmptyLines": 182,
+      "functions": [
+        {
+          "name": "_download_file",
+          "startLine": 24,
+          "endLine": 30,
+          "params": [
+            "url",
+            "path"
+          ]
+        },
+        {
+          "name": "_run_in_subprocess",
+          "startLine": 33,
+          "endLine": 41,
+          "params": [
+            "result_queue",
+            "func",
+            "args"
+          ]
+        },
+        {
+          "name": "_run_with_hard_timeout",
+          "startLine": 44,
+          "endLine": 77,
+          "params": [
+            "func",
+            "args",
+            "timeout",
+            "operation",
+            "paper_title"
+          ]
+        },
+        {
+          "name": "_extract_text_from_pdf_worker",
+          "startLine": 80,
+          "endLine": 84,
+          "params": [
+            "pdf_url"
+          ]
+        },
+        {
+          "name": "_extract_text_from_html_worker",
+          "startLine": 87,
+          "endLine": 96,
+          "params": [
+            "html_url"
+          ]
+        },
+        {
+          "name": "_extract_text_from_tar_worker",
+          "startLine": 99,
+          "endLine": 106,
+          "params": [
+            "source_url",
+            "paper_id",
+            "paper_title"
+          ]
+        },
+        {
+          "name": "extract_text_from_html",
+          "startLine": 180,
+          "endLine": 186,
+          "params": [
+            "paper"
+          ]
+        },
+        {
+          "name": "extract_text_from_pdf",
+          "startLine": 189,
+          "endLine": 199,
+          "params": [
+            "paper"
+          ]
+        },
+        {
+          "name": "extract_text_from_tar",
+          "startLine": 202,
+          "endLine": 213,
+          "params": [
+            "paper"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ArxivRetriever",
+          "startLine": 110,
+          "endLine": 177,
+          "methods": [
+            "__init__",
+            "_retrieve_raw_papers",
+            "convert_to_paper"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_download_file",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "_run_in_subprocess",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "_run_with_hard_timeout",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "_extract_text_from_pdf_worker",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "_extract_text_from_html_worker",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "_extract_text_from_tar_worker",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "ArxivRetriever",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "extract_text_from_html",
+          "line": 180,
+          "isDefault": false
+        },
+        {
+          "name": "extract_text_from_pdf",
+          "line": 189,
+          "isDefault": false
+        },
+        {
+          "name": "extract_text_from_tar",
+          "line": 202,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_download_file",
+          "callee": "requests.get",
+          "lineNumber": 25
+        },
+        {
+          "caller": "_download_file",
+          "callee": "response.raise_for_status",
+          "lineNumber": 26
+        },
+        {
+          "caller": "_download_file",
+          "callee": "open",
+          "lineNumber": 27
+        },
+        {
+          "caller": "_download_file",
+          "callee": "response.iter_content",
+          "lineNumber": 28
+        },
+        {
+          "caller": "_download_file",
+          "callee": "file.write",
+          "lineNumber": 30
+        },
+        {
+          "caller": "_run_in_subprocess",
+          "callee": "result_queue.put",
+          "lineNumber": 39
+        },
+        {
+          "caller": "_run_in_subprocess",
+          "callee": "func",
+          "lineNumber": 39
+        },
+        {
+          "caller": "_run_in_subprocess",
+          "callee": "result_queue.put",
+          "lineNumber": 41
+        },
+        {
+          "caller": "_run_in_subprocess",
+          "callee": "type",
+          "lineNumber": 41
+        },
+        {
+          "caller": "_run_with_hard_timeout",
+          "callee": "multiprocessing.get_all_start_methods",
+          "lineNumber": 52
+        },
+        {
+          "caller": "_run_with_hard_timeout",
+          "callee": "multiprocessing.get_context",
+          "lineNumber": 53
+        },
+        {
+          "caller": "_run_with_hard_timeout",
+          "callee": "context.Queue",
+          "lineNumber": 54
+        },
+        {
+          "caller": "_run_with_hard_timeout",
+          "callee": "context.Process",
+          "lineNumber": 55
+        },
+        {
+          "caller": "_run_with_hard_timeout",
+          "callee": "process.start",
+          "lineNumber": 56
+        },
+        {
+          "caller": "_run_with_hard_timeout",
+          "callee": "result_queue.get",
+          "lineNumber": 59
+        },
+        {
+          "caller": "_run_with_hard_timeout",
+          "callee": "process.is_alive",
+          "lineNumber": 61
+        },
+        {
+          "caller": "_run_with_hard_timeout",
+          "callee": "process.kill",
+          "lineNumber": 62
+        },
+        {
+          "caller": "_run_with_hard_timeout",
+          "callee": "process.join",
+          "lineNumber": 63
+        },
+        {
+          "caller": "_run_with_hard_timeout",
+          "callee": "result_queue.close",
+          "lineNumber": 64
+        },
+        {
+          "caller": "_run_with_hard_timeout",
+          "callee": "result_queue.join_thread",
+          "lineNumber": 65
+        },
+        {
+          "caller": "_run_with_hard_timeout",
+          "callee": "logger.warning",
+          "lineNumber": 66
+        },
+        {
+          "caller": "_run_with_hard_timeout",
+          "callee": "process.join",
+          "lineNumber": 69
+        },
+        {
+          "caller": "_run_with_hard_timeout",
+          "callee": "result_queue.close",
+          "lineNumber": 70
+        },
+        {
+          "caller": "_run_with_hard_timeout",
+          "callee": "result_queue.join_thread",
+          "lineNumber": 71
+        },
+        {
+          "caller": "_run_with_hard_timeout",
+          "callee": "logger.warning",
+          "lineNumber": 76
+        },
+        {
+          "caller": "_extract_text_from_pdf_worker",
+          "callee": "TemporaryDirectory",
+          "lineNumber": 81
+        },
+        {
+          "caller": "_extract_text_from_pdf_worker",
+          "callee": "os.path.join",
+          "lineNumber": 82
+        },
+        {
+          "caller": "_extract_text_from_pdf_worker",
+          "callee": "_download_file",
+          "lineNumber": 83
+        },
+        {
+          "caller": "_extract_text_from_pdf_worker",
+          "callee": "extract_markdown_from_pdf",
+          "lineNumber": 84
+        },
+        {
+          "caller": "_extract_text_from_html_worker",
+          "callee": "trafilatura.fetch_url",
+          "lineNumber": 90
+        },
+        {
+          "caller": "_extract_text_from_html_worker",
+          "callee": "ValueError",
+          "lineNumber": 92
+        },
+        {
+          "caller": "_extract_text_from_html_worker",
+          "callee": "trafilatura.extract",
+          "lineNumber": 93
+        },
+        {
+          "caller": "_extract_text_from_html_worker",
+          "callee": "ValueError",
+          "lineNumber": 95
+        },
+        {
+          "caller": "_extract_text_from_tar_worker",
+          "callee": "TemporaryDirectory",
+          "lineNumber": 100
+        },
+        {
+          "caller": "_extract_text_from_tar_worker",
+          "callee": "os.path.join",
+          "lineNumber": 101
+        },
+        {
+          "caller": "_extract_text_from_tar_worker",
+          "callee": "_download_file",
+          "lineNumber": 102
+        },
+        {
+          "caller": "_extract_text_from_tar_worker",
+          "callee": "extract_tex_code_from_tar",
+          "lineNumber": 103
+        },
+        {
+          "caller": "_extract_text_from_tar_worker",
+          "callee": "ValueError",
+          "lineNumber": 105
+        },
+        {
+          "caller": "__init__",
+          "callee": "super().__init__",
+          "lineNumber": 112
+        },
+        {
+          "caller": "__init__",
+          "callee": "super",
+          "lineNumber": 112
+        },
+        {
+          "caller": "__init__",
+          "callee": "ValueError",
+          "lineNumber": 114
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "arxiv.Client",
+          "lineNumber": 117
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "'+'.join",
+          "lineNumber": 118
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "self.config.source.arxiv.get",
+          "lineNumber": 119
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "feedparser.parse",
+          "lineNumber": 121
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "Exception",
+          "lineNumber": 123
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "i.id.removeprefix",
+          "lineNumber": 127
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "i.get",
+          "lineNumber": 129
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "tqdm",
+          "lineNumber": 135
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "len",
+          "lineNumber": 135
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "range",
+          "lineNumber": 138
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "len",
+          "lineNumber": 138
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "arxiv.Search",
+          "lineNumber": 139
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "range",
+          "lineNumber": 140
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "list",
+          "lineNumber": 142
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "client.results",
+          "lineNumber": 142
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "bar.update",
+          "lineNumber": 143
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "len",
+          "lineNumber": 143
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "raw_papers.extend",
+          "lineNumber": 144
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "logger.warning",
+          "lineNumber": 149
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "sleep",
+          "lineNumber": 150
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "len",
+          "lineNumber": 153
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "sleep",
+          "lineNumber": 154
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "bar.close",
+          "lineNumber": 155
+        },
+        {
+          "caller": "convert_to_paper",
+          "callee": "extract_text_from_tar",
+          "lineNumber": 164
+        },
+        {
+          "caller": "convert_to_paper",
+          "callee": "extract_text_from_html",
+          "lineNumber": 166
+        },
+        {
+          "caller": "convert_to_paper",
+          "callee": "extract_text_from_pdf",
+          "lineNumber": 168
+        },
+        {
+          "caller": "convert_to_paper",
+          "callee": "Paper",
+          "lineNumber": 169
+        },
+        {
+          "caller": "extract_text_from_html",
+          "callee": "paper.entry_id.replace",
+          "lineNumber": 181
+        },
+        {
+          "caller": "extract_text_from_html",
+          "callee": "_extract_text_from_html_worker",
+          "lineNumber": 183
+        },
+        {
+          "caller": "extract_text_from_html",
+          "callee": "logger.warning",
+          "lineNumber": 185
+        },
+        {
+          "caller": "extract_text_from_pdf",
+          "callee": "logger.warning",
+          "lineNumber": 191
+        },
+        {
+          "caller": "extract_text_from_pdf",
+          "callee": "_run_with_hard_timeout",
+          "lineNumber": 193
+        },
+        {
+          "caller": "extract_text_from_tar",
+          "callee": "paper.source_url",
+          "lineNumber": 203
+        },
+        {
+          "caller": "extract_text_from_tar",
+          "callee": "logger.warning",
+          "lineNumber": 205
+        },
+        {
+          "caller": "extract_text_from_tar",
+          "callee": "_run_with_hard_timeout",
+          "lineNumber": 207
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 10,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/zotero_arxiv_daily/retriever/base.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 51,
+      "nonEmptyLines": 43,
+      "functions": [
+        {
+          "name": "register_retriever",
+          "startLine": 41,
+          "endLine": 46,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "get_retriever_cls",
+          "startLine": 48,
+          "endLine": 51,
+          "params": [
+            "name"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "BaseRetriever",
+          "startLine": 10,
+          "endLine": 37,
+          "methods": [
+            "__init__",
+            "_retrieve_raw_papers",
+            "convert_to_paper",
+            "retrieve_papers"
+          ],
+          "properties": [
+            "name"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "BaseRetriever",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "register_retriever",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "get_retriever_cls",
+          "line": 48,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "getattr",
+          "lineNumber": 14
+        },
+        {
+          "caller": "retrieve_papers",
+          "callee": "self._retrieve_raw_papers",
+          "lineNumber": 25
+        },
+        {
+          "caller": "retrieve_papers",
+          "callee": "logger.info",
+          "lineNumber": 26
+        },
+        {
+          "caller": "retrieve_papers",
+          "callee": "tqdm",
+          "lineNumber": 28
+        },
+        {
+          "caller": "retrieve_papers",
+          "callee": "len",
+          "lineNumber": 28
+        },
+        {
+          "caller": "retrieve_papers",
+          "callee": "self.convert_to_paper",
+          "lineNumber": 30
+        },
+        {
+          "caller": "retrieve_papers",
+          "callee": "logger.warning",
+          "lineNumber": 32
+        },
+        {
+          "caller": "retrieve_papers",
+          "callee": "getattr",
+          "lineNumber": 32
+        },
+        {
+          "caller": "retrieve_papers",
+          "callee": "papers.append",
+          "lineNumber": 35
+        },
+        {
+          "caller": "retrieve_papers",
+          "callee": "sleep",
+          "lineNumber": 36
+        },
+        {
+          "caller": "get_retriever_cls",
+          "callee": "ValueError",
+          "lineNumber": 50
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 61,
+      "nonEmptyLines": 56,
+      "classes": [
+        {
+          "name": "BiorxivRetriever",
+          "startLine": 9,
+          "endLine": 61,
+          "methods": [
+            "__init__",
+            "_retrieve_raw_papers",
+            "convert_to_paper"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "BiorxivRetriever",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "super().__init__",
+          "lineNumber": 13
+        },
+        {
+          "caller": "__init__",
+          "callee": "super",
+          "lineNumber": 13
+        },
+        {
+          "caller": "__init__",
+          "callee": "ValueError",
+          "lineNumber": 15
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "range",
+          "lineNumber": 21
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "requests.get",
+          "lineNumber": 23
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "response.raise_for_status",
+          "lineNumber": 24
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "logger.warning",
+          "lineNumber": 30
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "str",
+          "lineNumber": 30
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "sleep",
+          "lineNumber": 31
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "response.json",
+          "lineNumber": 32
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "len",
+          "lineNumber": 34
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "logger.warning",
+          "lineNumber": 35
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "set",
+          "lineNumber": 37
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "sorted",
+          "lineNumber": 38
+        },
+        {
+          "caller": "_retrieve_raw_papers",
+          "callee": "c.lower",
+          "lineNumber": 40
+        },
+        {
+          "caller": "convert_to_paper",
+          "callee": "a.strip",
+          "lineNumber": 49
+        },
+        {
+          "caller": "convert_to_paper",
+          "callee": "raw_paper['authors'].split",
+          "lineNumber": 49
+        },
+        {
+          "caller": "convert_to_paper",
+          "callee": "Paper",
+          "lineNumber": 53
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/zotero_arxiv_daily/retriever/medrxiv_retriever.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 6,
+      "nonEmptyLines": 5,
+      "classes": [
+        {
+          "name": "MedrxivRetriever",
+          "startLine": 5,
+          "endLine": 6,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "MedrxivRetriever",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}

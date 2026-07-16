@@ -1,0 +1,69 @@
+{
+  "nodes": [
+    {
+      "id": "document:AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "AGENTS.md",
+      "summary": "Documentation asset describing usage, setup, project behavior, or repository guidance.",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate",
+      "language": "markdown",
+      "startLine": 1,
+      "endLine": 81,
+      "sizeLines": 81
+    },
+    {
+      "id": "document:CLAUDE.md",
+      "type": "document",
+      "name": "CLAUDE.md",
+      "filePath": "CLAUDE.md",
+      "summary": "Documentation asset describing usage, setup, project behavior, or repository guidance.",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate",
+      "language": "markdown",
+      "startLine": 1,
+      "endLine": 81,
+      "sizeLines": 81
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Documentation asset describing usage, setup, project behavior, or repository guidance.",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate",
+      "language": "markdown",
+      "startLine": 1,
+      "endLine": 211,
+      "sizeLines": 211
+    },
+    {
+      "id": "config:pyproject.toml",
+      "type": "config",
+      "name": "pyproject.toml",
+      "filePath": "pyproject.toml",
+      "summary": "Project configuration consumed by runtime, packaging, tests, or automation.",
+      "tags": [
+        "toml",
+        "config"
+      ],
+      "complexity": "simple",
+      "language": "toml",
+      "startLine": 1,
+      "endLine": 53,
+      "sizeLines": 53
+    }
+  ],
+  "edges": []
+}

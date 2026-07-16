@@ -1,0 +1,1933 @@
+{
+  "nodes": [
+    {
+      "id": "file:tests/canned_responses.py",
+      "type": "file",
+      "name": "canned_responses.py",
+      "filePath": "tests/canned_responses.py",
+      "summary": "Test support or pytest coverage for the recommendation pipeline and its utility modules.",
+      "tags": [
+        "python",
+        "code",
+        "test",
+        "functions"
+      ],
+      "complexity": "complex",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 231,
+      "sizeLines": 231
+    },
+    {
+      "id": "function:tests/canned_responses.py:_make_chat_response",
+      "type": "function",
+      "name": "_make_chat_response",
+      "filePath": "tests/canned_responses.py",
+      "summary": "Function _make_chat_response with parameters content.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 18,
+      "endLine": 31
+    },
+    {
+      "id": "function:tests/canned_responses.py:_stub_chat_create",
+      "type": "function",
+      "name": "_stub_chat_create",
+      "filePath": "tests/canned_responses.py",
+      "summary": "Function _stub_chat_create with parameters **kwargs.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 34,
+      "endLine": 39
+    },
+    {
+      "id": "function:tests/canned_responses.py:_stub_embeddings_create",
+      "type": "function",
+      "name": "_stub_embeddings_create",
+      "filePath": "tests/canned_responses.py",
+      "summary": "Function _stub_embeddings_create with parameters **kwargs.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 42,
+      "endLine": 49
+    },
+    {
+      "id": "function:tests/canned_responses.py:make_stub_openai_client",
+      "type": "function",
+      "name": "make_stub_openai_client",
+      "filePath": "tests/canned_responses.py",
+      "summary": "Function make_stub_openai_client.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 52,
+      "endLine": 63
+    },
+    {
+      "id": "function:tests/canned_responses.py:make_stub_zotero_client",
+      "type": "function",
+      "name": "make_stub_zotero_client",
+      "filePath": "tests/canned_responses.py",
+      "summary": "Function make_stub_zotero_client with parameters collections, items.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 101,
+      "endLine": 124
+    },
+    {
+      "id": "function:tests/canned_responses.py:make_stub_smtp",
+      "type": "function",
+      "name": "make_stub_smtp",
+      "filePath": "tests/canned_responses.py",
+      "summary": "Function make_stub_smtp with parameters sent_emails.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 132,
+      "endLine": 159
+    },
+    {
+      "id": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "function",
+      "name": "make_sample_paper",
+      "filePath": "tests/canned_responses.py",
+      "summary": "Function make_sample_paper with parameters **overrides.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 167,
+      "endLine": 181
+    },
+    {
+      "id": "function:tests/canned_responses.py:make_sample_corpus",
+      "type": "function",
+      "name": "make_sample_corpus",
+      "filePath": "tests/canned_responses.py",
+      "summary": "Function make_sample_corpus with parameters n.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 184,
+      "endLine": 193
+    },
+    {
+      "id": "file:tests/reranker/conftest.py",
+      "type": "file",
+      "name": "conftest.py",
+      "filePath": "tests/reranker/conftest.py",
+      "summary": "Implements embedding-based reranking over candidate papers using local models or OpenAI-compatible APIs.",
+      "tags": [
+        "python",
+        "code",
+        "test",
+        "functions"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 17,
+      "sizeLines": 17
+    },
+    {
+      "id": "function:tests/reranker/conftest.py:patch_openai",
+      "type": "function",
+      "name": "patch_openai",
+      "filePath": "tests/reranker/conftest.py",
+      "summary": "Function patch_openai with parameters monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 9,
+      "endLine": 17
+    },
+    {
+      "id": "file:tests/reranker/test_base_reranker.py",
+      "type": "file",
+      "name": "test_base_reranker.py",
+      "filePath": "tests/reranker/test_base_reranker.py",
+      "summary": "Implements embedding-based reranking over candidate papers using local models or OpenAI-compatible APIs.",
+      "tags": [
+        "python",
+        "code",
+        "test",
+        "classes",
+        "functions"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 70,
+      "sizeLines": 70
+    },
+    {
+      "id": "class:tests/reranker/test_base_reranker.py:StubReranker",
+      "type": "class",
+      "name": "StubReranker",
+      "filePath": "tests/reranker/test_base_reranker.py",
+      "summary": "Class StubReranker in tests/reranker/test_base_reranker.py with methods __init__, get_similarity_score.",
+      "tags": [
+        "class",
+        "python",
+        "__init__",
+        "get_similarity_score"
+      ],
+      "complexity": "simple",
+      "startLine": 10,
+      "endLine": 18
+    },
+    {
+      "id": "function:tests/reranker/test_base_reranker.py:StubReranker.__init__",
+      "type": "function",
+      "name": "StubReranker.__init__",
+      "filePath": "tests/reranker/test_base_reranker.py",
+      "summary": "Method __init__ on class StubReranker.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 10,
+      "endLine": 18
+    },
+    {
+      "id": "function:tests/reranker/test_base_reranker.py:StubReranker.get_similarity_score",
+      "type": "function",
+      "name": "StubReranker.get_similarity_score",
+      "filePath": "tests/reranker/test_base_reranker.py",
+      "summary": "Method get_similarity_score on class StubReranker.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 10,
+      "endLine": 18
+    },
+    {
+      "id": "function:tests/reranker/test_base_reranker.py:test_rerank_scores_and_sorts",
+      "type": "function",
+      "name": "test_rerank_scores_and_sorts",
+      "filePath": "tests/reranker/test_base_reranker.py",
+      "summary": "Function test_rerank_scores_and_sorts.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 21,
+      "endLine": 34
+    },
+    {
+      "id": "function:tests/reranker/test_base_reranker.py:test_rerank_time_decay_weighting",
+      "type": "function",
+      "name": "test_rerank_time_decay_weighting",
+      "filePath": "tests/reranker/test_base_reranker.py",
+      "summary": "Function test_rerank_time_decay_weighting.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 37,
+      "endLine": 55
+    },
+    {
+      "id": "function:tests/reranker/test_base_reranker.py:test_rerank_single_candidate_single_corpus",
+      "type": "function",
+      "name": "test_rerank_single_candidate_single_corpus",
+      "filePath": "tests/reranker/test_base_reranker.py",
+      "summary": "Function test_rerank_single_candidate_single_corpus.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 58,
+      "endLine": 65
+    },
+    {
+      "id": "function:tests/reranker/test_base_reranker.py:test_get_reranker_cls_unknown",
+      "type": "function",
+      "name": "test_get_reranker_cls_unknown",
+      "filePath": "tests/reranker/test_base_reranker.py",
+      "summary": "Function test_get_reranker_cls_unknown.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 68,
+      "endLine": 70
+    },
+    {
+      "id": "file:tests/retriever/test_biorxiv_retriever.py",
+      "type": "file",
+      "name": "test_biorxiv_retriever.py",
+      "filePath": "tests/retriever/test_biorxiv_retriever.py",
+      "summary": "Implements paper retrieval abstractions and source-specific retrievers for arXiv, bioRxiv, and medRxiv.",
+      "tags": [
+        "python",
+        "code",
+        "test",
+        "functions"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 58,
+      "sizeLines": 58
+    },
+    {
+      "id": "function:tests/retriever/test_biorxiv_retriever.py:test_biorxiv_retrieve",
+      "type": "function",
+      "name": "test_biorxiv_retrieve",
+      "filePath": "tests/retriever/test_biorxiv_retriever.py",
+      "summary": "Function test_biorxiv_retrieve with parameters config, mock_biorxiv_api, monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 10,
+      "endLine": 18
+    },
+    {
+      "id": "function:tests/retriever/test_biorxiv_retriever.py:test_biorxiv_empty_response",
+      "type": "function",
+      "name": "test_biorxiv_empty_response",
+      "filePath": "tests/retriever/test_biorxiv_retriever.py",
+      "summary": "Function test_biorxiv_empty_response with parameters config, monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 21,
+      "endLine": 39
+    },
+    {
+      "id": "function:tests/retriever/test_biorxiv_retriever.py:test_biorxiv_convert_to_paper",
+      "type": "function",
+      "name": "test_biorxiv_convert_to_paper",
+      "filePath": "tests/retriever/test_biorxiv_retriever.py",
+      "summary": "Function test_biorxiv_convert_to_paper with parameters config.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 42,
+      "endLine": 51
+    },
+    {
+      "id": "function:tests/retriever/test_biorxiv_retriever.py:test_biorxiv_requires_category",
+      "type": "function",
+      "name": "test_biorxiv_requires_category",
+      "filePath": "tests/retriever/test_biorxiv_retriever.py",
+      "summary": "Function test_biorxiv_requires_category with parameters config.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 54,
+      "endLine": 58
+    },
+    {
+      "id": "file:tests/test_construct_email.py",
+      "type": "file",
+      "name": "test_construct_email.py",
+      "filePath": "tests/test_construct_email.py",
+      "summary": "Renders selected paper recommendations into the HTML email body.",
+      "tags": [
+        "python",
+        "code",
+        "test",
+        "functions"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 78,
+      "sizeLines": 78
+    },
+    {
+      "id": "function:tests/test_construct_email.py:test_render_email_with_papers",
+      "type": "function",
+      "name": "test_render_email_with_papers",
+      "filePath": "tests/test_construct_email.py",
+      "summary": "Function test_render_email_with_papers.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 7,
+      "endLine": 12
+    },
+    {
+      "id": "function:tests/test_construct_email.py:test_render_email_empty_list",
+      "type": "function",
+      "name": "test_render_email_empty_list",
+      "filePath": "tests/test_construct_email.py",
+      "summary": "Function test_render_email_empty_list.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 15,
+      "endLine": 17
+    },
+    {
+      "id": "function:tests/test_construct_email.py:test_render_email_author_truncation",
+      "type": "function",
+      "name": "test_render_email_author_truncation",
+      "filePath": "tests/test_construct_email.py",
+      "summary": "Function test_render_email_author_truncation.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 20,
+      "endLine": 31
+    },
+    {
+      "id": "function:tests/test_construct_email.py:test_render_email_affiliation_truncation",
+      "type": "function",
+      "name": "test_render_email_affiliation_truncation",
+      "filePath": "tests/test_construct_email.py",
+      "summary": "Function test_render_email_affiliation_truncation.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 34,
+      "endLine": 41
+    },
+    {
+      "id": "function:tests/test_construct_email.py:test_render_email_no_affiliations",
+      "type": "function",
+      "name": "test_render_email_no_affiliations",
+      "filePath": "tests/test_construct_email.py",
+      "summary": "Function test_render_email_no_affiliations.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 44,
+      "endLine": 47
+    },
+    {
+      "id": "function:tests/test_construct_email.py:test_get_stars_low_score",
+      "type": "function",
+      "name": "test_get_stars_low_score",
+      "filePath": "tests/test_construct_email.py",
+      "summary": "Function test_get_stars_low_score.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 50,
+      "endLine": 52
+    },
+    {
+      "id": "function:tests/test_construct_email.py:test_get_stars_high_score",
+      "type": "function",
+      "name": "test_get_stars_high_score",
+      "filePath": "tests/test_construct_email.py",
+      "summary": "Function test_get_stars_high_score.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 55,
+      "endLine": 57
+    },
+    {
+      "id": "function:tests/test_construct_email.py:test_get_stars_mid_score",
+      "type": "function",
+      "name": "test_get_stars_mid_score",
+      "filePath": "tests/test_construct_email.py",
+      "summary": "Function test_get_stars_mid_score.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 60,
+      "endLine": 63
+    },
+    {
+      "id": "function:tests/test_construct_email.py:test_get_block_html_contains_all_fields",
+      "type": "function",
+      "name": "test_get_block_html_contains_all_fields",
+      "filePath": "tests/test_construct_email.py",
+      "summary": "Function test_get_block_html_contains_all_fields.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 66,
+      "endLine": 73
+    },
+    {
+      "id": "function:tests/test_construct_email.py:test_get_empty_html",
+      "type": "function",
+      "name": "test_get_empty_html",
+      "filePath": "tests/test_construct_email.py",
+      "summary": "Function test_get_empty_html.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 76,
+      "endLine": 78
+    },
+    {
+      "id": "file:tests/test_protocol.py",
+      "type": "file",
+      "name": "test_protocol.py",
+      "filePath": "tests/test_protocol.py",
+      "summary": "Defines Paper and CorpusPaper models, including LLM-backed TLDR and affiliation generation methods.",
+      "tags": [
+        "python",
+        "code",
+        "data-model",
+        "test",
+        "functions"
+      ],
+      "complexity": "moderate",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 124,
+      "sizeLines": 124
+    },
+    {
+      "id": "function:tests/test_protocol.py:llm_params",
+      "type": "function",
+      "name": "llm_params",
+      "filePath": "tests/test_protocol.py",
+      "summary": "Function llm_params.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 9,
+      "endLine": 13
+    },
+    {
+      "id": "function:tests/test_protocol.py:test_tldr_returns_response",
+      "type": "function",
+      "name": "test_tldr_returns_response",
+      "filePath": "tests/test_protocol.py",
+      "summary": "Function test_tldr_returns_response with parameters llm_params.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 21,
+      "endLine": 26
+    },
+    {
+      "id": "function:tests/test_protocol.py:test_tldr_without_abstract_or_fulltext",
+      "type": "function",
+      "name": "test_tldr_without_abstract_or_fulltext",
+      "filePath": "tests/test_protocol.py",
+      "summary": "Function test_tldr_without_abstract_or_fulltext with parameters llm_params.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 29,
+      "endLine": 33
+    },
+    {
+      "id": "function:tests/test_protocol.py:test_tldr_falls_back_to_abstract_on_error",
+      "type": "function",
+      "name": "test_tldr_falls_back_to_abstract_on_error",
+      "filePath": "tests/test_protocol.py",
+      "summary": "Function test_tldr_falls_back_to_abstract_on_error with parameters llm_params.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 36,
+      "endLine": 48
+    },
+    {
+      "id": "function:tests/test_protocol.py:test_tldr_truncates_long_prompt",
+      "type": "function",
+      "name": "test_tldr_truncates_long_prompt",
+      "filePath": "tests/test_protocol.py",
+      "summary": "Function test_tldr_truncates_long_prompt with parameters llm_params.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 51,
+      "endLine": 55
+    },
+    {
+      "id": "function:tests/test_protocol.py:test_affiliations_returns_parsed_list",
+      "type": "function",
+      "name": "test_affiliations_returns_parsed_list",
+      "filePath": "tests/test_protocol.py",
+      "summary": "Function test_affiliations_returns_parsed_list with parameters llm_params.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 63,
+      "endLine": 69
+    },
+    {
+      "id": "function:tests/test_protocol.py:test_affiliations_none_without_fulltext",
+      "type": "function",
+      "name": "test_affiliations_none_without_fulltext",
+      "filePath": "tests/test_protocol.py",
+      "summary": "Function test_affiliations_none_without_fulltext with parameters llm_params.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 72,
+      "endLine": 76
+    },
+    {
+      "id": "function:tests/test_protocol.py:test_affiliations_deduplicates",
+      "type": "function",
+      "name": "test_affiliations_deduplicates",
+      "filePath": "tests/test_protocol.py",
+      "summary": "Function test_affiliations_deduplicates with parameters llm_params.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 79,
+      "endLine": 86
+    },
+    {
+      "id": "function:tests/test_protocol.py:test_affiliations_malformed_llm_output",
+      "type": "function",
+      "name": "test_affiliations_malformed_llm_output",
+      "filePath": "tests/test_protocol.py",
+      "summary": "Function test_affiliations_malformed_llm_output with parameters llm_params.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 89,
+      "endLine": 110
+    },
+    {
+      "id": "function:tests/test_protocol.py:test_affiliations_error_returns_none",
+      "type": "function",
+      "name": "test_affiliations_error_returns_none",
+      "filePath": "tests/test_protocol.py",
+      "summary": "Function test_affiliations_error_returns_none with parameters llm_params.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 113,
+      "endLine": 124
+    },
+    {
+      "id": "file:tests/test_utils.py",
+      "type": "file",
+      "name": "test_utils.py",
+      "filePath": "tests/test_utils.py",
+      "summary": "Provides shared helpers for paths, glob matching, GitHub URL discovery, caching, and subprocess timeouts.",
+      "tags": [
+        "python",
+        "code",
+        "test",
+        "classes",
+        "functions"
+      ],
+      "complexity": "complex",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 290,
+      "sizeLines": 290
+    },
+    {
+      "id": "class:tests/test_utils.py:TestGlobMatch",
+      "type": "class",
+      "name": "TestGlobMatch",
+      "filePath": "tests/test_utils.py",
+      "summary": "Class TestGlobMatch in tests/test_utils.py with methods test_exact_match, test_wildcard_asterisk, test_wildcard_question_mark, test_character_classes, test_path_separators.",
+      "tags": [
+        "class",
+        "python",
+        "test_exact_match",
+        "test_wildcard_asterisk",
+        "test_wildcard_question_mark",
+        "test_character_classes",
+        "test_path_separators",
+        "test_complex_patterns",
+        "test_edge_cases",
+        "test_partial_matches",
+        "test_special_glob_characters",
+        "test_numeric_patterns",
+        "test_extension_patterns",
+        "test_recursive_wildcard"
+      ],
+      "complexity": "moderate",
+      "startLine": 18,
+      "endLine": 116
+    },
+    {
+      "id": "function:tests/test_utils.py:TestGlobMatch.test_exact_match",
+      "type": "function",
+      "name": "TestGlobMatch.test_exact_match",
+      "filePath": "tests/test_utils.py",
+      "summary": "Method test_exact_match on class TestGlobMatch.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 18,
+      "endLine": 116
+    },
+    {
+      "id": "function:tests/test_utils.py:TestGlobMatch.test_wildcard_asterisk",
+      "type": "function",
+      "name": "TestGlobMatch.test_wildcard_asterisk",
+      "filePath": "tests/test_utils.py",
+      "summary": "Method test_wildcard_asterisk on class TestGlobMatch.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 18,
+      "endLine": 116
+    },
+    {
+      "id": "function:tests/test_utils.py:TestGlobMatch.test_wildcard_question_mark",
+      "type": "function",
+      "name": "TestGlobMatch.test_wildcard_question_mark",
+      "filePath": "tests/test_utils.py",
+      "summary": "Method test_wildcard_question_mark on class TestGlobMatch.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 18,
+      "endLine": 116
+    },
+    {
+      "id": "function:tests/test_utils.py:TestGlobMatch.test_character_classes",
+      "type": "function",
+      "name": "TestGlobMatch.test_character_classes",
+      "filePath": "tests/test_utils.py",
+      "summary": "Method test_character_classes on class TestGlobMatch.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 18,
+      "endLine": 116
+    },
+    {
+      "id": "function:tests/test_utils.py:TestGlobMatch.test_path_separators",
+      "type": "function",
+      "name": "TestGlobMatch.test_path_separators",
+      "filePath": "tests/test_utils.py",
+      "summary": "Method test_path_separators on class TestGlobMatch.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 18,
+      "endLine": 116
+    },
+    {
+      "id": "function:tests/test_utils.py:TestGlobMatch.test_complex_patterns",
+      "type": "function",
+      "name": "TestGlobMatch.test_complex_patterns",
+      "filePath": "tests/test_utils.py",
+      "summary": "Method test_complex_patterns on class TestGlobMatch.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 18,
+      "endLine": 116
+    },
+    {
+      "id": "function:tests/test_utils.py:TestGlobMatch.test_edge_cases",
+      "type": "function",
+      "name": "TestGlobMatch.test_edge_cases",
+      "filePath": "tests/test_utils.py",
+      "summary": "Method test_edge_cases on class TestGlobMatch.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 18,
+      "endLine": 116
+    },
+    {
+      "id": "function:tests/test_utils.py:TestGlobMatch.test_partial_matches",
+      "type": "function",
+      "name": "TestGlobMatch.test_partial_matches",
+      "filePath": "tests/test_utils.py",
+      "summary": "Method test_partial_matches on class TestGlobMatch.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 18,
+      "endLine": 116
+    },
+    {
+      "id": "function:tests/test_utils.py:TestGlobMatch.test_special_glob_characters",
+      "type": "function",
+      "name": "TestGlobMatch.test_special_glob_characters",
+      "filePath": "tests/test_utils.py",
+      "summary": "Method test_special_glob_characters on class TestGlobMatch.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 18,
+      "endLine": 116
+    },
+    {
+      "id": "function:tests/test_utils.py:TestGlobMatch.test_numeric_patterns",
+      "type": "function",
+      "name": "TestGlobMatch.test_numeric_patterns",
+      "filePath": "tests/test_utils.py",
+      "summary": "Method test_numeric_patterns on class TestGlobMatch.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 18,
+      "endLine": 116
+    },
+    {
+      "id": "function:tests/test_utils.py:TestGlobMatch.test_extension_patterns",
+      "type": "function",
+      "name": "TestGlobMatch.test_extension_patterns",
+      "filePath": "tests/test_utils.py",
+      "summary": "Method test_extension_patterns on class TestGlobMatch.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 18,
+      "endLine": 116
+    },
+    {
+      "id": "function:tests/test_utils.py:TestGlobMatch.test_recursive_wildcard",
+      "type": "function",
+      "name": "TestGlobMatch.test_recursive_wildcard",
+      "filePath": "tests/test_utils.py",
+      "summary": "Method test_recursive_wildcard on class TestGlobMatch.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 18,
+      "endLine": 116
+    },
+    {
+      "id": "class:tests/test_utils.py:TestBm25Pick",
+      "type": "class",
+      "name": "TestBm25Pick",
+      "filePath": "tests/test_utils.py",
+      "summary": "Class TestBm25Pick in tests/test_utils.py with methods test_picks_best_match, test_single_candidate, test_empty_query_returns_first.",
+      "tags": [
+        "class",
+        "python",
+        "test_picks_best_match",
+        "test_single_candidate",
+        "test_empty_query_returns_first"
+      ],
+      "complexity": "simple",
+      "startLine": 275,
+      "endLine": 290
+    },
+    {
+      "id": "function:tests/test_utils.py:TestBm25Pick.test_picks_best_match",
+      "type": "function",
+      "name": "TestBm25Pick.test_picks_best_match",
+      "filePath": "tests/test_utils.py",
+      "summary": "Method test_picks_best_match on class TestBm25Pick.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 275,
+      "endLine": 290
+    },
+    {
+      "id": "function:tests/test_utils.py:TestBm25Pick.test_single_candidate",
+      "type": "function",
+      "name": "TestBm25Pick.test_single_candidate",
+      "filePath": "tests/test_utils.py",
+      "summary": "Method test_single_candidate on class TestBm25Pick.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 275,
+      "endLine": 290
+    },
+    {
+      "id": "function:tests/test_utils.py:TestBm25Pick.test_empty_query_returns_first",
+      "type": "function",
+      "name": "TestBm25Pick.test_empty_query_returns_first",
+      "filePath": "tests/test_utils.py",
+      "summary": "Method test_empty_query_returns_first on class TestBm25Pick.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 275,
+      "endLine": 290
+    },
+    {
+      "id": "function:tests/test_utils.py:test_send_email_starttls_success",
+      "type": "function",
+      "name": "test_send_email_starttls_success",
+      "filePath": "tests/test_utils.py",
+      "summary": "Function test_send_email_starttls_success with parameters config, monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 124,
+      "endLine": 133
+    },
+    {
+      "id": "function:tests/test_utils.py:test_send_email_falls_back_to_ssl",
+      "type": "function",
+      "name": "test_send_email_falls_back_to_ssl",
+      "filePath": "tests/test_utils.py",
+      "summary": "Function test_send_email_falls_back_to_ssl with parameters config, monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 136,
+      "endLine": 154
+    },
+    {
+      "id": "function:tests/test_utils.py:test_send_email_falls_back_to_plain",
+      "type": "function",
+      "name": "test_send_email_falls_back_to_plain",
+      "filePath": "tests/test_utils.py",
+      "summary": "Function test_send_email_falls_back_to_plain with parameters config, monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 157,
+      "endLine": 186
+    },
+    {
+      "id": "function:tests/test_utils.py:make_tar",
+      "type": "function",
+      "name": "make_tar",
+      "filePath": "tests/test_utils.py",
+      "summary": "Function make_tar with parameters tmp_path.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 195,
+      "endLine": 210
+    },
+    {
+      "id": "function:tests/test_utils.py:test_extract_tex_single_file",
+      "type": "function",
+      "name": "test_extract_tex_single_file",
+      "filePath": "tests/test_utils.py",
+      "summary": "Function test_extract_tex_single_file with parameters make_tar.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 213,
+      "endLine": 217
+    },
+    {
+      "id": "function:tests/test_utils.py:test_extract_tex_with_input_resolution",
+      "type": "function",
+      "name": "test_extract_tex_with_input_resolution",
+      "filePath": "tests/test_utils.py",
+      "summary": "Function test_extract_tex_with_input_resolution with parameters make_tar.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 220,
+      "endLine": 227
+    },
+    {
+      "id": "function:tests/test_utils.py:test_extract_tex_no_tex_files",
+      "type": "function",
+      "name": "test_extract_tex_no_tex_files",
+      "filePath": "tests/test_utils.py",
+      "summary": "Function test_extract_tex_no_tex_files with parameters make_tar.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 230,
+      "endLine": 233
+    },
+    {
+      "id": "function:tests/test_utils.py:test_extract_tex_not_a_tar",
+      "type": "function",
+      "name": "test_extract_tex_not_a_tar",
+      "filePath": "tests/test_utils.py",
+      "summary": "Function test_extract_tex_not_a_tar with parameters tmp_path.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 236,
+      "endLine": 240
+    },
+    {
+      "id": "function:tests/test_utils.py:test_extract_tex_multiple_tex_no_bbl",
+      "type": "function",
+      "name": "test_extract_tex_multiple_tex_no_bbl",
+      "filePath": "tests/test_utils.py",
+      "summary": "Function test_extract_tex_multiple_tex_no_bbl with parameters make_tar.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 243,
+      "endLine": 250
+    },
+    {
+      "id": "function:tests/test_utils.py:test_extract_tex_multiple_document_blocks_bm25",
+      "type": "function",
+      "name": "test_extract_tex_multiple_document_blocks_bm25",
+      "filePath": "tests/test_utils.py",
+      "summary": "Function test_extract_tex_multiple_document_blocks_bm25 with parameters make_tar.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 253,
+      "endLine": 261
+    },
+    {
+      "id": "function:tests/test_utils.py:test_extract_tex_multiple_document_blocks_no_title",
+      "type": "function",
+      "name": "test_extract_tex_multiple_document_blocks_no_title",
+      "filePath": "tests/test_utils.py",
+      "summary": "Function test_extract_tex_multiple_document_blocks_no_title with parameters make_tar.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 264,
+      "endLine": 272
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:tests/canned_responses.py",
+      "target": "function:tests/canned_responses.py:_make_chat_response",
+      "type": "contains",
+      "weight": 1,
+      "description": "canned_responses.py defines function _make_chat_response."
+    },
+    {
+      "source": "file:tests/canned_responses.py",
+      "target": "function:tests/canned_responses.py:_stub_chat_create",
+      "type": "contains",
+      "weight": 1,
+      "description": "canned_responses.py defines function _stub_chat_create."
+    },
+    {
+      "source": "file:tests/canned_responses.py",
+      "target": "function:tests/canned_responses.py:_stub_embeddings_create",
+      "type": "contains",
+      "weight": 1,
+      "description": "canned_responses.py defines function _stub_embeddings_create."
+    },
+    {
+      "source": "file:tests/canned_responses.py",
+      "target": "function:tests/canned_responses.py:make_stub_openai_client",
+      "type": "contains",
+      "weight": 1,
+      "description": "canned_responses.py defines function make_stub_openai_client."
+    },
+    {
+      "source": "file:tests/canned_responses.py",
+      "target": "function:tests/canned_responses.py:make_stub_zotero_client",
+      "type": "contains",
+      "weight": 1,
+      "description": "canned_responses.py defines function make_stub_zotero_client."
+    },
+    {
+      "source": "file:tests/canned_responses.py",
+      "target": "function:tests/canned_responses.py:make_stub_smtp",
+      "type": "contains",
+      "weight": 1,
+      "description": "canned_responses.py defines function make_stub_smtp."
+    },
+    {
+      "source": "file:tests/canned_responses.py",
+      "target": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "contains",
+      "weight": 1,
+      "description": "canned_responses.py defines function make_sample_paper."
+    },
+    {
+      "source": "file:tests/canned_responses.py",
+      "target": "function:tests/canned_responses.py:make_sample_corpus",
+      "type": "contains",
+      "weight": 1,
+      "description": "canned_responses.py defines function make_sample_corpus."
+    },
+    {
+      "source": "file:tests/reranker/conftest.py",
+      "target": "function:tests/reranker/conftest.py:patch_openai",
+      "type": "contains",
+      "weight": 1,
+      "description": "conftest.py defines function patch_openai."
+    },
+    {
+      "source": "file:tests/reranker/test_base_reranker.py",
+      "target": "class:tests/reranker/test_base_reranker.py:StubReranker",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_base_reranker.py defines class StubReranker."
+    },
+    {
+      "source": "class:tests/reranker/test_base_reranker.py:StubReranker",
+      "target": "function:tests/reranker/test_base_reranker.py:StubReranker.__init__",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class StubReranker contains method __init__."
+    },
+    {
+      "source": "class:tests/reranker/test_base_reranker.py:StubReranker",
+      "target": "function:tests/reranker/test_base_reranker.py:StubReranker.get_similarity_score",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class StubReranker contains method get_similarity_score."
+    },
+    {
+      "source": "file:tests/reranker/test_base_reranker.py",
+      "target": "function:tests/reranker/test_base_reranker.py:test_rerank_scores_and_sorts",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_base_reranker.py defines function test_rerank_scores_and_sorts."
+    },
+    {
+      "source": "file:tests/reranker/test_base_reranker.py",
+      "target": "function:tests/reranker/test_base_reranker.py:test_rerank_time_decay_weighting",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_base_reranker.py defines function test_rerank_time_decay_weighting."
+    },
+    {
+      "source": "file:tests/reranker/test_base_reranker.py",
+      "target": "function:tests/reranker/test_base_reranker.py:test_rerank_single_candidate_single_corpus",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_base_reranker.py defines function test_rerank_single_candidate_single_corpus."
+    },
+    {
+      "source": "file:tests/reranker/test_base_reranker.py",
+      "target": "function:tests/reranker/test_base_reranker.py:test_get_reranker_cls_unknown",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_base_reranker.py defines function test_get_reranker_cls_unknown."
+    },
+    {
+      "source": "file:tests/retriever/test_biorxiv_retriever.py",
+      "target": "function:tests/retriever/test_biorxiv_retriever.py:test_biorxiv_retrieve",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_biorxiv_retriever.py defines function test_biorxiv_retrieve."
+    },
+    {
+      "source": "file:tests/retriever/test_biorxiv_retriever.py",
+      "target": "function:tests/retriever/test_biorxiv_retriever.py:test_biorxiv_empty_response",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_biorxiv_retriever.py defines function test_biorxiv_empty_response."
+    },
+    {
+      "source": "file:tests/retriever/test_biorxiv_retriever.py",
+      "target": "function:tests/retriever/test_biorxiv_retriever.py:test_biorxiv_convert_to_paper",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_biorxiv_retriever.py defines function test_biorxiv_convert_to_paper."
+    },
+    {
+      "source": "file:tests/retriever/test_biorxiv_retriever.py",
+      "target": "function:tests/retriever/test_biorxiv_retriever.py:test_biorxiv_requires_category",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_biorxiv_retriever.py defines function test_biorxiv_requires_category."
+    },
+    {
+      "source": "file:tests/test_construct_email.py",
+      "target": "function:tests/test_construct_email.py:test_render_email_with_papers",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_construct_email.py defines function test_render_email_with_papers."
+    },
+    {
+      "source": "file:tests/test_construct_email.py",
+      "target": "function:tests/test_construct_email.py:test_render_email_empty_list",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_construct_email.py defines function test_render_email_empty_list."
+    },
+    {
+      "source": "file:tests/test_construct_email.py",
+      "target": "function:tests/test_construct_email.py:test_render_email_author_truncation",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_construct_email.py defines function test_render_email_author_truncation."
+    },
+    {
+      "source": "file:tests/test_construct_email.py",
+      "target": "function:tests/test_construct_email.py:test_render_email_affiliation_truncation",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_construct_email.py defines function test_render_email_affiliation_truncation."
+    },
+    {
+      "source": "file:tests/test_construct_email.py",
+      "target": "function:tests/test_construct_email.py:test_render_email_no_affiliations",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_construct_email.py defines function test_render_email_no_affiliations."
+    },
+    {
+      "source": "file:tests/test_construct_email.py",
+      "target": "function:tests/test_construct_email.py:test_get_stars_low_score",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_construct_email.py defines function test_get_stars_low_score."
+    },
+    {
+      "source": "file:tests/test_construct_email.py",
+      "target": "function:tests/test_construct_email.py:test_get_stars_high_score",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_construct_email.py defines function test_get_stars_high_score."
+    },
+    {
+      "source": "file:tests/test_construct_email.py",
+      "target": "function:tests/test_construct_email.py:test_get_stars_mid_score",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_construct_email.py defines function test_get_stars_mid_score."
+    },
+    {
+      "source": "file:tests/test_construct_email.py",
+      "target": "function:tests/test_construct_email.py:test_get_block_html_contains_all_fields",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_construct_email.py defines function test_get_block_html_contains_all_fields."
+    },
+    {
+      "source": "file:tests/test_construct_email.py",
+      "target": "function:tests/test_construct_email.py:test_get_empty_html",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_construct_email.py defines function test_get_empty_html."
+    },
+    {
+      "source": "file:tests/test_protocol.py",
+      "target": "function:tests/test_protocol.py:llm_params",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_protocol.py defines function llm_params."
+    },
+    {
+      "source": "file:tests/test_protocol.py",
+      "target": "function:tests/test_protocol.py:test_tldr_returns_response",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_protocol.py defines function test_tldr_returns_response."
+    },
+    {
+      "source": "file:tests/test_protocol.py",
+      "target": "function:tests/test_protocol.py:test_tldr_without_abstract_or_fulltext",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_protocol.py defines function test_tldr_without_abstract_or_fulltext."
+    },
+    {
+      "source": "file:tests/test_protocol.py",
+      "target": "function:tests/test_protocol.py:test_tldr_falls_back_to_abstract_on_error",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_protocol.py defines function test_tldr_falls_back_to_abstract_on_error."
+    },
+    {
+      "source": "file:tests/test_protocol.py",
+      "target": "function:tests/test_protocol.py:test_tldr_truncates_long_prompt",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_protocol.py defines function test_tldr_truncates_long_prompt."
+    },
+    {
+      "source": "file:tests/test_protocol.py",
+      "target": "function:tests/test_protocol.py:test_affiliations_returns_parsed_list",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_protocol.py defines function test_affiliations_returns_parsed_list."
+    },
+    {
+      "source": "file:tests/test_protocol.py",
+      "target": "function:tests/test_protocol.py:test_affiliations_none_without_fulltext",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_protocol.py defines function test_affiliations_none_without_fulltext."
+    },
+    {
+      "source": "file:tests/test_protocol.py",
+      "target": "function:tests/test_protocol.py:test_affiliations_deduplicates",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_protocol.py defines function test_affiliations_deduplicates."
+    },
+    {
+      "source": "file:tests/test_protocol.py",
+      "target": "function:tests/test_protocol.py:test_affiliations_malformed_llm_output",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_protocol.py defines function test_affiliations_malformed_llm_output."
+    },
+    {
+      "source": "file:tests/test_protocol.py",
+      "target": "function:tests/test_protocol.py:test_affiliations_error_returns_none",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_protocol.py defines function test_affiliations_error_returns_none."
+    },
+    {
+      "source": "file:tests/test_utils.py",
+      "target": "class:tests/test_utils.py:TestGlobMatch",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_utils.py defines class TestGlobMatch."
+    },
+    {
+      "source": "class:tests/test_utils.py:TestGlobMatch",
+      "target": "function:tests/test_utils.py:TestGlobMatch.test_exact_match",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class TestGlobMatch contains method test_exact_match."
+    },
+    {
+      "source": "class:tests/test_utils.py:TestGlobMatch",
+      "target": "function:tests/test_utils.py:TestGlobMatch.test_wildcard_asterisk",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class TestGlobMatch contains method test_wildcard_asterisk."
+    },
+    {
+      "source": "class:tests/test_utils.py:TestGlobMatch",
+      "target": "function:tests/test_utils.py:TestGlobMatch.test_wildcard_question_mark",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class TestGlobMatch contains method test_wildcard_question_mark."
+    },
+    {
+      "source": "class:tests/test_utils.py:TestGlobMatch",
+      "target": "function:tests/test_utils.py:TestGlobMatch.test_character_classes",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class TestGlobMatch contains method test_character_classes."
+    },
+    {
+      "source": "class:tests/test_utils.py:TestGlobMatch",
+      "target": "function:tests/test_utils.py:TestGlobMatch.test_path_separators",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class TestGlobMatch contains method test_path_separators."
+    },
+    {
+      "source": "class:tests/test_utils.py:TestGlobMatch",
+      "target": "function:tests/test_utils.py:TestGlobMatch.test_complex_patterns",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class TestGlobMatch contains method test_complex_patterns."
+    },
+    {
+      "source": "class:tests/test_utils.py:TestGlobMatch",
+      "target": "function:tests/test_utils.py:TestGlobMatch.test_edge_cases",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class TestGlobMatch contains method test_edge_cases."
+    },
+    {
+      "source": "class:tests/test_utils.py:TestGlobMatch",
+      "target": "function:tests/test_utils.py:TestGlobMatch.test_partial_matches",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class TestGlobMatch contains method test_partial_matches."
+    },
+    {
+      "source": "class:tests/test_utils.py:TestGlobMatch",
+      "target": "function:tests/test_utils.py:TestGlobMatch.test_special_glob_characters",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class TestGlobMatch contains method test_special_glob_characters."
+    },
+    {
+      "source": "class:tests/test_utils.py:TestGlobMatch",
+      "target": "function:tests/test_utils.py:TestGlobMatch.test_numeric_patterns",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class TestGlobMatch contains method test_numeric_patterns."
+    },
+    {
+      "source": "class:tests/test_utils.py:TestGlobMatch",
+      "target": "function:tests/test_utils.py:TestGlobMatch.test_extension_patterns",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class TestGlobMatch contains method test_extension_patterns."
+    },
+    {
+      "source": "class:tests/test_utils.py:TestGlobMatch",
+      "target": "function:tests/test_utils.py:TestGlobMatch.test_recursive_wildcard",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class TestGlobMatch contains method test_recursive_wildcard."
+    },
+    {
+      "source": "file:tests/test_utils.py",
+      "target": "class:tests/test_utils.py:TestBm25Pick",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_utils.py defines class TestBm25Pick."
+    },
+    {
+      "source": "class:tests/test_utils.py:TestBm25Pick",
+      "target": "function:tests/test_utils.py:TestBm25Pick.test_picks_best_match",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class TestBm25Pick contains method test_picks_best_match."
+    },
+    {
+      "source": "class:tests/test_utils.py:TestBm25Pick",
+      "target": "function:tests/test_utils.py:TestBm25Pick.test_single_candidate",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class TestBm25Pick contains method test_single_candidate."
+    },
+    {
+      "source": "class:tests/test_utils.py:TestBm25Pick",
+      "target": "function:tests/test_utils.py:TestBm25Pick.test_empty_query_returns_first",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class TestBm25Pick contains method test_empty_query_returns_first."
+    },
+    {
+      "source": "file:tests/test_utils.py",
+      "target": "function:tests/test_utils.py:test_send_email_starttls_success",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_utils.py defines function test_send_email_starttls_success."
+    },
+    {
+      "source": "file:tests/test_utils.py",
+      "target": "function:tests/test_utils.py:test_send_email_falls_back_to_ssl",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_utils.py defines function test_send_email_falls_back_to_ssl."
+    },
+    {
+      "source": "file:tests/test_utils.py",
+      "target": "function:tests/test_utils.py:test_send_email_falls_back_to_plain",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_utils.py defines function test_send_email_falls_back_to_plain."
+    },
+    {
+      "source": "file:tests/test_utils.py",
+      "target": "function:tests/test_utils.py:make_tar",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_utils.py defines function make_tar."
+    },
+    {
+      "source": "file:tests/test_utils.py",
+      "target": "function:tests/test_utils.py:test_extract_tex_single_file",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_utils.py defines function test_extract_tex_single_file."
+    },
+    {
+      "source": "file:tests/test_utils.py",
+      "target": "function:tests/test_utils.py:test_extract_tex_with_input_resolution",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_utils.py defines function test_extract_tex_with_input_resolution."
+    },
+    {
+      "source": "file:tests/test_utils.py",
+      "target": "function:tests/test_utils.py:test_extract_tex_no_tex_files",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_utils.py defines function test_extract_tex_no_tex_files."
+    },
+    {
+      "source": "file:tests/test_utils.py",
+      "target": "function:tests/test_utils.py:test_extract_tex_not_a_tar",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_utils.py defines function test_extract_tex_not_a_tar."
+    },
+    {
+      "source": "file:tests/test_utils.py",
+      "target": "function:tests/test_utils.py:test_extract_tex_multiple_tex_no_bbl",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_utils.py defines function test_extract_tex_multiple_tex_no_bbl."
+    },
+    {
+      "source": "file:tests/test_utils.py",
+      "target": "function:tests/test_utils.py:test_extract_tex_multiple_document_blocks_bm25",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_utils.py defines function test_extract_tex_multiple_document_blocks_bm25."
+    },
+    {
+      "source": "file:tests/test_utils.py",
+      "target": "function:tests/test_utils.py:test_extract_tex_multiple_document_blocks_no_title",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_utils.py defines function test_extract_tex_multiple_document_blocks_no_title."
+    },
+    {
+      "source": "file:tests/reranker/conftest.py",
+      "target": "file:tests/canned_responses.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "tests/reranker/conftest.py imports tests/canned_responses.py."
+    },
+    {
+      "source": "file:tests/reranker/test_base_reranker.py",
+      "target": "file:tests/canned_responses.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "tests/reranker/test_base_reranker.py imports tests/canned_responses.py."
+    },
+    {
+      "source": "file:tests/retriever/test_biorxiv_retriever.py",
+      "target": "file:tests/canned_responses.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "tests/retriever/test_biorxiv_retriever.py imports tests/canned_responses.py."
+    },
+    {
+      "source": "file:tests/test_construct_email.py",
+      "target": "file:tests/canned_responses.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "tests/test_construct_email.py imports tests/canned_responses.py."
+    },
+    {
+      "source": "file:tests/test_protocol.py",
+      "target": "file:tests/canned_responses.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "tests/test_protocol.py imports tests/canned_responses.py."
+    },
+    {
+      "source": "file:tests/test_utils.py",
+      "target": "file:tests/canned_responses.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "tests/test_utils.py imports tests/canned_responses.py."
+    },
+    {
+      "source": "function:tests/canned_responses.py:_stub_chat_create",
+      "target": "function:tests/canned_responses.py:_make_chat_response",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "_stub_chat_create calls _make_chat_response."
+    },
+    {
+      "source": "function:tests/canned_responses.py:_stub_chat_create",
+      "target": "function:tests/canned_responses.py:_make_chat_response",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "_stub_chat_create calls _make_chat_response."
+    },
+    {
+      "source": "function:tests/reranker/conftest.py:patch_openai",
+      "target": "function:tests/canned_responses.py:make_stub_openai_client",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "patch_openai calls make_stub_openai_client."
+    },
+    {
+      "source": "function:tests/reranker/test_base_reranker.py:test_rerank_scores_and_sorts",
+      "target": "function:tests/canned_responses.py:make_sample_corpus",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_rerank_scores_and_sorts calls make_sample_corpus."
+    },
+    {
+      "source": "function:tests/reranker/test_base_reranker.py:test_rerank_scores_and_sorts",
+      "target": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_rerank_scores_and_sorts calls make_sample_paper."
+    },
+    {
+      "source": "function:tests/reranker/test_base_reranker.py:test_rerank_scores_and_sorts",
+      "target": "class:tests/reranker/test_base_reranker.py:StubReranker",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_rerank_scores_and_sorts calls StubReranker."
+    },
+    {
+      "source": "function:tests/reranker/test_base_reranker.py:test_rerank_time_decay_weighting",
+      "target": "function:tests/canned_responses.py:make_sample_corpus",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_rerank_time_decay_weighting calls make_sample_corpus."
+    },
+    {
+      "source": "function:tests/reranker/test_base_reranker.py:test_rerank_time_decay_weighting",
+      "target": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_rerank_time_decay_weighting calls make_sample_paper."
+    },
+    {
+      "source": "function:tests/reranker/test_base_reranker.py:test_rerank_time_decay_weighting",
+      "target": "class:tests/reranker/test_base_reranker.py:StubReranker",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_rerank_time_decay_weighting calls StubReranker."
+    },
+    {
+      "source": "function:tests/reranker/test_base_reranker.py:test_rerank_time_decay_weighting",
+      "target": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_rerank_time_decay_weighting calls make_sample_paper."
+    },
+    {
+      "source": "function:tests/reranker/test_base_reranker.py:test_rerank_time_decay_weighting",
+      "target": "class:tests/reranker/test_base_reranker.py:StubReranker",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_rerank_time_decay_weighting calls StubReranker."
+    },
+    {
+      "source": "function:tests/reranker/test_base_reranker.py:test_rerank_single_candidate_single_corpus",
+      "target": "function:tests/canned_responses.py:make_sample_corpus",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_rerank_single_candidate_single_corpus calls make_sample_corpus."
+    },
+    {
+      "source": "function:tests/reranker/test_base_reranker.py:test_rerank_single_candidate_single_corpus",
+      "target": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_rerank_single_candidate_single_corpus calls make_sample_paper."
+    },
+    {
+      "source": "function:tests/reranker/test_base_reranker.py:test_rerank_single_candidate_single_corpus",
+      "target": "class:tests/reranker/test_base_reranker.py:StubReranker",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_rerank_single_candidate_single_corpus calls StubReranker."
+    },
+    {
+      "source": "function:tests/test_construct_email.py:test_render_email_with_papers",
+      "target": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_render_email_with_papers calls make_sample_paper."
+    },
+    {
+      "source": "function:tests/test_construct_email.py:test_render_email_author_truncation",
+      "target": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_render_email_author_truncation calls make_sample_paper."
+    },
+    {
+      "source": "function:tests/test_construct_email.py:test_render_email_affiliation_truncation",
+      "target": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_render_email_affiliation_truncation calls make_sample_paper."
+    },
+    {
+      "source": "function:tests/test_construct_email.py:test_render_email_no_affiliations",
+      "target": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_render_email_no_affiliations calls make_sample_paper."
+    },
+    {
+      "source": "function:tests/test_protocol.py:test_tldr_returns_response",
+      "target": "function:tests/canned_responses.py:make_stub_openai_client",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_tldr_returns_response calls make_stub_openai_client."
+    },
+    {
+      "source": "function:tests/test_protocol.py:test_tldr_returns_response",
+      "target": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_tldr_returns_response calls make_sample_paper."
+    },
+    {
+      "source": "function:tests/test_protocol.py:test_tldr_without_abstract_or_fulltext",
+      "target": "function:tests/canned_responses.py:make_stub_openai_client",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_tldr_without_abstract_or_fulltext calls make_stub_openai_client."
+    },
+    {
+      "source": "function:tests/test_protocol.py:test_tldr_without_abstract_or_fulltext",
+      "target": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_tldr_without_abstract_or_fulltext calls make_sample_paper."
+    },
+    {
+      "source": "function:tests/test_protocol.py:test_tldr_falls_back_to_abstract_on_error",
+      "target": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_tldr_falls_back_to_abstract_on_error calls make_sample_paper."
+    },
+    {
+      "source": "function:tests/test_protocol.py:test_tldr_truncates_long_prompt",
+      "target": "function:tests/canned_responses.py:make_stub_openai_client",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_tldr_truncates_long_prompt calls make_stub_openai_client."
+    },
+    {
+      "source": "function:tests/test_protocol.py:test_tldr_truncates_long_prompt",
+      "target": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_tldr_truncates_long_prompt calls make_sample_paper."
+    },
+    {
+      "source": "function:tests/test_protocol.py:test_affiliations_returns_parsed_list",
+      "target": "function:tests/canned_responses.py:make_stub_openai_client",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_affiliations_returns_parsed_list calls make_stub_openai_client."
+    },
+    {
+      "source": "function:tests/test_protocol.py:test_affiliations_returns_parsed_list",
+      "target": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_affiliations_returns_parsed_list calls make_sample_paper."
+    },
+    {
+      "source": "function:tests/test_protocol.py:test_affiliations_none_without_fulltext",
+      "target": "function:tests/canned_responses.py:make_stub_openai_client",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_affiliations_none_without_fulltext calls make_stub_openai_client."
+    },
+    {
+      "source": "function:tests/test_protocol.py:test_affiliations_none_without_fulltext",
+      "target": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_affiliations_none_without_fulltext calls make_sample_paper."
+    },
+    {
+      "source": "function:tests/test_protocol.py:test_affiliations_deduplicates",
+      "target": "function:tests/canned_responses.py:make_stub_openai_client",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_affiliations_deduplicates calls make_stub_openai_client."
+    },
+    {
+      "source": "function:tests/test_protocol.py:test_affiliations_deduplicates",
+      "target": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_affiliations_deduplicates calls make_sample_paper."
+    },
+    {
+      "source": "function:tests/test_protocol.py:test_affiliations_malformed_llm_output",
+      "target": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_affiliations_malformed_llm_output calls make_sample_paper."
+    },
+    {
+      "source": "function:tests/test_protocol.py:test_affiliations_error_returns_none",
+      "target": "function:tests/canned_responses.py:make_sample_paper",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_affiliations_error_returns_none calls make_sample_paper."
+    },
+    {
+      "source": "function:tests/test_utils.py:test_send_email_starttls_success",
+      "target": "function:tests/canned_responses.py:make_stub_smtp",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_send_email_starttls_success calls make_stub_smtp."
+    },
+    {
+      "source": "function:tests/test_utils.py:test_send_email_falls_back_to_ssl",
+      "target": "function:tests/canned_responses.py:make_stub_smtp",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_send_email_falls_back_to_ssl calls make_stub_smtp."
+    },
+    {
+      "source": "function:tests/test_utils.py:test_send_email_falls_back_to_plain",
+      "target": "function:tests/canned_responses.py:make_stub_smtp",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_send_email_falls_back_to_plain calls make_stub_smtp."
+    },
+    {
+      "source": "function:tests/test_utils.py:test_extract_tex_single_file",
+      "target": "function:tests/test_utils.py:make_tar",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_extract_tex_single_file calls make_tar."
+    },
+    {
+      "source": "function:tests/test_utils.py:test_extract_tex_with_input_resolution",
+      "target": "function:tests/test_utils.py:make_tar",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_extract_tex_with_input_resolution calls make_tar."
+    },
+    {
+      "source": "function:tests/test_utils.py:test_extract_tex_no_tex_files",
+      "target": "function:tests/test_utils.py:make_tar",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_extract_tex_no_tex_files calls make_tar."
+    },
+    {
+      "source": "function:tests/test_utils.py:test_extract_tex_multiple_tex_no_bbl",
+      "target": "function:tests/test_utils.py:make_tar",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_extract_tex_multiple_tex_no_bbl calls make_tar."
+    },
+    {
+      "source": "function:tests/test_utils.py:test_extract_tex_multiple_document_blocks_bm25",
+      "target": "function:tests/test_utils.py:make_tar",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_extract_tex_multiple_document_blocks_bm25 calls make_tar."
+    },
+    {
+      "source": "function:tests/test_utils.py:test_extract_tex_multiple_document_blocks_no_title",
+      "target": "function:tests/test_utils.py:make_tar",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_extract_tex_multiple_document_blocks_no_title calls make_tar."
+    }
+  ]
+}

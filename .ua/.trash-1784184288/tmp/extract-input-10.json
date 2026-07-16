@@ -1,0 +1,28 @@
+{
+  "projectRoot": "E:\\Code\\zotero-arxiv-daily",
+  "batchFiles": [
+    {
+      "path": "config/base.yaml",
+      "language": "yaml",
+      "sizeLines": 51,
+      "fileCategory": "config"
+    },
+    {
+      "path": "config/custom.yaml",
+      "language": "yaml",
+      "sizeLines": 26,
+      "fileCategory": "config"
+    },
+    {
+      "path": "config/default.yaml",
+      "language": "yaml",
+      "sizeLines": 2,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    "config/base.yaml": [],
+    "config/custom.yaml": [],
+    "config/default.yaml": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "projectRoot": "E:\\Code\\zotero-arxiv-daily",
+  "batchFiles": [
+    {
+      "path": "tests/utils/mock_zotero/Dockerfile",
+      "language": "dockerfile",
+      "sizeLines": 30,
+      "fileCategory": "infra"
+    }
+  ],
+  "batchImportData": {
+    "tests/utils/mock_zotero/Dockerfile": []
+  }
+}

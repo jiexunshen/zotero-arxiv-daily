@@ -1,0 +1,1438 @@
+{
+  "nodes": [
+    {
+      "id": "file:.python-version",
+      "type": "file",
+      "name": ".python-version",
+      "filePath": ".python-version",
+      "summary": "Project file .python-version.",
+      "tags": [
+        "unknown",
+        "code"
+      ],
+      "complexity": "simple",
+      "language": "unknown",
+      "startLine": 1,
+      "endLine": 1,
+      "sizeLines": 1
+    },
+    {
+      "id": "document:assets/use_docker.md",
+      "type": "document",
+      "name": "use_docker.md",
+      "filePath": "assets/use_docker.md",
+      "summary": "Documentation asset describing usage, setup, project behavior, or repository guidance.",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate",
+      "language": "markdown",
+      "startLine": 1,
+      "endLine": 111,
+      "sizeLines": 111
+    },
+    {
+      "id": "file:src/zotero_arxiv_daily/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/zotero_arxiv_daily/__init__.py",
+      "summary": "Project file src/zotero_arxiv_daily/__init__.py.",
+      "tags": [
+        "python",
+        "code"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 1,
+      "sizeLines": 1
+    },
+    {
+      "id": "file:tests/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "tests/__init__.py",
+      "summary": "Test support or pytest coverage for the recommendation pipeline and its utility modules.",
+      "tags": [
+        "python",
+        "code",
+        "test"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 1,
+      "sizeLines": 1
+    },
+    {
+      "id": "file:tests/conftest.py",
+      "type": "file",
+      "name": "conftest.py",
+      "filePath": "tests/conftest.py",
+      "summary": "Test support or pytest coverage for the recommendation pipeline and its utility modules.",
+      "tags": [
+        "python",
+        "code",
+        "test",
+        "functions"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 58,
+      "sizeLines": 58
+    },
+    {
+      "id": "function:tests/conftest.py:_base_config",
+      "type": "function",
+      "name": "_base_config",
+      "filePath": "tests/conftest.py",
+      "summary": "Function _base_config.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 17,
+      "endLine": 49
+    },
+    {
+      "id": "function:tests/conftest.py:config",
+      "type": "function",
+      "name": "config",
+      "filePath": "tests/conftest.py",
+      "summary": "Function config with parameters _base_config.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 53,
+      "endLine": 58
+    },
+    {
+      "id": "file:tests/reranker/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "tests/reranker/__init__.py",
+      "summary": "Implements embedding-based reranking over candidate papers using local models or OpenAI-compatible APIs.",
+      "tags": [
+        "python",
+        "code",
+        "test"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 1,
+      "sizeLines": 1
+    },
+    {
+      "id": "file:tests/reranker/test_api_reranker.py",
+      "type": "file",
+      "name": "test_api_reranker.py",
+      "filePath": "tests/reranker/test_api_reranker.py",
+      "summary": "Implements embedding-based reranking over candidate papers using local models or OpenAI-compatible APIs.",
+      "tags": [
+        "python",
+        "code",
+        "test",
+        "functions"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 17,
+      "sizeLines": 17
+    },
+    {
+      "id": "function:tests/reranker/test_api_reranker.py:test_api_reranker_similarity_shape",
+      "type": "function",
+      "name": "test_api_reranker_similarity_shape",
+      "filePath": "tests/reranker/test_api_reranker.py",
+      "summary": "Function test_api_reranker_similarity_shape with parameters config, patch_openai.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 6,
+      "endLine": 9
+    },
+    {
+      "id": "function:tests/reranker/test_api_reranker.py:test_api_reranker_batching",
+      "type": "function",
+      "name": "test_api_reranker_batching",
+      "filePath": "tests/reranker/test_api_reranker.py",
+      "summary": "Function test_api_reranker_batching with parameters config, patch_openai.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 12,
+      "endLine": 17
+    },
+    {
+      "id": "file:tests/reranker/test_local_reranker.py",
+      "type": "file",
+      "name": "test_local_reranker.py",
+      "filePath": "tests/reranker/test_local_reranker.py",
+      "summary": "Implements embedding-based reranking over candidate papers using local models or OpenAI-compatible APIs.",
+      "tags": [
+        "python",
+        "code",
+        "test",
+        "functions"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 12,
+      "sizeLines": 12
+    },
+    {
+      "id": "function:tests/reranker/test_local_reranker.py:test_local_reranker",
+      "type": "function",
+      "name": "test_local_reranker",
+      "filePath": "tests/reranker/test_local_reranker.py",
+      "summary": "Function test_local_reranker with parameters config.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 9,
+      "endLine": 12
+    },
+    {
+      "id": "file:tests/retriever/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "tests/retriever/__init__.py",
+      "summary": "Implements paper retrieval abstractions and source-specific retrievers for arXiv, bioRxiv, and medRxiv.",
+      "tags": [
+        "python",
+        "code",
+        "test"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 1,
+      "sizeLines": 1
+    },
+    {
+      "id": "config:tests/retriever/arxiv_rss_example.xml",
+      "type": "config",
+      "name": "arxiv_rss_example.xml",
+      "filePath": "tests/retriever/arxiv_rss_example.xml",
+      "summary": "Implements paper retrieval abstractions and source-specific retrievers for arXiv, bioRxiv, and medRxiv.",
+      "tags": [
+        "xml",
+        "config",
+        "test"
+      ],
+      "complexity": "moderate",
+      "language": "xml",
+      "startLine": 1,
+      "endLine": 107,
+      "sizeLines": 107
+    },
+    {
+      "id": "file:tests/retriever/conftest.py",
+      "type": "file",
+      "name": "conftest.py",
+      "filePath": "tests/retriever/conftest.py",
+      "summary": "Implements paper retrieval abstractions and source-specific retrievers for arXiv, bioRxiv, and medRxiv.",
+      "tags": [
+        "python",
+        "code",
+        "test",
+        "functions"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 50,
+      "sizeLines": 50
+    },
+    {
+      "id": "function:tests/retriever/conftest.py:mock_feedparser",
+      "type": "function",
+      "name": "mock_feedparser",
+      "filePath": "tests/retriever/conftest.py",
+      "summary": "Function mock_feedparser with parameters monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 8,
+      "endLine": 28
+    },
+    {
+      "id": "function:tests/retriever/conftest.py:mock_biorxiv_api",
+      "type": "function",
+      "name": "mock_biorxiv_api",
+      "filePath": "tests/retriever/conftest.py",
+      "summary": "Function mock_biorxiv_api with parameters monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 32,
+      "endLine": 50
+    },
+    {
+      "id": "file:tests/retriever/test_arxiv_retriever.py",
+      "type": "file",
+      "name": "test_arxiv_retriever.py",
+      "filePath": "tests/retriever/test_arxiv_retriever.py",
+      "summary": "Implements paper retrieval abstractions and source-specific retrievers for arXiv, bioRxiv, and medRxiv.",
+      "tags": [
+        "python",
+        "code",
+        "test",
+        "functions"
+      ],
+      "complexity": "moderate",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 90,
+      "sizeLines": 90
+    },
+    {
+      "id": "function:tests/retriever/test_arxiv_retriever.py:_sleep_and_return",
+      "type": "function",
+      "name": "_sleep_and_return",
+      "filePath": "tests/retriever/test_arxiv_retriever.py",
+      "summary": "Function _sleep_and_return with parameters value, delay_seconds.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 12,
+      "endLine": 14
+    },
+    {
+      "id": "function:tests/retriever/test_arxiv_retriever.py:_raise_runtime_error",
+      "type": "function",
+      "name": "_raise_runtime_error",
+      "filePath": "tests/retriever/test_arxiv_retriever.py",
+      "summary": "Function _raise_runtime_error.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 17,
+      "endLine": 18
+    },
+    {
+      "id": "function:tests/retriever/test_arxiv_retriever.py:test_arxiv_retriever",
+      "type": "function",
+      "name": "test_arxiv_retriever",
+      "filePath": "tests/retriever/test_arxiv_retriever.py",
+      "summary": "Function test_arxiv_retriever with parameters config, mock_feedparser, monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 21,
+      "endLine": 63
+    },
+    {
+      "id": "function:tests/retriever/test_arxiv_retriever.py:test_run_with_hard_timeout_returns_value",
+      "type": "function",
+      "name": "test_run_with_hard_timeout_returns_value",
+      "filePath": "tests/retriever/test_arxiv_retriever.py",
+      "summary": "Function test_run_with_hard_timeout_returns_value.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 66,
+      "endLine": 70
+    },
+    {
+      "id": "function:tests/retriever/test_arxiv_retriever.py:test_run_with_hard_timeout_returns_none_on_timeout",
+      "type": "function",
+      "name": "test_run_with_hard_timeout_returns_none_on_timeout",
+      "filePath": "tests/retriever/test_arxiv_retriever.py",
+      "summary": "Function test_run_with_hard_timeout_returns_none_on_timeout with parameters monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 73,
+      "endLine": 80
+    },
+    {
+      "id": "function:tests/retriever/test_arxiv_retriever.py:test_run_with_hard_timeout_returns_none_on_failure",
+      "type": "function",
+      "name": "test_run_with_hard_timeout_returns_none_on_failure",
+      "filePath": "tests/retriever/test_arxiv_retriever.py",
+      "summary": "Function test_run_with_hard_timeout_returns_none_on_failure with parameters monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 83,
+      "endLine": 90
+    },
+    {
+      "id": "file:tests/retriever/test_base_retriever.py",
+      "type": "file",
+      "name": "test_base_retriever.py",
+      "filePath": "tests/retriever/test_base_retriever.py",
+      "summary": "Implements paper retrieval abstractions and source-specific retrievers for arXiv, bioRxiv, and medRxiv.",
+      "tags": [
+        "python",
+        "code",
+        "test",
+        "classes",
+        "functions"
+      ],
+      "complexity": "moderate",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 127,
+      "sizeLines": 127
+    },
+    {
+      "id": "class:tests/retriever/test_base_retriever.py:FailingTestRetriever",
+      "type": "class",
+      "name": "FailingTestRetriever",
+      "filePath": "tests/retriever/test_base_retriever.py",
+      "summary": "Class FailingTestRetriever in tests/retriever/test_base_retriever.py with methods _retrieve_raw_papers, convert_to_paper.",
+      "tags": [
+        "class",
+        "python",
+        "_retrieve_raw_papers",
+        "convert_to_paper"
+      ],
+      "complexity": "simple",
+      "startLine": 19,
+      "endLine": 41
+    },
+    {
+      "id": "function:tests/retriever/test_base_retriever.py:FailingTestRetriever._retrieve_raw_papers",
+      "type": "function",
+      "name": "FailingTestRetriever._retrieve_raw_papers",
+      "filePath": "tests/retriever/test_base_retriever.py",
+      "summary": "Method _retrieve_raw_papers on class FailingTestRetriever.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 19,
+      "endLine": 41
+    },
+    {
+      "id": "function:tests/retriever/test_base_retriever.py:FailingTestRetriever.convert_to_paper",
+      "type": "function",
+      "name": "FailingTestRetriever.convert_to_paper",
+      "filePath": "tests/retriever/test_base_retriever.py",
+      "summary": "Method convert_to_paper on class FailingTestRetriever.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 19,
+      "endLine": 41
+    },
+    {
+      "id": "class:tests/retriever/test_base_retriever.py:SerialTestRetriever",
+      "type": "class",
+      "name": "SerialTestRetriever",
+      "filePath": "tests/retriever/test_base_retriever.py",
+      "summary": "Class SerialTestRetriever in tests/retriever/test_base_retriever.py with methods __init__, _retrieve_raw_papers, convert_to_paper.",
+      "tags": [
+        "class",
+        "python",
+        "__init__",
+        "_retrieve_raw_papers",
+        "convert_to_paper"
+      ],
+      "complexity": "simple",
+      "startLine": 45,
+      "endLine": 61
+    },
+    {
+      "id": "function:tests/retriever/test_base_retriever.py:SerialTestRetriever.__init__",
+      "type": "function",
+      "name": "SerialTestRetriever.__init__",
+      "filePath": "tests/retriever/test_base_retriever.py",
+      "summary": "Method __init__ on class SerialTestRetriever.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 45,
+      "endLine": 61
+    },
+    {
+      "id": "function:tests/retriever/test_base_retriever.py:SerialTestRetriever._retrieve_raw_papers",
+      "type": "function",
+      "name": "SerialTestRetriever._retrieve_raw_papers",
+      "filePath": "tests/retriever/test_base_retriever.py",
+      "summary": "Method _retrieve_raw_papers on class SerialTestRetriever.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 45,
+      "endLine": 61
+    },
+    {
+      "id": "function:tests/retriever/test_base_retriever.py:SerialTestRetriever.convert_to_paper",
+      "type": "function",
+      "name": "SerialTestRetriever.convert_to_paper",
+      "filePath": "tests/retriever/test_base_retriever.py",
+      "summary": "Method convert_to_paper on class SerialTestRetriever.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 45,
+      "endLine": 61
+    },
+    {
+      "id": "class:tests/retriever/test_base_retriever.py:NoneRetriever",
+      "type": "class",
+      "name": "NoneRetriever",
+      "filePath": "tests/retriever/test_base_retriever.py",
+      "summary": "Class NoneRetriever in tests/retriever/test_base_retriever.py with methods _retrieve_raw_papers, convert_to_paper.",
+      "tags": [
+        "class",
+        "python",
+        "_retrieve_raw_papers",
+        "convert_to_paper"
+      ],
+      "complexity": "simple",
+      "startLine": 65,
+      "endLine": 70
+    },
+    {
+      "id": "function:tests/retriever/test_base_retriever.py:NoneRetriever._retrieve_raw_papers",
+      "type": "function",
+      "name": "NoneRetriever._retrieve_raw_papers",
+      "filePath": "tests/retriever/test_base_retriever.py",
+      "summary": "Method _retrieve_raw_papers on class NoneRetriever.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 65,
+      "endLine": 70
+    },
+    {
+      "id": "function:tests/retriever/test_base_retriever.py:NoneRetriever.convert_to_paper",
+      "type": "function",
+      "name": "NoneRetriever.convert_to_paper",
+      "filePath": "tests/retriever/test_base_retriever.py",
+      "summary": "Method convert_to_paper on class NoneRetriever.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 65,
+      "endLine": 70
+    },
+    {
+      "id": "function:tests/retriever/test_base_retriever.py:test_retrieve_papers_skips_conversion_errors",
+      "type": "function",
+      "name": "test_retrieve_papers_skips_conversion_errors",
+      "filePath": "tests/retriever/test_base_retriever.py",
+      "summary": "Function test_retrieve_papers_skips_conversion_errors with parameters config, monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 78,
+      "endLine": 84
+    },
+    {
+      "id": "function:tests/retriever/test_base_retriever.py:test_retrieve_papers_runs_serially",
+      "type": "function",
+      "name": "test_retrieve_papers_runs_serially",
+      "filePath": "tests/retriever/test_base_retriever.py",
+      "summary": "Function test_retrieve_papers_runs_serially with parameters config, monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 87,
+      "endLine": 95
+    },
+    {
+      "id": "function:tests/retriever/test_base_retriever.py:test_retrieve_papers_skips_none_results",
+      "type": "function",
+      "name": "test_retrieve_papers_skips_none_results",
+      "filePath": "tests/retriever/test_base_retriever.py",
+      "summary": "Function test_retrieve_papers_skips_none_results with parameters config, monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 98,
+      "endLine": 104
+    },
+    {
+      "id": "function:tests/retriever/test_base_retriever.py:test_retrieve_papers_empty_raw",
+      "type": "function",
+      "name": "test_retrieve_papers_empty_raw",
+      "filePath": "tests/retriever/test_base_retriever.py",
+      "summary": "Function test_retrieve_papers_empty_raw with parameters config, monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 107,
+      "endLine": 121
+    },
+    {
+      "id": "function:tests/retriever/test_base_retriever.py:test_get_retriever_cls_unknown",
+      "type": "function",
+      "name": "test_get_retriever_cls_unknown",
+      "filePath": "tests/retriever/test_base_retriever.py",
+      "summary": "Function test_get_retriever_cls_unknown.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 124,
+      "endLine": 127
+    },
+    {
+      "id": "file:tests/retriever/test_medrxiv_retriever.py",
+      "type": "file",
+      "name": "test_medrxiv_retriever.py",
+      "filePath": "tests/retriever/test_medrxiv_retriever.py",
+      "summary": "Implements paper retrieval abstractions and source-specific retrievers for arXiv, bioRxiv, and medRxiv.",
+      "tags": [
+        "python",
+        "code",
+        "test",
+        "functions"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 27,
+      "sizeLines": 27
+    },
+    {
+      "id": "function:tests/retriever/test_medrxiv_retriever.py:test_medrxiv_server_attribute",
+      "type": "function",
+      "name": "test_medrxiv_server_attribute",
+      "filePath": "tests/retriever/test_medrxiv_retriever.py",
+      "summary": "Function test_medrxiv_server_attribute with parameters config.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 8,
+      "endLine": 12
+    },
+    {
+      "id": "function:tests/retriever/test_medrxiv_retriever.py:test_medrxiv_pdf_url",
+      "type": "function",
+      "name": "test_medrxiv_pdf_url",
+      "filePath": "tests/retriever/test_medrxiv_retriever.py",
+      "summary": "Function test_medrxiv_pdf_url with parameters config.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 15,
+      "endLine": 27
+    },
+    {
+      "id": "file:tests/test_executor.py",
+      "type": "file",
+      "name": "test_executor.py",
+      "filePath": "tests/test_executor.py",
+      "summary": "Coordinates the Zotero fetch, source retrieval, reranking, TLDR generation, email rendering, and SMTP delivery pipeline.",
+      "tags": [
+        "python",
+        "code",
+        "pipeline",
+        "test",
+        "functions"
+      ],
+      "complexity": "complex",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 283,
+      "sizeLines": 283
+    },
+    {
+      "id": "function:tests/test_executor.py:test_normalize_path_patterns_rejects_single_string_for_include_path",
+      "type": "function",
+      "name": "test_normalize_path_patterns_rejects_single_string_for_include_path",
+      "filePath": "tests/test_executor.py",
+      "summary": "Function test_normalize_path_patterns_rejects_single_string_for_include_path.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 17,
+      "endLine": 19
+    },
+    {
+      "id": "function:tests/test_executor.py:test_normalize_path_patterns_accepts_list_config_for_include_path",
+      "type": "function",
+      "name": "test_normalize_path_patterns_accepts_list_config_for_include_path",
+      "filePath": "tests/test_executor.py",
+      "summary": "Function test_normalize_path_patterns_accepts_list_config_for_include_path.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 22,
+      "endLine": 27
+    },
+    {
+      "id": "function:tests/test_executor.py:test_normalize_path_patterns_rejects_single_string_for_ignore_path",
+      "type": "function",
+      "name": "test_normalize_path_patterns_rejects_single_string_for_ignore_path",
+      "filePath": "tests/test_executor.py",
+      "summary": "Function test_normalize_path_patterns_rejects_single_string_for_ignore_path.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 30,
+      "endLine": 32
+    },
+    {
+      "id": "function:tests/test_executor.py:test_normalize_path_patterns_accepts_list_config_for_ignore_path",
+      "type": "function",
+      "name": "test_normalize_path_patterns_accepts_list_config_for_ignore_path",
+      "filePath": "tests/test_executor.py",
+      "summary": "Function test_normalize_path_patterns_accepts_list_config_for_ignore_path.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 35,
+      "endLine": 37
+    },
+    {
+      "id": "function:tests/test_executor.py:test_normalize_path_patterns_accepts_empty_list",
+      "type": "function",
+      "name": "test_normalize_path_patterns_accepts_empty_list",
+      "filePath": "tests/test_executor.py",
+      "summary": "Function test_normalize_path_patterns_accepts_empty_list.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 40,
+      "endLine": 41
+    },
+    {
+      "id": "function:tests/test_executor.py:test_normalize_path_patterns_accepts_none",
+      "type": "function",
+      "name": "test_normalize_path_patterns_accepts_none",
+      "filePath": "tests/test_executor.py",
+      "summary": "Function test_normalize_path_patterns_accepts_none.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 44,
+      "endLine": 45
+    },
+    {
+      "id": "function:tests/test_executor.py:_make_executor",
+      "type": "function",
+      "name": "_make_executor",
+      "filePath": "tests/test_executor.py",
+      "summary": "Function _make_executor with parameters include_patterns, ignore_patterns.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 53,
+      "endLine": 57
+    },
+    {
+      "id": "function:tests/test_executor.py:test_filter_corpus_matches_any_path_against_any_pattern",
+      "type": "function",
+      "name": "test_filter_corpus_matches_any_path_against_any_pattern",
+      "filePath": "tests/test_executor.py",
+      "summary": "Function test_filter_corpus_matches_any_path_against_any_pattern.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 60,
+      "endLine": 68
+    },
+    {
+      "id": "function:tests/test_executor.py:test_filter_corpus_excludes_papers_matching_ignore_path",
+      "type": "function",
+      "name": "test_filter_corpus_excludes_papers_matching_ignore_path",
+      "filePath": "tests/test_executor.py",
+      "summary": "Function test_filter_corpus_excludes_papers_matching_ignore_path.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 71,
+      "endLine": 79
+    },
+    {
+      "id": "function:tests/test_executor.py:test_filter_corpus_ignore_path_takes_precedence_over_include_path",
+      "type": "function",
+      "name": "test_filter_corpus_ignore_path_takes_precedence_over_include_path",
+      "filePath": "tests/test_executor.py",
+      "summary": "Function test_filter_corpus_ignore_path_takes_precedence_over_include_path.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 82,
+      "endLine": 89
+    },
+    {
+      "id": "function:tests/test_executor.py:test_filter_corpus_no_filters_returns_all",
+      "type": "function",
+      "name": "test_filter_corpus_no_filters_returns_all",
+      "filePath": "tests/test_executor.py",
+      "summary": "Function test_filter_corpus_no_filters_returns_all.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 92,
+      "endLine": 99
+    },
+    {
+      "id": "function:tests/test_executor.py:test_fetch_zotero_corpus",
+      "type": "function",
+      "name": "test_fetch_zotero_corpus",
+      "filePath": "tests/test_executor.py",
+      "summary": "Function test_fetch_zotero_corpus with parameters config, monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 107,
+      "endLine": 119
+    },
+    {
+      "id": "function:tests/test_executor.py:test_fetch_zotero_corpus_paper_with_zero_collections",
+      "type": "function",
+      "name": "test_fetch_zotero_corpus_paper_with_zero_collections",
+      "filePath": "tests/test_executor.py",
+      "summary": "Function test_fetch_zotero_corpus_paper_with_zero_collections with parameters config, monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 122,
+      "endLine": 143
+    },
+    {
+      "id": "function:tests/test_executor.py:test_run_end_to_end",
+      "type": "function",
+      "name": "test_run_end_to_end",
+      "filePath": "tests/test_executor.py",
+      "summary": "Function test_run_end_to_end with parameters config, monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 151,
+      "endLine": 209
+    },
+    {
+      "id": "function:tests/test_executor.py:test_run_no_papers_send_empty_false",
+      "type": "function",
+      "name": "test_run_no_papers_send_empty_false",
+      "filePath": "tests/test_executor.py",
+      "summary": "Function test_run_no_papers_send_empty_false with parameters config, monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 212,
+      "endLine": 245
+    },
+    {
+      "id": "function:tests/test_executor.py:test_run_no_papers_send_empty_true",
+      "type": "function",
+      "name": "test_run_no_papers_send_empty_true",
+      "filePath": "tests/test_executor.py",
+      "summary": "Function test_run_no_papers_send_empty_true with parameters config, monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 248,
+      "endLine": 283
+    },
+    {
+      "id": "file:tests/test_main.py",
+      "type": "file",
+      "name": "test_main.py",
+      "filePath": "tests/test_main.py",
+      "summary": "Test support or pytest coverage for the recommendation pipeline and its utility modules.",
+      "tags": [
+        "python",
+        "code",
+        "test",
+        "functions"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 61,
+      "sizeLines": 61
+    },
+    {
+      "id": "function:tests/test_main.py:_clear_hydra",
+      "type": "function",
+      "name": "_clear_hydra",
+      "filePath": "tests/test_main.py",
+      "summary": "Function _clear_hydra.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 13,
+      "endLine": 17
+    },
+    {
+      "id": "function:tests/test_main.py:test_main_creates_executor_and_runs",
+      "type": "function",
+      "name": "test_main_creates_executor_and_runs",
+      "filePath": "tests/test_main.py",
+      "summary": "Function test_main_creates_executor_and_runs with parameters config, monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 20,
+      "endLine": 40
+    },
+    {
+      "id": "function:tests/test_main.py:test_main_debug_logging",
+      "type": "function",
+      "name": "test_main_debug_logging",
+      "filePath": "tests/test_main.py",
+      "summary": "Function test_main_debug_logging with parameters config, monkeypatch.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 43,
+      "endLine": 61
+    },
+    {
+      "id": "file:tests/utils/mock_openai/openai_server.py",
+      "type": "file",
+      "name": "openai_server.py",
+      "filePath": "tests/utils/mock_openai/openai_server.py",
+      "summary": "Test support or pytest coverage for the recommendation pipeline and its utility modules.",
+      "tags": [
+        "python",
+        "code",
+        "test",
+        "functions"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 53,
+      "sizeLines": 53
+    },
+    {
+      "id": "function:tests/utils/mock_openai/openai_server.py:chat_completions",
+      "type": "function",
+      "name": "chat_completions",
+      "filePath": "tests/utils/mock_openai/openai_server.py",
+      "summary": "Function chat_completions with parameters request.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 6,
+      "endLine": 39
+    },
+    {
+      "id": "function:tests/utils/mock_openai/openai_server.py:embeddings",
+      "type": "function",
+      "name": "embeddings",
+      "filePath": "tests/utils/mock_openai/openai_server.py",
+      "summary": "Function embeddings with parameters request.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 42,
+      "endLine": 50
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:tests/conftest.py",
+      "target": "function:tests/conftest.py:_base_config",
+      "type": "contains",
+      "weight": 1,
+      "description": "conftest.py defines function _base_config."
+    },
+    {
+      "source": "file:tests/conftest.py",
+      "target": "function:tests/conftest.py:config",
+      "type": "contains",
+      "weight": 1,
+      "description": "conftest.py defines function config."
+    },
+    {
+      "source": "file:tests/reranker/test_api_reranker.py",
+      "target": "function:tests/reranker/test_api_reranker.py:test_api_reranker_similarity_shape",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_api_reranker.py defines function test_api_reranker_similarity_shape."
+    },
+    {
+      "source": "file:tests/reranker/test_api_reranker.py",
+      "target": "function:tests/reranker/test_api_reranker.py:test_api_reranker_batching",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_api_reranker.py defines function test_api_reranker_batching."
+    },
+    {
+      "source": "file:tests/reranker/test_local_reranker.py",
+      "target": "function:tests/reranker/test_local_reranker.py:test_local_reranker",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_local_reranker.py defines function test_local_reranker."
+    },
+    {
+      "source": "file:tests/retriever/conftest.py",
+      "target": "function:tests/retriever/conftest.py:mock_feedparser",
+      "type": "contains",
+      "weight": 1,
+      "description": "conftest.py defines function mock_feedparser."
+    },
+    {
+      "source": "file:tests/retriever/conftest.py",
+      "target": "function:tests/retriever/conftest.py:mock_biorxiv_api",
+      "type": "contains",
+      "weight": 1,
+      "description": "conftest.py defines function mock_biorxiv_api."
+    },
+    {
+      "source": "file:tests/retriever/test_arxiv_retriever.py",
+      "target": "function:tests/retriever/test_arxiv_retriever.py:_sleep_and_return",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_arxiv_retriever.py defines function _sleep_and_return."
+    },
+    {
+      "source": "file:tests/retriever/test_arxiv_retriever.py",
+      "target": "function:tests/retriever/test_arxiv_retriever.py:_raise_runtime_error",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_arxiv_retriever.py defines function _raise_runtime_error."
+    },
+    {
+      "source": "file:tests/retriever/test_arxiv_retriever.py",
+      "target": "function:tests/retriever/test_arxiv_retriever.py:test_arxiv_retriever",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_arxiv_retriever.py defines function test_arxiv_retriever."
+    },
+    {
+      "source": "file:tests/retriever/test_arxiv_retriever.py",
+      "target": "function:tests/retriever/test_arxiv_retriever.py:test_run_with_hard_timeout_returns_value",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_arxiv_retriever.py defines function test_run_with_hard_timeout_returns_value."
+    },
+    {
+      "source": "file:tests/retriever/test_arxiv_retriever.py",
+      "target": "function:tests/retriever/test_arxiv_retriever.py:test_run_with_hard_timeout_returns_none_on_timeout",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_arxiv_retriever.py defines function test_run_with_hard_timeout_returns_none_on_timeout."
+    },
+    {
+      "source": "file:tests/retriever/test_arxiv_retriever.py",
+      "target": "function:tests/retriever/test_arxiv_retriever.py:test_run_with_hard_timeout_returns_none_on_failure",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_arxiv_retriever.py defines function test_run_with_hard_timeout_returns_none_on_failure."
+    },
+    {
+      "source": "file:tests/retriever/test_base_retriever.py",
+      "target": "class:tests/retriever/test_base_retriever.py:FailingTestRetriever",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_base_retriever.py defines class FailingTestRetriever."
+    },
+    {
+      "source": "class:tests/retriever/test_base_retriever.py:FailingTestRetriever",
+      "target": "function:tests/retriever/test_base_retriever.py:FailingTestRetriever._retrieve_raw_papers",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class FailingTestRetriever contains method _retrieve_raw_papers."
+    },
+    {
+      "source": "class:tests/retriever/test_base_retriever.py:FailingTestRetriever",
+      "target": "function:tests/retriever/test_base_retriever.py:FailingTestRetriever.convert_to_paper",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class FailingTestRetriever contains method convert_to_paper."
+    },
+    {
+      "source": "file:tests/retriever/test_base_retriever.py",
+      "target": "class:tests/retriever/test_base_retriever.py:SerialTestRetriever",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_base_retriever.py defines class SerialTestRetriever."
+    },
+    {
+      "source": "class:tests/retriever/test_base_retriever.py:SerialTestRetriever",
+      "target": "function:tests/retriever/test_base_retriever.py:SerialTestRetriever.__init__",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class SerialTestRetriever contains method __init__."
+    },
+    {
+      "source": "class:tests/retriever/test_base_retriever.py:SerialTestRetriever",
+      "target": "function:tests/retriever/test_base_retriever.py:SerialTestRetriever._retrieve_raw_papers",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class SerialTestRetriever contains method _retrieve_raw_papers."
+    },
+    {
+      "source": "class:tests/retriever/test_base_retriever.py:SerialTestRetriever",
+      "target": "function:tests/retriever/test_base_retriever.py:SerialTestRetriever.convert_to_paper",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class SerialTestRetriever contains method convert_to_paper."
+    },
+    {
+      "source": "file:tests/retriever/test_base_retriever.py",
+      "target": "class:tests/retriever/test_base_retriever.py:NoneRetriever",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_base_retriever.py defines class NoneRetriever."
+    },
+    {
+      "source": "class:tests/retriever/test_base_retriever.py:NoneRetriever",
+      "target": "function:tests/retriever/test_base_retriever.py:NoneRetriever._retrieve_raw_papers",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class NoneRetriever contains method _retrieve_raw_papers."
+    },
+    {
+      "source": "class:tests/retriever/test_base_retriever.py:NoneRetriever",
+      "target": "function:tests/retriever/test_base_retriever.py:NoneRetriever.convert_to_paper",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class NoneRetriever contains method convert_to_paper."
+    },
+    {
+      "source": "file:tests/retriever/test_base_retriever.py",
+      "target": "function:tests/retriever/test_base_retriever.py:test_retrieve_papers_skips_conversion_errors",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_base_retriever.py defines function test_retrieve_papers_skips_conversion_errors."
+    },
+    {
+      "source": "file:tests/retriever/test_base_retriever.py",
+      "target": "function:tests/retriever/test_base_retriever.py:test_retrieve_papers_runs_serially",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_base_retriever.py defines function test_retrieve_papers_runs_serially."
+    },
+    {
+      "source": "file:tests/retriever/test_base_retriever.py",
+      "target": "function:tests/retriever/test_base_retriever.py:test_retrieve_papers_skips_none_results",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_base_retriever.py defines function test_retrieve_papers_skips_none_results."
+    },
+    {
+      "source": "file:tests/retriever/test_base_retriever.py",
+      "target": "function:tests/retriever/test_base_retriever.py:test_retrieve_papers_empty_raw",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_base_retriever.py defines function test_retrieve_papers_empty_raw."
+    },
+    {
+      "source": "file:tests/retriever/test_base_retriever.py",
+      "target": "function:tests/retriever/test_base_retriever.py:test_get_retriever_cls_unknown",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_base_retriever.py defines function test_get_retriever_cls_unknown."
+    },
+    {
+      "source": "file:tests/retriever/test_medrxiv_retriever.py",
+      "target": "function:tests/retriever/test_medrxiv_retriever.py:test_medrxiv_server_attribute",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_medrxiv_retriever.py defines function test_medrxiv_server_attribute."
+    },
+    {
+      "source": "file:tests/retriever/test_medrxiv_retriever.py",
+      "target": "function:tests/retriever/test_medrxiv_retriever.py:test_medrxiv_pdf_url",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_medrxiv_retriever.py defines function test_medrxiv_pdf_url."
+    },
+    {
+      "source": "file:tests/test_executor.py",
+      "target": "function:tests/test_executor.py:test_normalize_path_patterns_rejects_single_string_for_include_path",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_executor.py defines function test_normalize_path_patterns_rejects_single_string_for_include_path."
+    },
+    {
+      "source": "file:tests/test_executor.py",
+      "target": "function:tests/test_executor.py:test_normalize_path_patterns_accepts_list_config_for_include_path",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_executor.py defines function test_normalize_path_patterns_accepts_list_config_for_include_path."
+    },
+    {
+      "source": "file:tests/test_executor.py",
+      "target": "function:tests/test_executor.py:test_normalize_path_patterns_rejects_single_string_for_ignore_path",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_executor.py defines function test_normalize_path_patterns_rejects_single_string_for_ignore_path."
+    },
+    {
+      "source": "file:tests/test_executor.py",
+      "target": "function:tests/test_executor.py:test_normalize_path_patterns_accepts_list_config_for_ignore_path",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_executor.py defines function test_normalize_path_patterns_accepts_list_config_for_ignore_path."
+    },
+    {
+      "source": "file:tests/test_executor.py",
+      "target": "function:tests/test_executor.py:test_normalize_path_patterns_accepts_empty_list",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_executor.py defines function test_normalize_path_patterns_accepts_empty_list."
+    },
+    {
+      "source": "file:tests/test_executor.py",
+      "target": "function:tests/test_executor.py:test_normalize_path_patterns_accepts_none",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_executor.py defines function test_normalize_path_patterns_accepts_none."
+    },
+    {
+      "source": "file:tests/test_executor.py",
+      "target": "function:tests/test_executor.py:_make_executor",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_executor.py defines function _make_executor."
+    },
+    {
+      "source": "file:tests/test_executor.py",
+      "target": "function:tests/test_executor.py:test_filter_corpus_matches_any_path_against_any_pattern",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_executor.py defines function test_filter_corpus_matches_any_path_against_any_pattern."
+    },
+    {
+      "source": "file:tests/test_executor.py",
+      "target": "function:tests/test_executor.py:test_filter_corpus_excludes_papers_matching_ignore_path",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_executor.py defines function test_filter_corpus_excludes_papers_matching_ignore_path."
+    },
+    {
+      "source": "file:tests/test_executor.py",
+      "target": "function:tests/test_executor.py:test_filter_corpus_ignore_path_takes_precedence_over_include_path",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_executor.py defines function test_filter_corpus_ignore_path_takes_precedence_over_include_path."
+    },
+    {
+      "source": "file:tests/test_executor.py",
+      "target": "function:tests/test_executor.py:test_filter_corpus_no_filters_returns_all",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_executor.py defines function test_filter_corpus_no_filters_returns_all."
+    },
+    {
+      "source": "file:tests/test_executor.py",
+      "target": "function:tests/test_executor.py:test_fetch_zotero_corpus",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_executor.py defines function test_fetch_zotero_corpus."
+    },
+    {
+      "source": "file:tests/test_executor.py",
+      "target": "function:tests/test_executor.py:test_fetch_zotero_corpus_paper_with_zero_collections",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_executor.py defines function test_fetch_zotero_corpus_paper_with_zero_collections."
+    },
+    {
+      "source": "file:tests/test_executor.py",
+      "target": "function:tests/test_executor.py:test_run_end_to_end",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_executor.py defines function test_run_end_to_end."
+    },
+    {
+      "source": "file:tests/test_executor.py",
+      "target": "function:tests/test_executor.py:test_run_no_papers_send_empty_false",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_executor.py defines function test_run_no_papers_send_empty_false."
+    },
+    {
+      "source": "file:tests/test_executor.py",
+      "target": "function:tests/test_executor.py:test_run_no_papers_send_empty_true",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_executor.py defines function test_run_no_papers_send_empty_true."
+    },
+    {
+      "source": "file:tests/test_main.py",
+      "target": "function:tests/test_main.py:_clear_hydra",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_main.py defines function _clear_hydra."
+    },
+    {
+      "source": "file:tests/test_main.py",
+      "target": "function:tests/test_main.py:test_main_creates_executor_and_runs",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_main.py defines function test_main_creates_executor_and_runs."
+    },
+    {
+      "source": "file:tests/test_main.py",
+      "target": "function:tests/test_main.py:test_main_debug_logging",
+      "type": "contains",
+      "weight": 1,
+      "description": "test_main.py defines function test_main_debug_logging."
+    },
+    {
+      "source": "file:tests/utils/mock_openai/openai_server.py",
+      "target": "function:tests/utils/mock_openai/openai_server.py:chat_completions",
+      "type": "contains",
+      "weight": 1,
+      "description": "openai_server.py defines function chat_completions."
+    },
+    {
+      "source": "file:tests/utils/mock_openai/openai_server.py",
+      "target": "function:tests/utils/mock_openai/openai_server.py:embeddings",
+      "type": "contains",
+      "weight": 1,
+      "description": "openai_server.py defines function embeddings."
+    },
+    {
+      "source": "function:tests/retriever/test_base_retriever.py:test_retrieve_papers_skips_conversion_errors",
+      "target": "class:tests/retriever/test_base_retriever.py:FailingTestRetriever",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_retrieve_papers_skips_conversion_errors calls FailingTestRetriever."
+    },
+    {
+      "source": "function:tests/retriever/test_base_retriever.py:test_retrieve_papers_runs_serially",
+      "target": "class:tests/retriever/test_base_retriever.py:SerialTestRetriever",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_retrieve_papers_runs_serially calls SerialTestRetriever."
+    },
+    {
+      "source": "function:tests/retriever/test_base_retriever.py:test_retrieve_papers_skips_none_results",
+      "target": "class:tests/retriever/test_base_retriever.py:NoneRetriever",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_retrieve_papers_skips_none_results calls NoneRetriever."
+    },
+    {
+      "source": "function:tests/test_executor.py:test_filter_corpus_matches_any_path_against_any_pattern",
+      "target": "function:tests/test_executor.py:_make_executor",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_filter_corpus_matches_any_path_against_any_pattern calls _make_executor."
+    },
+    {
+      "source": "function:tests/test_executor.py:test_filter_corpus_excludes_papers_matching_ignore_path",
+      "target": "function:tests/test_executor.py:_make_executor",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_filter_corpus_excludes_papers_matching_ignore_path calls _make_executor."
+    },
+    {
+      "source": "function:tests/test_executor.py:test_filter_corpus_ignore_path_takes_precedence_over_include_path",
+      "target": "function:tests/test_executor.py:_make_executor",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_filter_corpus_ignore_path_takes_precedence_over_include_path calls _make_executor."
+    },
+    {
+      "source": "function:tests/test_executor.py:test_filter_corpus_no_filters_returns_all",
+      "target": "function:tests/test_executor.py:_make_executor",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "test_filter_corpus_no_filters_returns_all calls _make_executor."
+    }
+  ]
+}

@@ -5,7 +5,7 @@ from datetime import datetime
 import pytest
 from omegaconf import OmegaConf
 
-from zotero_arxiv_daily.executor import Executor, normalize_path_patterns
+from zotero_arxiv_daily.executor import Executor, build_zotero_taxonomy, normalize_path_patterns
 from zotero_arxiv_daily.protocol import CorpusPaper
 
 
@@ -43,6 +43,21 @@ def test_normalize_path_patterns_accepts_empty_list():
 
 def test_normalize_path_patterns_accepts_none():
     assert normalize_path_patterns(None, "include_path") is None
+
+
+def test_build_zotero_taxonomy_counts_existing_collection_paths():
+    corpus = [
+        CorpusPaper(title="A", abstract="", added_date=datetime(2026, 1, 1), paths=["Agent/效率 Efficiency", "Agent/效率 Efficiency/规划 Planning"]),
+        CorpusPaper(title="B", abstract="", added_date=datetime(2026, 1, 2), paths=["Agent/效率 Efficiency/规划 Planning"]),
+        CorpusPaper(title="C", abstract="", added_date=datetime(2026, 1, 3), paths=[]),
+    ]
+
+    taxonomy = build_zotero_taxonomy(corpus)
+
+    assert taxonomy == [
+        {"path": "Agent/效率 Efficiency/规划 Planning", "count": 2},
+        {"path": "Agent/效率 Efficiency", "count": 1},
+    ]
 
 
 # ---------------------------------------------------------------------------

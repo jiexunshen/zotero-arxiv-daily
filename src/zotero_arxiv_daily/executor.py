@@ -11,6 +11,7 @@ from .construct_email import render_email
 from .utils import send_email
 from openai import OpenAI
 from tqdm import tqdm
+from collections import Counter
 
 
 def normalize_path_patterns(patterns: list[str] | ListConfig | None, config_key: str) -> list[str] | None:
@@ -27,6 +28,14 @@ def normalize_path_patterns(patterns: list[str] | ListConfig | None, config_key:
         raise TypeError(f"config.zotero.{config_key} must contain only glob pattern strings.")
 
     return list(patterns)
+
+
+def build_zotero_taxonomy(corpus: list[CorpusPaper]) -> list[dict]:
+    path_counts = Counter(path for paper in corpus for path in paper.paths)
+    return [
+        {"path": path, "count": count}
+        for path, count in sorted(path_counts.items(), key=lambda item: (-item[1], item[0]))
+    ]
 
 
 class Executor:
@@ -96,6 +105,7 @@ class Executor:
         if len(corpus) == 0:
             logger.error(f"No zotero papers found. Please check your zotero settings:\n{self.config.zotero}")
             return
+        zotero_taxonomy = build_zotero_taxonomy(corpus)
         all_papers = []
         for source, retriever in self.retrievers.items():
             logger.info(f"Retrieving {source} papers...")
@@ -115,6 +125,8 @@ class Executor:
             for p in tqdm(reranked_papers):
                 p.generate_tldr(self.openai_client, self.config.llm)
                 p.generate_affiliations(self.openai_client, self.config.llm)
+                if self.config.llm.get("enable_deep_analysis", True):
+                    p.generate_analysis(self.openai_client, self.config.llm, zotero_taxonomy)
         elif not self.config.executor.send_empty:
             logger.info("No new papers found. No email will be sent.")
             return

@@ -1,0 +1,113 @@
+{
+  "scriptCompleted": true,
+  "stats": {
+    "filesScanned": 54,
+    "filesWithImports": 18,
+    "totalEdges": 31
+  },
+  "importMap": {
+    ".github/copilot-instructions.md": [],
+    ".github/FUNDING.yml": [],
+    ".github/keep-alive.txt": [],
+    ".github/workflows/ci.yml": [],
+    ".github/workflows/keep-alive.yml": [],
+    ".github/workflows/main.yml": [],
+    ".github/workflows/test.yml": [],
+    ".python-version": [],
+    "AGENTS.md": [],
+    "assets/use_docker.md": [],
+    "CLAUDE.md": [],
+    "config/base.yaml": [],
+    "config/custom.yaml": [],
+    "config/default.yaml": [],
+    "pyproject.toml": [],
+    "README.md": [],
+    "src/zotero_arxiv_daily/__init__.py": [],
+    "src/zotero_arxiv_daily/construct_email.py": [
+      "src/zotero_arxiv_daily/protocol.py"
+    ],
+    "src/zotero_arxiv_daily/executor.py": [
+      "src/zotero_arxiv_daily/construct_email.py",
+      "src/zotero_arxiv_daily/protocol.py",
+      "src/zotero_arxiv_daily/reranker/__init__.py",
+      "src/zotero_arxiv_daily/retriever/__init__.py",
+      "src/zotero_arxiv_daily/utils.py"
+    ],
+    "src/zotero_arxiv_daily/main.py": [
+      "src/zotero_arxiv_daily/executor.py"
+    ],
+    "src/zotero_arxiv_daily/protocol.py": [],
+    "src/zotero_arxiv_daily/reranker/__init__.py": [
+      "src/zotero_arxiv_daily/reranker/api.py",
+      "src/zotero_arxiv_daily/reranker/base.py",
+      "src/zotero_arxiv_daily/reranker/local.py"
+    ],
+    "src/zotero_arxiv_daily/reranker/api.py": [
+      "src/zotero_arxiv_daily/reranker/base.py"
+    ],
+    "src/zotero_arxiv_daily/reranker/base.py": [
+      "src/zotero_arxiv_daily/protocol.py"
+    ],
+    "src/zotero_arxiv_daily/reranker/local.py": [
+      "src/zotero_arxiv_daily/reranker/base.py"
+    ],
+    "src/zotero_arxiv_daily/retriever/__init__.py": [
+      "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "src/zotero_arxiv_daily/retriever/base.py",
+      "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py",
+      "src/zotero_arxiv_daily/retriever/medrxiv_retriever.py"
+    ],
+    "src/zotero_arxiv_daily/retriever/arxiv_retriever.py": [
+      "src/zotero_arxiv_daily/protocol.py",
+      "src/zotero_arxiv_daily/retriever/base.py",
+      "src/zotero_arxiv_daily/utils.py"
+    ],
+    "src/zotero_arxiv_daily/retriever/base.py": [
+      "src/zotero_arxiv_daily/protocol.py"
+    ],
+    "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py": [
+      "src/zotero_arxiv_daily/protocol.py",
+      "src/zotero_arxiv_daily/retriever/base.py"
+    ],
+    "src/zotero_arxiv_daily/retriever/medrxiv_retriever.py": [
+      "src/zotero_arxiv_daily/retriever/base.py",
+      "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py"
+    ],
+    "src/zotero_arxiv_daily/utils.py": [],
+    "tests/__init__.py": [],
+    "tests/canned_responses.py": [],
+    "tests/conftest.py": [],
+    "tests/reranker/__init__.py": [],
+    "tests/reranker/conftest.py": [
+      "tests/canned_responses.py"
+    ],
+    "tests/reranker/test_api_reranker.py": [],
+    "tests/reranker/test_base_reranker.py": [
+      "tests/canned_responses.py"
+    ],
+    "tests/reranker/test_local_reranker.py": [],
+    "tests/retriever/__init__.py": [],
+    "tests/retriever/arxiv_rss_example.xml": [],
+    "tests/retriever/conftest.py": [],
+    "tests/retriever/test_arxiv_retriever.py": [],
+    "tests/retriever/test_base_retriever.py": [],
+    "tests/retriever/test_biorxiv_retriever.py": [
+      "tests/canned_responses.py"
+    ],
+    "tests/retriever/test_medrxiv_retriever.py": [],
+    "tests/test_construct_email.py": [
+      "tests/canned_responses.py"
+    ],
+    "tests/test_executor.py": [],
+    "tests/test_main.py": [],
+    "tests/test_protocol.py": [
+      "tests/canned_responses.py"
+    ],
+    "tests/test_utils.py": [
+      "tests/canned_responses.py"
+    ],
+    "tests/utils/mock_openai/Dockerfile": [],
+    "tests/utils/mock_openai/openai_server.py": [],
+    "tests/utils/mock_zotero/Dockerfile": []
+  }
+}

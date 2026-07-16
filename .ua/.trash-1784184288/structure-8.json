@@ -1,0 +1,162 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": ".github/FUNDING.yml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 15,
+      "nonEmptyLines": 14,
+      "sections": [
+        {
+          "heading": "github",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "patreon",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "open_collective",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "ko_fi",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "tidelift",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "community_bridge",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "liberapay",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "issuehunt",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "lfx_crowdfunding",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "polar",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "buy_me_a_coffee",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "thanks_dev",
+          "level": 1,
+          "line": 14
+        },
+        {
+          "heading": "custom",
+          "level": 1,
+          "line": 15
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": ".github/copilot-instructions.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 74,
+      "nonEmptyLines": 48,
+      "sections": [
+        {
+          "heading": "Copilot Instructions",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Project Overview",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Commands",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Architecture",
+          "level": 2,
+          "line": 28
+        },
+        {
+          "heading": "Plugin Systems",
+          "level": 3,
+          "line": 39
+        },
+        {
+          "heading": "Configuration",
+          "level": 3,
+          "line": 47
+        },
+        {
+          "heading": "Data Classes",
+          "level": 3,
+          "line": 51
+        },
+        {
+          "heading": "Testing Conventions",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "Coding Conventions",
+          "level": 2,
+          "line": 63
+        },
+        {
+          "heading": "Git Workflow",
+          "level": 2,
+          "line": 72
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": ".github/keep-alive.txt",
+      "language": "txt",
+      "fileCategory": "docs",
+      "totalLines": 2,
+      "nonEmptyLines": 2,
+      "metrics": {}
+    }
+  ]
+}

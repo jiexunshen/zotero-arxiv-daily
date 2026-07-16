@@ -18,6 +18,19 @@ class StubReranker(BaseReranker):
         return self._sim
 
 
+class StubRerankerWithConfig(BaseReranker):
+    """Reranker with config so tests can exercise top-k evidence settings."""
+
+    def __init__(self, sim_matrix: np.ndarray, top_k: int):
+        from omegaconf import OmegaConf
+
+        self.config = OmegaConf.create({"llm": {"analysis_top_k_similar": top_k}})
+        self._sim = sim_matrix
+
+    def get_similarity_score(self, s1, s2):
+        return self._sim
+
+
 def test_rerank_scores_and_sorts():
     corpus = make_sample_corpus(3)
     papers = [make_sample_paper(title=f"Paper {i}") for i in range(2)]
@@ -63,6 +76,22 @@ def test_rerank_single_candidate_single_corpus():
     ranked = reranker.rerank(papers, corpus)
     assert len(ranked) == 1
     assert ranked[0].score is not None
+
+
+def test_rerank_attaches_top_similar_corpus_evidence():
+    corpus = make_sample_corpus(3)
+    papers = [make_sample_paper(title="Candidate")]
+    sim = np.array([[0.2, 0.9, 0.5]])
+    reranker = StubRerankerWithConfig(sim, top_k=2)
+
+    ranked = reranker.rerank(papers, corpus)
+
+    evidence = ranked[0].similar_corpus
+    assert len(evidence) == 2
+    assert evidence[0]["similarity"] == 0.9
+    assert evidence[0]["title"] == corpus[1].title
+    assert evidence[0]["paths"] == corpus[1].paths
+    assert evidence[1]["similarity"] == 0.5
 
 
 def test_get_reranker_cls_unknown():

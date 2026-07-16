@@ -1,5 +1,6 @@
 from .protocol import Paper
 import math
+from html import escape
 
 
 framework = """
@@ -52,7 +53,49 @@ def get_empty_html():
   """
   return block_template
 
-def get_block_html(title:str, authors:str, rate:str, tldr:str, pdf_url:str, affiliations:str=None):
+def get_analysis_html(analysis: dict | None) -> str:
+    if not analysis:
+        return ""
+
+    category = analysis.get("category", {})
+    detail = analysis.get("analysis", {})
+    recommended_path = category.get("recommended_path", "Unknown")
+    category_reason = category.get("reason", "")
+    is_new = category.get("is_new", False)
+    new_label = "（建议新增分类）" if is_new else ""
+
+    rows = [
+        ("推荐分类", f"{recommended_path} {new_label}".strip()),
+        ("分类理由", category_reason),
+        ("它想解决的问题", detail.get("problem", "")),
+        ("它是如何解决的", detail.get("method", "")),
+        ("科研启发", detail.get("inspiration", "")),
+        ("阅读建议", detail.get("reading_suggestion", "")),
+    ]
+    rows_html = "\n".join(
+        f"""
+        <tr>
+            <td style="font-size: 14px; color: #333; padding: 4px 0;">
+                <strong>{escape(label)}:</strong> {escape(str(value))}
+            </td>
+        </tr>
+        """
+        for label, value in rows
+        if value
+    )
+    if not rows_html:
+        return ""
+    return f"""
+    <tr>
+        <td style="font-size: 14px; color: #333; padding: 8px 0;">
+            <strong>深度解读</strong>
+        </td>
+    </tr>
+    {rows_html}
+    """
+
+
+def get_block_html(title:str, authors:str, rate:str, tldr:str, pdf_url:str, affiliations:str=None, analysis:dict=None):
     block_template = """
     <table border="0" cellpadding="0" cellspacing="0" width="100%" style="font-family: Arial, sans-serif; border: 1px solid #ddd; border-radius: 8px; padding: 16px; background-color: #f9f9f9;">
     <tr>
@@ -77,6 +120,7 @@ def get_block_html(title:str, authors:str, rate:str, tldr:str, pdf_url:str, affi
             <strong>TLDR:</strong> {tldr}
         </td>
     </tr>
+    {analysis_html}
 
     <tr>
         <td style="padding: 8px 0;">
@@ -85,7 +129,15 @@ def get_block_html(title:str, authors:str, rate:str, tldr:str, pdf_url:str, affi
     </tr>
 </table>
 """
-    return block_template.format(title=title, authors=authors,rate=rate, tldr=tldr, pdf_url=pdf_url, affiliations=affiliations)
+    return block_template.format(
+        title=title,
+        authors=authors,
+        rate=rate,
+        tldr=tldr,
+        pdf_url=pdf_url,
+        affiliations=affiliations,
+        analysis_html=get_analysis_html(analysis),
+    )
 
 def get_stars(score:float):
     full_star = '<span class="full-star">⭐</span>'
@@ -125,7 +177,7 @@ def render_email(papers:list[Paper]) -> str:
                 affiliations += ', ...'
         else:
             affiliations = 'Unknown Affiliation'
-        parts.append(get_block_html(p.title, authors, rate, p.tldr, p.pdf_url, affiliations))
+        parts.append(get_block_html(p.title, authors, rate, p.tldr, p.pdf_url, affiliations, p.analysis))
 
     content = '<br>' + '</br><br>'.join(parts) + '</br>'
     return framework.replace('__CONTENT__', content)

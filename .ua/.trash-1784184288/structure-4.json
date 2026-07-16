@@ -1,0 +1,364 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "src/zotero_arxiv_daily/reranker/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 2,
+      "nonEmptyLines": 2,
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/zotero_arxiv_daily/reranker/api.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 23,
+      "classes": [
+        {
+          "name": "ApiReranker",
+          "startLine": 5,
+          "endLine": 23,
+          "methods": [
+            "get_similarity_score"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ApiReranker",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get_similarity_score",
+          "callee": "OpenAI",
+          "lineNumber": 7
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "self.config.reranker.api.get",
+          "lineNumber": 8
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "range",
+          "lineNumber": 11
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "len",
+          "lineNumber": 11
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "client.embeddings.create",
+          "lineNumber": 13
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "all_embeddings.extend",
+          "lineNumber": 17
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "np.array",
+          "lineNumber": 18
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "len",
+          "lineNumber": 18
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "np.array",
+          "lineNumber": 19
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "len",
+          "lineNumber": 19
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "np.linalg.norm",
+          "lineNumber": 20
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "np.linalg.norm",
+          "lineNumber": 21
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "np.dot",
+          "lineNumber": 22
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/zotero_arxiv_daily/reranker/base.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 37,
+      "nonEmptyLines": 32,
+      "functions": [
+        {
+          "name": "register_reranker",
+          "startLine": 28,
+          "endLine": 32,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "get_reranker_cls",
+          "startLine": 34,
+          "endLine": 37,
+          "params": [
+            "name"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "BaseReranker",
+          "startLine": 6,
+          "endLine": 24,
+          "methods": [
+            "__init__",
+            "rerank",
+            "get_similarity_score"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "BaseReranker",
+          "line": 6,
+          "isDefault": false
+        },
+        {
+          "name": "register_reranker",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "get_reranker_cls",
+          "line": 34,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "rerank",
+          "callee": "sorted",
+          "lineNumber": 11
+        },
+        {
+          "caller": "rerank",
+          "callee": "np.log10",
+          "lineNumber": 12
+        },
+        {
+          "caller": "rerank",
+          "callee": "np.arange",
+          "lineNumber": 12
+        },
+        {
+          "caller": "rerank",
+          "callee": "len",
+          "lineNumber": 12
+        },
+        {
+          "caller": "rerank",
+          "callee": "time_decay_weight.sum",
+          "lineNumber": 13
+        },
+        {
+          "caller": "rerank",
+          "callee": "self.get_similarity_score",
+          "lineNumber": 14
+        },
+        {
+          "caller": "rerank",
+          "callee": "len",
+          "lineNumber": 15
+        },
+        {
+          "caller": "rerank",
+          "callee": "len",
+          "lineNumber": 15
+        },
+        {
+          "caller": "rerank",
+          "callee": "(sim * time_decay_weight).sum",
+          "lineNumber": 16
+        },
+        {
+          "caller": "rerank",
+          "callee": "zip",
+          "lineNumber": 17
+        },
+        {
+          "caller": "rerank",
+          "callee": "sorted",
+          "lineNumber": 19
+        },
+        {
+          "caller": "get_reranker_cls",
+          "callee": "ValueError",
+          "lineNumber": 36
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/zotero_arxiv_daily/reranker/local.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 28,
+      "classes": [
+        {
+          "name": "LocalReranker",
+          "startLine": 6,
+          "endLine": 30,
+          "methods": [
+            "get_similarity_score"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "LocalReranker",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get_similarity_score",
+          "callee": "transformers_logging.set_verbosity_error",
+          "lineNumber": 13
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "hf_logging.set_verbosity_error",
+          "lineNumber": 14
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "logging.getLogger(\"sentence_transformers\").setLevel",
+          "lineNumber": 15
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "logging.getLogger",
+          "lineNumber": 15
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "logging.getLogger(\"sentence_transformers.SentenceTransformer\").setLevel",
+          "lineNumber": 16
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "logging.getLogger",
+          "lineNumber": 16
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "logging.getLogger(\"transformers\").setLevel",
+          "lineNumber": 17
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "logging.getLogger",
+          "lineNumber": 17
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "logging.getLogger(\"huggingface_hub\").setLevel",
+          "lineNumber": 18
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "logging.getLogger",
+          "lineNumber": 18
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "logging.getLogger(\"huggingface_hub.utils._http\").setLevel",
+          "lineNumber": 19
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "logging.getLogger",
+          "lineNumber": 19
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "warnings.filterwarnings",
+          "lineNumber": 20
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "SentenceTransformer",
+          "lineNumber": 22
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "encoder.encode",
+          "lineNumber": 27
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "encoder.encode",
+          "lineNumber": 28
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "encoder.similarity",
+          "lineNumber": 29
+        },
+        {
+          "caller": "get_similarity_score",
+          "callee": "sim.numpy",
+          "lineNumber": 30
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "nodes": [
+    {
+      "id": "config:.github/FUNDING.yml",
+      "type": "config",
+      "name": "FUNDING.yml",
+      "filePath": ".github/FUNDING.yml",
+      "summary": "Project configuration consumed by runtime, packaging, tests, or automation.",
+      "tags": [
+        "yaml",
+        "config"
+      ],
+      "complexity": "simple",
+      "language": "yaml",
+      "startLine": 1,
+      "endLine": 15,
+      "sizeLines": 15
+    },
+    {
+      "id": "document:.github/copilot-instructions.md",
+      "type": "document",
+      "name": "copilot-instructions.md",
+      "filePath": ".github/copilot-instructions.md",
+      "summary": "Documentation asset describing usage, setup, project behavior, or repository guidance.",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "simple",
+      "language": "markdown",
+      "startLine": 1,
+      "endLine": 74,
+      "sizeLines": 74
+    },
+    {
+      "id": "document:.github/keep-alive.txt",
+      "type": "document",
+      "name": "keep-alive.txt",
+      "filePath": ".github/keep-alive.txt",
+      "summary": "Documentation asset describing usage, setup, project behavior, or repository guidance.",
+      "tags": [
+        "txt",
+        "docs"
+      ],
+      "complexity": "simple",
+      "language": "txt",
+      "startLine": 1,
+      "endLine": 2,
+      "sizeLines": 2
+    }
+  ],
+  "edges": []
+}

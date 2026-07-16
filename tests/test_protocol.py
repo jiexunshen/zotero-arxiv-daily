@@ -56,6 +56,61 @@ def test_tldr_truncates_long_prompt(llm_params):
 
 
 # ---------------------------------------------------------------------------
+# generate_analysis
+# ---------------------------------------------------------------------------
+
+
+def test_analysis_returns_structured_category_and_reading_guidance(llm_params):
+    client = make_stub_openai_client()
+    paper = make_sample_paper(
+        similar_corpus=[
+            {
+                "title": "Planning Corpus Paper",
+                "paths": ["Agent/效率 Efficiency/规划 Planning"],
+                "similarity": 0.91,
+            }
+        ]
+    )
+    taxonomy = [
+        {"path": "Agent/安全 Security", "count": 3},
+        {"path": "Agent/效率 Efficiency/规划 Planning", "count": 7},
+    ]
+
+    result = paper.generate_analysis(client, llm_params, taxonomy)
+
+    assert result["category"]["recommended_path"] == "Agent/效率 Efficiency/规划 Planning"
+    assert result["category"]["is_new"] is False
+    assert "long-horizon planning" in result["analysis"]["problem"]
+    assert "精读" in result["analysis"]["reading_suggestion"]
+    assert paper.analysis == result
+
+
+def test_analysis_falls_back_to_none_on_malformed_json(llm_params):
+    from types import SimpleNamespace
+
+    def create_bad_json(**kwargs):
+        return SimpleNamespace(
+            choices=[
+                SimpleNamespace(
+                    message=SimpleNamespace(content="category: planning"),
+                )
+            ]
+        )
+
+    client = SimpleNamespace(
+        chat=SimpleNamespace(
+            completions=SimpleNamespace(create=create_bad_json)
+        )
+    )
+    paper = make_sample_paper()
+
+    result = paper.generate_analysis(client, llm_params, [])
+
+    assert result is None
+    assert paper.analysis is None
+
+
+# ---------------------------------------------------------------------------
 # generate_affiliations
 # ---------------------------------------------------------------------------
 

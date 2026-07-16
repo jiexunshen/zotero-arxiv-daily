@@ -1,0 +1,45 @@
+{
+  "projectRoot": "E:\\Code\\zotero-arxiv-daily",
+  "batchFiles": [
+    {
+      "path": "src/zotero_arxiv_daily/reranker/__init__.py",
+      "language": "python",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/reranker/api.py",
+      "language": "python",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/reranker/base.py",
+      "language": "python",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/reranker/local.py",
+      "language": "python",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "src/zotero_arxiv_daily/reranker/__init__.py": [
+      "src/zotero_arxiv_daily/reranker/api.py",
+      "src/zotero_arxiv_daily/reranker/base.py",
+      "src/zotero_arxiv_daily/reranker/local.py"
+    ],
+    "src/zotero_arxiv_daily/reranker/api.py": [
+      "src/zotero_arxiv_daily/reranker/base.py"
+    ],
+    "src/zotero_arxiv_daily/reranker/base.py": [
+      "src/zotero_arxiv_daily/protocol.py"
+    ],
+    "src/zotero_arxiv_daily/reranker/local.py": [
+      "src/zotero_arxiv_daily/reranker/base.py"
+    ]
+  }
+}

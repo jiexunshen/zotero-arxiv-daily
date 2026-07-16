@@ -1,0 +1,1809 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 17,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": ".python-version",
+      "language": "unknown",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {}
+    },
+    {
+      "path": "assets/use_docker.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 111,
+      "nonEmptyLines": 90,
+      "sections": [
+        {
+          "heading": "🐳 Docker Deployment",
+          "level": 2,
+          "line": 1
+        },
+        {
+          "heading": "Quick Start with Docker",
+          "level": 3,
+          "line": 14
+        },
+        {
+          "heading": "Key Features of Docker Deployment",
+          "level": 3,
+          "line": 69
+        },
+        {
+          "heading": "Configuration Options",
+          "level": 3,
+          "line": 77
+        },
+        {
+          "heading": "Monitoring and Maintenance",
+          "level": 3,
+          "line": 86
+        },
+        {
+          "heading": "Why Choose Docker Deployment?",
+          "level": 3,
+          "line": 105
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "src/zotero_arxiv_daily/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 0,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 0,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/conftest.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 58,
+      "nonEmptyLines": 48,
+      "functions": [
+        {
+          "name": "_base_config",
+          "startLine": 17,
+          "endLine": 49,
+          "params": []
+        },
+        {
+          "name": "config",
+          "startLine": 53,
+          "endLine": 58,
+          "params": [
+            "_base_config"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_base_config",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "config",
+          "line": 52,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_base_config",
+          "callee": "GlobalHydra.instance().clear",
+          "lineNumber": 22
+        },
+        {
+          "caller": "_base_config",
+          "callee": "GlobalHydra.instance",
+          "lineNumber": 22
+        },
+        {
+          "caller": "_base_config",
+          "callee": "initialize_config_dir",
+          "lineNumber": 23
+        },
+        {
+          "caller": "_base_config",
+          "callee": "compose",
+          "lineNumber": 24
+        },
+        {
+          "caller": "config",
+          "callee": "copy.deepcopy",
+          "lineNumber": 58
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/reranker/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 0,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/reranker/test_api_reranker.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 12,
+      "functions": [
+        {
+          "name": "test_api_reranker_similarity_shape",
+          "startLine": 6,
+          "endLine": 9,
+          "params": [
+            "config",
+            "patch_openai"
+          ]
+        },
+        {
+          "name": "test_api_reranker_batching",
+          "startLine": 12,
+          "endLine": 17,
+          "params": [
+            "config",
+            "patch_openai"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_api_reranker_similarity_shape",
+          "line": 6,
+          "isDefault": false
+        },
+        {
+          "name": "test_api_reranker_batching",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_api_reranker_similarity_shape",
+          "callee": "ApiReranker",
+          "lineNumber": 7
+        },
+        {
+          "caller": "test_api_reranker_similarity_shape",
+          "callee": "reranker.get_similarity_score",
+          "lineNumber": 8
+        },
+        {
+          "caller": "test_api_reranker_batching",
+          "callee": "ApiReranker",
+          "lineNumber": 13
+        },
+        {
+          "caller": "test_api_reranker_batching",
+          "callee": "range",
+          "lineNumber": 14
+        },
+        {
+          "caller": "test_api_reranker_batching",
+          "callee": "range",
+          "lineNumber": 15
+        },
+        {
+          "caller": "test_api_reranker_batching",
+          "callee": "reranker.get_similarity_score",
+          "lineNumber": 16
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/reranker/test_local_reranker.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 8,
+      "functions": [
+        {
+          "name": "test_local_reranker",
+          "startLine": 9,
+          "endLine": 12,
+          "params": [
+            "config"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_local_reranker",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_local_reranker",
+          "callee": "LocalReranker",
+          "lineNumber": 10
+        },
+        {
+          "caller": "test_local_reranker",
+          "callee": "reranker.get_similarity_score",
+          "lineNumber": 11
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/retriever/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 0,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/retriever/arxiv_rss_example.xml",
+      "language": "xml",
+      "fileCategory": "config",
+      "totalLines": 107,
+      "nonEmptyLines": 107,
+      "metrics": {}
+    },
+    {
+      "path": "tests/retriever/conftest.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 50,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "mock_feedparser",
+          "startLine": 8,
+          "endLine": 28,
+          "params": [
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "mock_biorxiv_api",
+          "startLine": 32,
+          "endLine": 50,
+          "params": [
+            "monkeypatch"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "mock_feedparser",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "mock_biorxiv_api",
+          "line": 31,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "mock_feedparser",
+          "callee": "feedparser.parse",
+          "lineNumber": 16
+        },
+        {
+          "caller": "_patched",
+          "callee": "isinstance",
+          "lineNumber": 21
+        },
+        {
+          "caller": "_patched",
+          "callee": "target.decode",
+          "lineNumber": 22
+        },
+        {
+          "caller": "_patched",
+          "callee": "isinstance",
+          "lineNumber": 23
+        },
+        {
+          "caller": "_patched",
+          "callee": "raw_parse",
+          "lineNumber": 25
+        },
+        {
+          "caller": "mock_feedparser",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 27
+        },
+        {
+          "caller": "_patched",
+          "callee": "SimpleNamespace",
+          "lineNumber": 43
+        },
+        {
+          "caller": "_patched",
+          "callee": "original_get",
+          "lineNumber": 48
+        },
+        {
+          "caller": "mock_biorxiv_api",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 50
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/retriever/test_arxiv_retriever.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 90,
+      "nonEmptyLines": 68,
+      "functions": [
+        {
+          "name": "_sleep_and_return",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "value",
+            "delay_seconds"
+          ]
+        },
+        {
+          "name": "_raise_runtime_error",
+          "startLine": 17,
+          "endLine": 18,
+          "params": []
+        },
+        {
+          "name": "test_arxiv_retriever",
+          "startLine": 21,
+          "endLine": 63,
+          "params": [
+            "config",
+            "mock_feedparser",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_run_with_hard_timeout_returns_value",
+          "startLine": 66,
+          "endLine": 70,
+          "params": []
+        },
+        {
+          "name": "test_run_with_hard_timeout_returns_none_on_timeout",
+          "startLine": 73,
+          "endLine": 80,
+          "params": [
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_run_with_hard_timeout_returns_none_on_failure",
+          "startLine": 83,
+          "endLine": 90,
+          "params": [
+            "monkeypatch"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_sleep_and_return",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "_raise_runtime_error",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "test_arxiv_retriever",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "test_run_with_hard_timeout_returns_value",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "test_run_with_hard_timeout_returns_none_on_timeout",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "test_run_with_hard_timeout_returns_none_on_failure",
+          "line": 83,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_sleep_and_return",
+          "callee": "time.sleep",
+          "lineNumber": 13
+        },
+        {
+          "caller": "_raise_runtime_error",
+          "callee": "RuntimeError",
+          "lineNumber": 18
+        },
+        {
+          "caller": "test_arxiv_retriever",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 22
+        },
+        {
+          "caller": "test_arxiv_retriever",
+          "callee": "e.get",
+          "lineNumber": 29
+        },
+        {
+          "caller": "test_arxiv_retriever",
+          "callee": "e.id.removeprefix",
+          "lineNumber": 31
+        },
+        {
+          "caller": "test_arxiv_retriever",
+          "callee": "entry.id.removeprefix",
+          "lineNumber": 36
+        },
+        {
+          "caller": "test_arxiv_retriever",
+          "callee": "fake_results.append",
+          "lineNumber": 37
+        },
+        {
+          "caller": "test_arxiv_retriever",
+          "callee": "SimpleNamespace",
+          "lineNumber": 37
+        },
+        {
+          "caller": "test_arxiv_retriever",
+          "callee": "SimpleNamespace",
+          "lineNumber": 39
+        },
+        {
+          "caller": "results",
+          "callee": "iter",
+          "lineNumber": 50
+        },
+        {
+          "caller": "test_arxiv_retriever",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 52
+        },
+        {
+          "caller": "test_arxiv_retriever",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 55
+        },
+        {
+          "caller": "test_arxiv_retriever",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_arxiv_retriever",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 57
+        },
+        {
+          "caller": "test_arxiv_retriever",
+          "callee": "ArxivRetriever",
+          "lineNumber": 59
+        },
+        {
+          "caller": "test_arxiv_retriever",
+          "callee": "retriever.retrieve_papers",
+          "lineNumber": 60
+        },
+        {
+          "caller": "test_arxiv_retriever",
+          "callee": "len",
+          "lineNumber": 62
+        },
+        {
+          "caller": "test_arxiv_retriever",
+          "callee": "len",
+          "lineNumber": 62
+        },
+        {
+          "caller": "test_arxiv_retriever",
+          "callee": "set",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_arxiv_retriever",
+          "callee": "set",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_run_with_hard_timeout_returns_value",
+          "callee": "_run_with_hard_timeout",
+          "lineNumber": 67
+        },
+        {
+          "caller": "test_run_with_hard_timeout_returns_none_on_timeout",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 75
+        },
+        {
+          "caller": "test_run_with_hard_timeout_returns_none_on_timeout",
+          "callee": "SimpleNamespace",
+          "lineNumber": 75
+        },
+        {
+          "caller": "test_run_with_hard_timeout_returns_none_on_timeout",
+          "callee": "_run_with_hard_timeout",
+          "lineNumber": 76
+        },
+        {
+          "caller": "test_run_with_hard_timeout_returns_none_on_failure",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_run_with_hard_timeout_returns_none_on_failure",
+          "callee": "SimpleNamespace",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_run_with_hard_timeout_returns_none_on_failure",
+          "callee": "_run_with_hard_timeout",
+          "lineNumber": 86
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/retriever/test_base_retriever.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 127,
+      "nonEmptyLines": 98,
+      "functions": [
+        {
+          "name": "test_retrieve_papers_skips_conversion_errors",
+          "startLine": 78,
+          "endLine": 84,
+          "params": [
+            "config",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_retrieve_papers_runs_serially",
+          "startLine": 87,
+          "endLine": 95,
+          "params": [
+            "config",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_retrieve_papers_skips_none_results",
+          "startLine": 98,
+          "endLine": 104,
+          "params": [
+            "config",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_retrieve_papers_empty_raw",
+          "startLine": 107,
+          "endLine": 121,
+          "params": [
+            "config",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_get_retriever_cls_unknown",
+          "startLine": 124,
+          "endLine": 127,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "FailingTestRetriever",
+          "startLine": 19,
+          "endLine": 41,
+          "methods": [
+            "_retrieve_raw_papers",
+            "convert_to_paper"
+          ],
+          "properties": []
+        },
+        {
+          "name": "SerialTestRetriever",
+          "startLine": 45,
+          "endLine": 61,
+          "methods": [
+            "__init__",
+            "_retrieve_raw_papers",
+            "convert_to_paper"
+          ],
+          "properties": []
+        },
+        {
+          "name": "NoneRetriever",
+          "startLine": 65,
+          "endLine": 70,
+          "methods": [
+            "_retrieve_raw_papers",
+            "convert_to_paper"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "FailingTestRetriever",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "SerialTestRetriever",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "NoneRetriever",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "test_retrieve_papers_skips_conversion_errors",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "test_retrieve_papers_runs_serially",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "test_retrieve_papers_skips_none_results",
+          "line": 98,
+          "isDefault": false
+        },
+        {
+          "name": "test_retrieve_papers_empty_raw",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "test_get_retriever_cls_unknown",
+          "line": 124,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "convert_to_paper",
+          "callee": "HTTPError",
+          "lineNumber": 28
+        },
+        {
+          "caller": "convert_to_paper",
+          "callee": "io.BufferedReader",
+          "lineNumber": 33
+        },
+        {
+          "caller": "convert_to_paper",
+          "callee": "io.BytesIO",
+          "lineNumber": 33
+        },
+        {
+          "caller": "convert_to_paper",
+          "callee": "Paper",
+          "lineNumber": 35
+        },
+        {
+          "caller": "__init__",
+          "callee": "super().__init__",
+          "lineNumber": 47
+        },
+        {
+          "caller": "__init__",
+          "callee": "super",
+          "lineNumber": 47
+        },
+        {
+          "caller": "convert_to_paper",
+          "callee": "self.seen_titles.append",
+          "lineNumber": 54
+        },
+        {
+          "caller": "convert_to_paper",
+          "callee": "Paper",
+          "lineNumber": 55
+        },
+        {
+          "caller": "test_retrieve_papers_skips_conversion_errors",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 79
+        },
+        {
+          "caller": "test_retrieve_papers_skips_conversion_errors",
+          "callee": "open_dict",
+          "lineNumber": 80
+        },
+        {
+          "caller": "test_retrieve_papers_skips_conversion_errors",
+          "callee": "FailingTestRetriever",
+          "lineNumber": 82
+        },
+        {
+          "caller": "test_retrieve_papers_skips_conversion_errors",
+          "callee": "retriever.retrieve_papers",
+          "lineNumber": 83
+        },
+        {
+          "caller": "test_retrieve_papers_runs_serially",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 88
+        },
+        {
+          "caller": "test_retrieve_papers_runs_serially",
+          "callee": "open_dict",
+          "lineNumber": 89
+        },
+        {
+          "caller": "test_retrieve_papers_runs_serially",
+          "callee": "SerialTestRetriever",
+          "lineNumber": 92
+        },
+        {
+          "caller": "test_retrieve_papers_runs_serially",
+          "callee": "retriever.retrieve_papers",
+          "lineNumber": 93
+        },
+        {
+          "caller": "test_retrieve_papers_skips_none_results",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 99
+        },
+        {
+          "caller": "test_retrieve_papers_skips_none_results",
+          "callee": "open_dict",
+          "lineNumber": 100
+        },
+        {
+          "caller": "test_retrieve_papers_skips_none_results",
+          "callee": "NoneRetriever",
+          "lineNumber": 102
+        },
+        {
+          "caller": "test_retrieve_papers_skips_none_results",
+          "callee": "retriever.retrieve_papers",
+          "lineNumber": 103
+        },
+        {
+          "caller": "test_retrieve_papers_empty_raw",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 108
+        },
+        {
+          "caller": "test_retrieve_papers_empty_raw",
+          "callee": "register_retriever",
+          "lineNumber": 110
+        },
+        {
+          "caller": "test_retrieve_papers_empty_raw",
+          "callee": "open_dict",
+          "lineNumber": 117
+        },
+        {
+          "caller": "test_retrieve_papers_empty_raw",
+          "callee": "EmptyRetriever",
+          "lineNumber": 119
+        },
+        {
+          "caller": "test_retrieve_papers_empty_raw",
+          "callee": "retriever.retrieve_papers",
+          "lineNumber": 120
+        },
+        {
+          "caller": "test_get_retriever_cls_unknown",
+          "callee": "pytest.raises",
+          "lineNumber": 126
+        },
+        {
+          "caller": "test_get_retriever_cls_unknown",
+          "callee": "get_retriever_cls",
+          "lineNumber": 127
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 5,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "tests/retriever/test_medrxiv_retriever.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 21,
+      "functions": [
+        {
+          "name": "test_medrxiv_server_attribute",
+          "startLine": 8,
+          "endLine": 12,
+          "params": [
+            "config"
+          ]
+        },
+        {
+          "name": "test_medrxiv_pdf_url",
+          "startLine": 15,
+          "endLine": 27,
+          "params": [
+            "config"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_medrxiv_server_attribute",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "test_medrxiv_pdf_url",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_medrxiv_server_attribute",
+          "callee": "open_dict",
+          "lineNumber": 9
+        },
+        {
+          "caller": "test_medrxiv_server_attribute",
+          "callee": "MedrxivRetriever",
+          "lineNumber": 11
+        },
+        {
+          "caller": "test_medrxiv_pdf_url",
+          "callee": "open_dict",
+          "lineNumber": 16
+        },
+        {
+          "caller": "test_medrxiv_pdf_url",
+          "callee": "MedrxivRetriever",
+          "lineNumber": 18
+        },
+        {
+          "caller": "test_medrxiv_pdf_url",
+          "callee": "retriever.convert_to_paper",
+          "lineNumber": 19
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/test_executor.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 283,
+      "nonEmptyLines": 200,
+      "functions": [
+        {
+          "name": "test_normalize_path_patterns_rejects_single_string_for_include_path",
+          "startLine": 17,
+          "endLine": 19,
+          "params": []
+        },
+        {
+          "name": "test_normalize_path_patterns_accepts_list_config_for_include_path",
+          "startLine": 22,
+          "endLine": 27,
+          "params": []
+        },
+        {
+          "name": "test_normalize_path_patterns_rejects_single_string_for_ignore_path",
+          "startLine": 30,
+          "endLine": 32,
+          "params": []
+        },
+        {
+          "name": "test_normalize_path_patterns_accepts_list_config_for_ignore_path",
+          "startLine": 35,
+          "endLine": 37,
+          "params": []
+        },
+        {
+          "name": "test_normalize_path_patterns_accepts_empty_list",
+          "startLine": 40,
+          "endLine": 41,
+          "params": []
+        },
+        {
+          "name": "test_normalize_path_patterns_accepts_none",
+          "startLine": 44,
+          "endLine": 45,
+          "params": []
+        },
+        {
+          "name": "_make_executor",
+          "startLine": 53,
+          "endLine": 57,
+          "params": [
+            "include_patterns",
+            "ignore_patterns"
+          ]
+        },
+        {
+          "name": "test_filter_corpus_matches_any_path_against_any_pattern",
+          "startLine": 60,
+          "endLine": 68,
+          "params": []
+        },
+        {
+          "name": "test_filter_corpus_excludes_papers_matching_ignore_path",
+          "startLine": 71,
+          "endLine": 79,
+          "params": []
+        },
+        {
+          "name": "test_filter_corpus_ignore_path_takes_precedence_over_include_path",
+          "startLine": 82,
+          "endLine": 89,
+          "params": []
+        },
+        {
+          "name": "test_filter_corpus_no_filters_returns_all",
+          "startLine": 92,
+          "endLine": 99,
+          "params": []
+        },
+        {
+          "name": "test_fetch_zotero_corpus",
+          "startLine": 107,
+          "endLine": 119,
+          "params": [
+            "config",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_fetch_zotero_corpus_paper_with_zero_collections",
+          "startLine": 122,
+          "endLine": 143,
+          "params": [
+            "config",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_run_end_to_end",
+          "startLine": 151,
+          "endLine": 209,
+          "params": [
+            "config",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_run_no_papers_send_empty_false",
+          "startLine": 212,
+          "endLine": 245,
+          "params": [
+            "config",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_run_no_papers_send_empty_true",
+          "startLine": 248,
+          "endLine": 283,
+          "params": [
+            "config",
+            "monkeypatch"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "test_normalize_path_patterns_rejects_single_string_for_include_path",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "test_normalize_path_patterns_accepts_list_config_for_include_path",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "test_normalize_path_patterns_rejects_single_string_for_ignore_path",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "test_normalize_path_patterns_accepts_list_config_for_ignore_path",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "test_normalize_path_patterns_accepts_empty_list",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "test_normalize_path_patterns_accepts_none",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "_make_executor",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "test_filter_corpus_matches_any_path_against_any_pattern",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "test_filter_corpus_excludes_papers_matching_ignore_path",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "test_filter_corpus_ignore_path_takes_precedence_over_include_path",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "test_filter_corpus_no_filters_returns_all",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "test_fetch_zotero_corpus",
+          "line": 107,
+          "isDefault": false
+        },
+        {
+          "name": "test_fetch_zotero_corpus_paper_with_zero_collections",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "test_run_end_to_end",
+          "line": 151,
+          "isDefault": false
+        },
+        {
+          "name": "test_run_no_papers_send_empty_false",
+          "line": 212,
+          "isDefault": false
+        },
+        {
+          "name": "test_run_no_papers_send_empty_true",
+          "line": 248,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "test_normalize_path_patterns_rejects_single_string_for_include_path",
+          "callee": "pytest.raises",
+          "lineNumber": 18
+        },
+        {
+          "caller": "test_normalize_path_patterns_rejects_single_string_for_include_path",
+          "callee": "normalize_path_patterns",
+          "lineNumber": 19
+        },
+        {
+          "caller": "test_normalize_path_patterns_accepts_list_config_for_include_path",
+          "callee": "OmegaConf.create",
+          "lineNumber": 23
+        },
+        {
+          "caller": "test_normalize_path_patterns_accepts_list_config_for_include_path",
+          "callee": "normalize_path_patterns",
+          "lineNumber": 24
+        },
+        {
+          "caller": "test_normalize_path_patterns_rejects_single_string_for_ignore_path",
+          "callee": "pytest.raises",
+          "lineNumber": 31
+        },
+        {
+          "caller": "test_normalize_path_patterns_rejects_single_string_for_ignore_path",
+          "callee": "normalize_path_patterns",
+          "lineNumber": 32
+        },
+        {
+          "caller": "test_normalize_path_patterns_accepts_list_config_for_ignore_path",
+          "callee": "OmegaConf.create",
+          "lineNumber": 36
+        },
+        {
+          "caller": "test_normalize_path_patterns_accepts_list_config_for_ignore_path",
+          "callee": "normalize_path_patterns",
+          "lineNumber": 37
+        },
+        {
+          "caller": "test_normalize_path_patterns_accepts_empty_list",
+          "callee": "normalize_path_patterns",
+          "lineNumber": 41
+        },
+        {
+          "caller": "test_normalize_path_patterns_accepts_none",
+          "callee": "normalize_path_patterns",
+          "lineNumber": 45
+        },
+        {
+          "caller": "_make_executor",
+          "callee": "Executor.__new__",
+          "lineNumber": 54
+        },
+        {
+          "caller": "_make_executor",
+          "callee": "normalize_path_patterns",
+          "lineNumber": 55
+        },
+        {
+          "caller": "_make_executor",
+          "callee": "normalize_path_patterns",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_filter_corpus_matches_any_path_against_any_pattern",
+          "callee": "_make_executor",
+          "lineNumber": 61
+        },
+        {
+          "caller": "test_filter_corpus_matches_any_path_against_any_pattern",
+          "callee": "CorpusPaper",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_filter_corpus_matches_any_path_against_any_pattern",
+          "callee": "datetime",
+          "lineNumber": 63
+        },
+        {
+          "caller": "test_filter_corpus_matches_any_path_against_any_pattern",
+          "callee": "CorpusPaper",
+          "lineNumber": 64
+        },
+        {
+          "caller": "test_filter_corpus_matches_any_path_against_any_pattern",
+          "callee": "datetime",
+          "lineNumber": 64
+        },
+        {
+          "caller": "test_filter_corpus_matches_any_path_against_any_pattern",
+          "callee": "CorpusPaper",
+          "lineNumber": 65
+        },
+        {
+          "caller": "test_filter_corpus_matches_any_path_against_any_pattern",
+          "callee": "datetime",
+          "lineNumber": 65
+        },
+        {
+          "caller": "test_filter_corpus_matches_any_path_against_any_pattern",
+          "callee": "executor.filter_corpus",
+          "lineNumber": 67
+        },
+        {
+          "caller": "test_filter_corpus_excludes_papers_matching_ignore_path",
+          "callee": "_make_executor",
+          "lineNumber": 72
+        },
+        {
+          "caller": "test_filter_corpus_excludes_papers_matching_ignore_path",
+          "callee": "CorpusPaper",
+          "lineNumber": 74
+        },
+        {
+          "caller": "test_filter_corpus_excludes_papers_matching_ignore_path",
+          "callee": "datetime",
+          "lineNumber": 74
+        },
+        {
+          "caller": "test_filter_corpus_excludes_papers_matching_ignore_path",
+          "callee": "CorpusPaper",
+          "lineNumber": 75
+        },
+        {
+          "caller": "test_filter_corpus_excludes_papers_matching_ignore_path",
+          "callee": "datetime",
+          "lineNumber": 75
+        },
+        {
+          "caller": "test_filter_corpus_excludes_papers_matching_ignore_path",
+          "callee": "CorpusPaper",
+          "lineNumber": 76
+        },
+        {
+          "caller": "test_filter_corpus_excludes_papers_matching_ignore_path",
+          "callee": "datetime",
+          "lineNumber": 76
+        },
+        {
+          "caller": "test_filter_corpus_excludes_papers_matching_ignore_path",
+          "callee": "executor.filter_corpus",
+          "lineNumber": 78
+        },
+        {
+          "caller": "test_filter_corpus_ignore_path_takes_precedence_over_include_path",
+          "callee": "_make_executor",
+          "lineNumber": 83
+        },
+        {
+          "caller": "test_filter_corpus_ignore_path_takes_precedence_over_include_path",
+          "callee": "CorpusPaper",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_filter_corpus_ignore_path_takes_precedence_over_include_path",
+          "callee": "datetime",
+          "lineNumber": 85
+        },
+        {
+          "caller": "test_filter_corpus_ignore_path_takes_precedence_over_include_path",
+          "callee": "CorpusPaper",
+          "lineNumber": 86
+        },
+        {
+          "caller": "test_filter_corpus_ignore_path_takes_precedence_over_include_path",
+          "callee": "datetime",
+          "lineNumber": 86
+        },
+        {
+          "caller": "test_filter_corpus_ignore_path_takes_precedence_over_include_path",
+          "callee": "executor.filter_corpus",
+          "lineNumber": 88
+        },
+        {
+          "caller": "test_filter_corpus_no_filters_returns_all",
+          "callee": "_make_executor",
+          "lineNumber": 93
+        },
+        {
+          "caller": "test_filter_corpus_no_filters_returns_all",
+          "callee": "CorpusPaper",
+          "lineNumber": 95
+        },
+        {
+          "caller": "test_filter_corpus_no_filters_returns_all",
+          "callee": "datetime",
+          "lineNumber": 95
+        },
+        {
+          "caller": "test_filter_corpus_no_filters_returns_all",
+          "callee": "CorpusPaper",
+          "lineNumber": 96
+        },
+        {
+          "caller": "test_filter_corpus_no_filters_returns_all",
+          "callee": "datetime",
+          "lineNumber": 96
+        },
+        {
+          "caller": "test_filter_corpus_no_filters_returns_all",
+          "callee": "executor.filter_corpus",
+          "lineNumber": 98
+        },
+        {
+          "caller": "test_fetch_zotero_corpus",
+          "callee": "make_stub_zotero_client",
+          "lineNumber": 110
+        },
+        {
+          "caller": "test_fetch_zotero_corpus",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 111
+        },
+        {
+          "caller": "test_fetch_zotero_corpus",
+          "callee": "Executor.__new__",
+          "lineNumber": 113
+        },
+        {
+          "caller": "test_fetch_zotero_corpus",
+          "callee": "executor.fetch_zotero_corpus",
+          "lineNumber": 115
+        },
+        {
+          "caller": "test_fetch_zotero_corpus",
+          "callee": "len",
+          "lineNumber": 117
+        },
+        {
+          "caller": "test_fetch_zotero_corpus_paper_with_zero_collections",
+          "callee": "make_stub_zotero_client",
+          "lineNumber": 135
+        },
+        {
+          "caller": "test_fetch_zotero_corpus_paper_with_zero_collections",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 136
+        },
+        {
+          "caller": "test_fetch_zotero_corpus_paper_with_zero_collections",
+          "callee": "Executor.__new__",
+          "lineNumber": 138
+        },
+        {
+          "caller": "test_fetch_zotero_corpus_paper_with_zero_collections",
+          "callee": "executor.fetch_zotero_corpus",
+          "lineNumber": 140
+        },
+        {
+          "caller": "test_fetch_zotero_corpus_paper_with_zero_collections",
+          "callee": "len",
+          "lineNumber": 142
+        },
+        {
+          "caller": "test_run_end_to_end",
+          "callee": "open_dict",
+          "lineNumber": 166
+        },
+        {
+          "caller": "test_run_end_to_end",
+          "callee": "make_stub_zotero_client",
+          "lineNumber": 172
+        },
+        {
+          "caller": "test_run_end_to_end",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 173
+        },
+        {
+          "caller": "test_run_end_to_end",
+          "callee": "make_stub_openai_client",
+          "lineNumber": 176
+        },
+        {
+          "caller": "test_run_end_to_end",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 177
+        },
+        {
+          "caller": "test_run_end_to_end",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 178
+        },
+        {
+          "caller": "test_run_end_to_end",
+          "callee": "make_sample_paper",
+          "lineNumber": 180
+        },
+        {
+          "caller": "test_run_end_to_end",
+          "callee": "make_sample_paper",
+          "lineNumber": 181
+        },
+        {
+          "caller": "test_run_end_to_end",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 189
+        },
+        {
+          "caller": "test_run_end_to_end",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 197
+        },
+        {
+          "caller": "test_run_end_to_end",
+          "callee": "make_stub_smtp",
+          "lineNumber": 197
+        },
+        {
+          "caller": "test_run_end_to_end",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 200
+        },
+        {
+          "caller": "test_run_end_to_end",
+          "callee": "Executor",
+          "lineNumber": 203
+        },
+        {
+          "caller": "test_run_end_to_end",
+          "callee": "executor.run",
+          "lineNumber": 204
+        },
+        {
+          "caller": "test_run_end_to_end",
+          "callee": "len",
+          "lineNumber": 207
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_false",
+          "callee": "open_dict",
+          "lineNumber": 220
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_false",
+          "callee": "make_stub_zotero_client",
+          "lineNumber": 225
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_false",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 226
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_false",
+          "callee": "make_stub_openai_client",
+          "lineNumber": 228
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_false",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 229
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_false",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 230
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_false",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 236
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_false",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 239
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_false",
+          "callee": "make_stub_smtp",
+          "lineNumber": 239
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_false",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 240
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_false",
+          "callee": "Executor",
+          "lineNumber": 242
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_false",
+          "callee": "executor.run",
+          "lineNumber": 243
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_false",
+          "callee": "len",
+          "lineNumber": 245
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_true",
+          "callee": "open_dict",
+          "lineNumber": 256
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_true",
+          "callee": "make_stub_zotero_client",
+          "lineNumber": 261
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_true",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 262
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_true",
+          "callee": "make_stub_openai_client",
+          "lineNumber": 264
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_true",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 265
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_true",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 266
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_true",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 272
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_true",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 275
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_true",
+          "callee": "make_stub_smtp",
+          "lineNumber": 275
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_true",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 276
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_true",
+          "callee": "Executor",
+          "lineNumber": 278
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_true",
+          "callee": "executor.run",
+          "lineNumber": 279
+        },
+        {
+          "caller": "test_run_no_papers_send_empty_true",
+          "callee": "len",
+          "lineNumber": 281
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 16,
+        "functionCount": 16,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/test_main.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 61,
+      "nonEmptyLines": 42,
+      "functions": [
+        {
+          "name": "_clear_hydra",
+          "startLine": 13,
+          "endLine": 17,
+          "params": []
+        },
+        {
+          "name": "test_main_creates_executor_and_runs",
+          "startLine": 20,
+          "endLine": 40,
+          "params": [
+            "config",
+            "monkeypatch"
+          ]
+        },
+        {
+          "name": "test_main_debug_logging",
+          "startLine": 43,
+          "endLine": 61,
+          "params": [
+            "config",
+            "monkeypatch"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_clear_hydra",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "test_main_creates_executor_and_runs",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "test_main_debug_logging",
+          "line": 43,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_clear_hydra",
+          "callee": "GlobalHydra.instance().clear",
+          "lineNumber": 15
+        },
+        {
+          "caller": "_clear_hydra",
+          "callee": "GlobalHydra.instance",
+          "lineNumber": 15
+        },
+        {
+          "caller": "_clear_hydra",
+          "callee": "GlobalHydra.instance().clear",
+          "lineNumber": 17
+        },
+        {
+          "caller": "_clear_hydra",
+          "callee": "GlobalHydra.instance",
+          "lineNumber": 17
+        },
+        {
+          "caller": "__init__",
+          "callee": "calls.append",
+          "lineNumber": 26
+        },
+        {
+          "caller": "run",
+          "callee": "calls.append",
+          "lineNumber": 29
+        },
+        {
+          "caller": "test_main_creates_executor_and_runs",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 31
+        },
+        {
+          "caller": "test_main_creates_executor_and_runs",
+          "callee": "main_mod.main.__wrapped__",
+          "lineNumber": 37
+        },
+        {
+          "caller": "test_main_debug_logging",
+          "callee": "open_dict",
+          "lineNumber": 47
+        },
+        {
+          "caller": "test_main_debug_logging",
+          "callee": "monkeypatch.setattr",
+          "lineNumber": 56
+        },
+        {
+          "caller": "test_main_debug_logging",
+          "callee": "main_mod.main.__wrapped__",
+          "lineNumber": 60
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tests/utils/mock_openai/openai_server.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 53,
+      "nonEmptyLines": 50,
+      "functions": [
+        {
+          "name": "chat_completions",
+          "startLine": 6,
+          "endLine": 39,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "embeddings",
+          "startLine": 42,
+          "endLine": 50,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "chat_completions",
+          "line": 5,
+          "isDefault": false
+        },
+        {
+          "name": "embeddings",
+          "line": 41,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "chat_completions",
+          "callee": "str",
+          "lineNumber": 7
+        },
+        {
+          "caller": "embeddings",
+          "callee": "len",
+          "lineNumber": 44
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    }
+  ]
+}

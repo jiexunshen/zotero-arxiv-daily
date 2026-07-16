@@ -1,0 +1,2795 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "05b20ec5c14ef82f8634c21a0876acd40e02c2b2",
+  "generatedAt": "2026-07-16T06:44:25.100Z",
+  "files": {
+    ".github/copilot-instructions.md": {
+      "filePath": ".github/copilot-instructions.md",
+      "contentHash": "ac32049de6303c7c757c079c54ad86c28940feb96790e678b677e1eee3e7dc60",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 75,
+      "hasStructuralAnalysis": true
+    },
+    ".github/FUNDING.yml": {
+      "filePath": ".github/FUNDING.yml",
+      "contentHash": "0392c0e1c848f01435ecccf949e4b82d43cded40f660a33d298ed7d4f4d591a3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    ".github/keep-alive.txt": {
+      "filePath": ".github/keep-alive.txt",
+      "contentHash": "7fcf999a8ab25280f5cd0d0d69227d9191a0f09b59fb0804bfcbae584c08b491",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3,
+      "hasStructuralAnalysis": false
+    },
+    ".github/workflows/ci.yml": {
+      "filePath": ".github/workflows/ci.yml",
+      "contentHash": "5bcc4122dfdea2c8c2430431fb2f0064a7e55fdf2b48270d4dc47cba93da5f68",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": true
+    },
+    ".github/workflows/keep-alive.yml": {
+      "filePath": ".github/workflows/keep-alive.yml",
+      "contentHash": "91252b5db83dd4173366e55f4c7e659ab533f28dae28107e99a189309f73d41b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 37,
+      "hasStructuralAnalysis": true
+    },
+    ".github/workflows/main.yml": {
+      "filePath": ".github/workflows/main.yml",
+      "contentHash": "689e5a265b8ccdd5a09554c092265a7e72fc62477e40c4eeeb02de2c8da977db",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 35,
+      "hasStructuralAnalysis": true
+    },
+    ".github/workflows/test.yml": {
+      "filePath": ".github/workflows/test.yml",
+      "contentHash": "fb51ca39a8ede2bf412ff2441877dfabb1b5595f610849ef9936a223f1d984a0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 35,
+      "hasStructuralAnalysis": true
+    },
+    ".python-version": {
+      "filePath": ".python-version",
+      "contentHash": "a7b9da5e355ce2ea4508cc53756849f44c960d87a38e5a76d0c734d7512c5371",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "AGENTS.md": {
+      "filePath": "AGENTS.md",
+      "contentHash": "29eadf6d8c7f7ff4ad5d4b400df1bb9154943ca90dd49c99c563bf62af62d6f2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 82,
+      "hasStructuralAnalysis": true
+    },
+    "assets/use_docker.md": {
+      "filePath": "assets/use_docker.md",
+      "contentHash": "b12aa475be0a142c40ec2d18cc7eb49850eb7f9d02b9254d40da890be11f43ca",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 111,
+      "hasStructuralAnalysis": true
+    },
+    "CLAUDE.md": {
+      "filePath": "CLAUDE.md",
+      "contentHash": "00b611aeb7ca25783b6469d210a02c11fb1c4eb19868987b604cb7f4027662ad",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 82,
+      "hasStructuralAnalysis": true
+    },
+    "config/base.yaml": {
+      "filePath": "config/base.yaml",
+      "contentHash": "b1ed55c22dda52326f6e567a24f0dee874ae74a18a4866117f56fc9338f5ca5b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "config/custom.yaml": {
+      "filePath": "config/custom.yaml",
+      "contentHash": "6c2195f658e014a155da86e6c04e891ec07f11c4cd4a96d92aa8ef8345065fa3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 27,
+      "hasStructuralAnalysis": true
+    },
+    "config/default.yaml": {
+      "filePath": "config/default.yaml",
+      "contentHash": "ac351eca267f8a473c1162dce286a8f05a8bfd22b0bc9bfb2b9fabc89a90b519",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3,
+      "hasStructuralAnalysis": true
+    },
+    "pyproject.toml": {
+      "filePath": "pyproject.toml",
+      "contentHash": "b1d5b3fa7b7d1b344936395d891b24889a777c686c5d74b1c9e4c0e9c3149aed",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 54,
+      "hasStructuralAnalysis": true
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "dd6db51bb07c01c295cce85252a27611ad27d89d151d43ad4b17f193ba6d95fa",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 212,
+      "hasStructuralAnalysis": true
+    },
+    "src/zotero_arxiv_daily/__init__.py": {
+      "filePath": "src/zotero_arxiv_daily/__init__.py",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "src/zotero_arxiv_daily/construct_email.py": {
+      "filePath": "src/zotero_arxiv_daily/construct_email.py",
+      "contentHash": "ef451c0f8d929f0f03eccbd1a69cab5e02871aa6bb8cfbb68c6ce23587bd07d6",
+      "functions": [
+        {
+          "name": "get_empty_html",
+          "params": [],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "get_block_html",
+          "params": [
+            "title",
+            "authors",
+            "rate",
+            "tldr",
+            "pdf_url",
+            "affiliations"
+          ],
+          "exported": true,
+          "lineCount": 34
+        },
+        {
+          "name": "get_stars",
+          "params": [
+            "score"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "render_email",
+          "params": [
+            "papers"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 25
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": ".protocol",
+          "specifiers": [
+            "Paper"
+          ]
+        },
+        {
+          "source": "math",
+          "specifiers": [
+            "math"
+          ]
+        }
+      ],
+      "exports": [
+        "get_empty_html",
+        "get_block_html",
+        "get_stars",
+        "render_email"
+      ],
+      "totalLines": 132,
+      "hasStructuralAnalysis": true
+    },
+    "src/zotero_arxiv_daily/executor.py": {
+      "filePath": "src/zotero_arxiv_daily/executor.py",
+      "contentHash": "5068b7acbacd06e23b6c37c19a3ede19dde2bbf3a6567fd1317e3ad01a04643c",
+      "functions": [
+        {
+          "name": "normalize_path_patterns",
+          "params": [
+            "patterns",
+            "config_key"
+          ],
+          "returnType": "list[str] | None",
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "classes": [
+        {
+          "name": "Executor",
+          "methods": [
+            "__init__",
+            "fetch_zotero_corpus",
+            "filter_corpus",
+            "run"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 93
+        }
+      ],
+      "imports": [
+        {
+          "source": "loguru",
+          "specifiers": [
+            "logger"
+          ]
+        },
+        {
+          "source": "pyzotero",
+          "specifiers": [
+            "zotero"
+          ]
+        },
+        {
+          "source": "omegaconf",
+          "specifiers": [
+            "DictConfig",
+            "ListConfig"
+          ]
+        },
+        {
+          "source": ".utils",
+          "specifiers": [
+            "glob_match"
+          ]
+        },
+        {
+          "source": ".retriever",
+          "specifiers": [
+            "get_retriever_cls"
+          ]
+        },
+        {
+          "source": ".protocol",
+          "specifiers": [
+            "CorpusPaper"
+          ]
+        },
+        {
+          "source": "random",
+          "specifiers": [
+            "random"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "datetime"
+          ]
+        },
+        {
+          "source": ".reranker",
+          "specifiers": [
+            "get_reranker_cls"
+          ]
+        },
+        {
+          "source": ".construct_email",
+          "specifiers": [
+            "render_email"
+          ]
+        },
+        {
+          "source": ".utils",
+          "specifiers": [
+            "send_email"
+          ]
+        },
+        {
+          "source": "openai",
+          "specifiers": [
+            "OpenAI"
+          ]
+        },
+        {
+          "source": "tqdm",
+          "specifiers": [
+            "tqdm"
+          ]
+        }
+      ],
+      "exports": [
+        "normalize_path_patterns",
+        "Executor"
+      ],
+      "totalLines": 125,
+      "hasStructuralAnalysis": true
+    },
+    "src/zotero_arxiv_daily/main.py": {
+      "filePath": "src/zotero_arxiv_daily/main.py",
+      "contentHash": "0babb34bb404df7cc76b556723f5e5990e1675b8ddd8f4f1b500cced5fdc932f",
+      "functions": [
+        {
+          "name": "main",
+          "params": [
+            "config"
+          ],
+          "exported": true,
+          "lineCount": 20
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "logging",
+          "specifiers": [
+            "logging"
+          ]
+        },
+        {
+          "source": "omegaconf",
+          "specifiers": [
+            "DictConfig"
+          ]
+        },
+        {
+          "source": "hydra",
+          "specifiers": [
+            "hydra"
+          ]
+        },
+        {
+          "source": "loguru",
+          "specifiers": [
+            "logger"
+          ]
+        },
+        {
+          "source": "dotenv",
+          "specifiers": [
+            "dotenv"
+          ]
+        },
+        {
+          "source": "zotero_arxiv_daily.executor",
+          "specifiers": [
+            "Executor"
+          ]
+        }
+      ],
+      "exports": [
+        "main"
+      ],
+      "totalLines": 35,
+      "hasStructuralAnalysis": true
+    },
+    "src/zotero_arxiv_daily/protocol.py": {
+      "filePath": "src/zotero_arxiv_daily/protocol.py",
+      "contentHash": "36d1066688b898bddbcf338402bd1e7e67fb9472a69c268f678ece2385bc9f14",
+      "functions": [],
+      "classes": [
+        {
+          "name": "Paper",
+          "methods": [
+            "_generate_tldr_with_llm",
+            "generate_tldr",
+            "_generate_affiliations_with_llm",
+            "generate_affiliations"
+          ],
+          "properties": [
+            "source",
+            "title",
+            "authors",
+            "abstract",
+            "url",
+            "pdf_url",
+            "full_text",
+            "tldr",
+            "affiliations",
+            "score"
+          ],
+          "exported": true,
+          "lineCount": 94
+        },
+        {
+          "name": "CorpusPaper",
+          "methods": [],
+          "properties": [
+            "title",
+            "abstract",
+            "added_date",
+            "paths"
+          ],
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "imports": [
+        {
+          "source": "dataclasses",
+          "specifiers": [
+            "dataclass"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Optional",
+            "TypeVar"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "datetime"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "tiktoken",
+          "specifiers": [
+            "tiktoken"
+          ]
+        },
+        {
+          "source": "openai",
+          "specifiers": [
+            "OpenAI"
+          ]
+        },
+        {
+          "source": "loguru",
+          "specifiers": [
+            "logger"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        }
+      ],
+      "exports": [
+        "Paper",
+        "CorpusPaper"
+      ],
+      "totalLines": 111,
+      "hasStructuralAnalysis": true
+    },
+    "src/zotero_arxiv_daily/reranker/__init__.py": {
+      "filePath": "src/zotero_arxiv_daily/reranker/__init__.py",
+      "contentHash": "c54348a142f427faf2a48b22d0e79ee0f7d432ffd05c18c2143c8e7a0b870bcb",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": ".base",
+          "specifiers": [
+            "get_reranker_cls"
+          ]
+        },
+        {
+          "source": ".",
+          "specifiers": [
+            "local",
+            "api"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "src/zotero_arxiv_daily/reranker/api.py": {
+      "filePath": "src/zotero_arxiv_daily/reranker/api.py",
+      "contentHash": "eab00b8294e2e978019062ed3db323f3d495bf3ab2dea48a508623e20b3a6350",
+      "functions": [],
+      "classes": [
+        {
+          "name": "ApiReranker",
+          "methods": [
+            "get_similarity_score"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 19
+        }
+      ],
+      "imports": [
+        {
+          "source": ".base",
+          "specifiers": [
+            "BaseReranker",
+            "register_reranker"
+          ]
+        },
+        {
+          "source": "openai",
+          "specifiers": [
+            "OpenAI"
+          ]
+        },
+        {
+          "source": "numpy",
+          "specifiers": [
+            "np"
+          ]
+        }
+      ],
+      "exports": [
+        "ApiReranker"
+      ],
+      "totalLines": 24,
+      "hasStructuralAnalysis": true
+    },
+    "src/zotero_arxiv_daily/reranker/base.py": {
+      "filePath": "src/zotero_arxiv_daily/reranker/base.py",
+      "contentHash": "7cc6731b680fd004f10eb2533930d281e6509669e2aa991e07429dd7b10e3354",
+      "functions": [
+        {
+          "name": "register_reranker",
+          "params": [
+            "name"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "get_reranker_cls",
+          "params": [
+            "name"
+          ],
+          "returnType": "Type[BaseReranker]",
+          "exported": true,
+          "lineCount": 4
+        }
+      ],
+      "classes": [
+        {
+          "name": "BaseReranker",
+          "methods": [
+            "__init__",
+            "rerank",
+            "get_similarity_score"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 19
+        }
+      ],
+      "imports": [
+        {
+          "source": "abc",
+          "specifiers": [
+            "ABC",
+            "abstractmethod"
+          ]
+        },
+        {
+          "source": "omegaconf",
+          "specifiers": [
+            "DictConfig"
+          ]
+        },
+        {
+          "source": "..protocol",
+          "specifiers": [
+            "Paper",
+            "CorpusPaper"
+          ]
+        },
+        {
+          "source": "numpy",
+          "specifiers": [
+            "np"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Type"
+          ]
+        }
+      ],
+      "exports": [
+        "BaseReranker",
+        "register_reranker",
+        "get_reranker_cls"
+      ],
+      "totalLines": 37,
+      "hasStructuralAnalysis": true
+    },
+    "src/zotero_arxiv_daily/reranker/local.py": {
+      "filePath": "src/zotero_arxiv_daily/reranker/local.py",
+      "contentHash": "6ff68ae461c44d8b06cd59b4177b5a0d3e48809b5e4159fe43575a36f1cdac27",
+      "functions": [],
+      "classes": [
+        {
+          "name": "LocalReranker",
+          "methods": [
+            "get_similarity_score"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 25
+        }
+      ],
+      "imports": [
+        {
+          "source": ".base",
+          "specifiers": [
+            "BaseReranker",
+            "register_reranker"
+          ]
+        },
+        {
+          "source": "logging",
+          "specifiers": [
+            "logging"
+          ]
+        },
+        {
+          "source": "warnings",
+          "specifiers": [
+            "warnings"
+          ]
+        },
+        {
+          "source": "numpy",
+          "specifiers": [
+            "np"
+          ]
+        }
+      ],
+      "exports": [
+        "LocalReranker"
+      ],
+      "totalLines": 30,
+      "hasStructuralAnalysis": true
+    },
+    "src/zotero_arxiv_daily/retriever/__init__.py": {
+      "filePath": "src/zotero_arxiv_daily/retriever/__init__.py",
+      "contentHash": "9ebd3abb0e79f8255191815af6ae5366500af80b9fc19c000fb2803d044120e9",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": ".base",
+          "specifiers": [
+            "get_retriever_cls"
+          ]
+        },
+        {
+          "source": ".",
+          "specifiers": [
+            "arxiv_retriever",
+            "biorxiv_retriever",
+            "medrxiv_retriever"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "src/zotero_arxiv_daily/retriever/arxiv_retriever.py": {
+      "filePath": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "contentHash": "3e9c0bc664dc3c79bd0e8dc4aa7e1eb550436f486e13f3cd82b39cfd6e3fd1bd",
+      "functions": [
+        {
+          "name": "_download_file",
+          "params": [
+            "url",
+            "path"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "_run_in_subprocess",
+          "params": [
+            "result_queue",
+            "func",
+            "args"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "_run_with_hard_timeout",
+          "params": [
+            "func",
+            "args",
+            "timeout",
+            "operation",
+            "paper_title"
+          ],
+          "returnType": "T | None",
+          "exported": true,
+          "lineCount": 34
+        },
+        {
+          "name": "_extract_text_from_pdf_worker",
+          "params": [
+            "pdf_url"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "_extract_text_from_html_worker",
+          "params": [
+            "html_url"
+          ],
+          "returnType": "str | None",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "_extract_text_from_tar_worker",
+          "params": [
+            "source_url",
+            "paper_id",
+            "paper_title"
+          ],
+          "returnType": "str | None",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "extract_text_from_html",
+          "params": [
+            "paper"
+          ],
+          "returnType": "str | None",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "extract_text_from_pdf",
+          "params": [
+            "paper"
+          ],
+          "returnType": "str | None",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "extract_text_from_tar",
+          "params": [
+            "paper"
+          ],
+          "returnType": "str | None",
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "classes": [
+        {
+          "name": "ArxivRetriever",
+          "methods": [
+            "__init__",
+            "_retrieve_raw_papers",
+            "convert_to_paper"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 68
+        }
+      ],
+      "imports": [
+        {
+          "source": ".base",
+          "specifiers": [
+            "BaseRetriever",
+            "register_retriever"
+          ]
+        },
+        {
+          "source": "arxiv",
+          "specifiers": [
+            "arxiv"
+          ]
+        },
+        {
+          "source": "arxiv",
+          "specifiers": [
+            "ArxivResult"
+          ]
+        },
+        {
+          "source": "..protocol",
+          "specifiers": [
+            "Paper"
+          ]
+        },
+        {
+          "source": "..utils",
+          "specifiers": [
+            "extract_markdown_from_pdf",
+            "extract_tex_code_from_tar"
+          ]
+        },
+        {
+          "source": "tempfile",
+          "specifiers": [
+            "TemporaryDirectory"
+          ]
+        },
+        {
+          "source": "feedparser",
+          "specifiers": [
+            "feedparser"
+          ]
+        },
+        {
+          "source": "tqdm",
+          "specifiers": [
+            "tqdm"
+          ]
+        },
+        {
+          "source": "multiprocessing",
+          "specifiers": [
+            "multiprocessing"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "queue",
+          "specifiers": [
+            "Empty"
+          ]
+        },
+        {
+          "source": "time",
+          "specifiers": [
+            "sleep"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any",
+            "Callable",
+            "TypeVar"
+          ]
+        },
+        {
+          "source": "loguru",
+          "specifiers": [
+            "logger"
+          ]
+        },
+        {
+          "source": "requests",
+          "specifiers": [
+            "requests"
+          ]
+        }
+      ],
+      "exports": [
+        "_download_file",
+        "_run_in_subprocess",
+        "_run_with_hard_timeout",
+        "_extract_text_from_pdf_worker",
+        "_extract_text_from_html_worker",
+        "_extract_text_from_tar_worker",
+        "ArxivRetriever",
+        "extract_text_from_html",
+        "extract_text_from_pdf",
+        "extract_text_from_tar"
+      ],
+      "totalLines": 214,
+      "hasStructuralAnalysis": true
+    },
+    "src/zotero_arxiv_daily/retriever/base.py": {
+      "filePath": "src/zotero_arxiv_daily/retriever/base.py",
+      "contentHash": "ba2fe92d364c5a5600a591c600e1557398880b312a33da0c02e630d10557bc44",
+      "functions": [
+        {
+          "name": "register_retriever",
+          "params": [
+            "name"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "get_retriever_cls",
+          "params": [
+            "name"
+          ],
+          "returnType": "Type[BaseRetriever]",
+          "exported": true,
+          "lineCount": 4
+        }
+      ],
+      "classes": [
+        {
+          "name": "BaseRetriever",
+          "methods": [
+            "__init__",
+            "_retrieve_raw_papers",
+            "convert_to_paper",
+            "retrieve_papers"
+          ],
+          "properties": [
+            "name"
+          ],
+          "exported": true,
+          "lineCount": 28
+        }
+      ],
+      "imports": [
+        {
+          "source": "abc",
+          "specifiers": [
+            "ABC",
+            "abstractmethod"
+          ]
+        },
+        {
+          "source": "omegaconf",
+          "specifiers": [
+            "DictConfig"
+          ]
+        },
+        {
+          "source": "..protocol",
+          "specifiers": [
+            "Paper",
+            "RawPaperItem"
+          ]
+        },
+        {
+          "source": "tqdm",
+          "specifiers": [
+            "tqdm"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Type"
+          ]
+        },
+        {
+          "source": "time",
+          "specifiers": [
+            "sleep"
+          ]
+        },
+        {
+          "source": "loguru",
+          "specifiers": [
+            "logger"
+          ]
+        }
+      ],
+      "exports": [
+        "BaseRetriever",
+        "register_retriever",
+        "get_retriever_cls"
+      ],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py": {
+      "filePath": "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py",
+      "contentHash": "bef817fbb7661d40c49ed1b53abb2733418bdb976aa5abc98722a940ca2b0d3e",
+      "functions": [],
+      "classes": [
+        {
+          "name": "BiorxivRetriever",
+          "methods": [
+            "__init__",
+            "_retrieve_raw_papers",
+            "convert_to_paper"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 53
+        }
+      ],
+      "imports": [
+        {
+          "source": "requests",
+          "specifiers": [
+            "requests"
+          ]
+        },
+        {
+          "source": ".base",
+          "specifiers": [
+            "BaseRetriever",
+            "register_retriever"
+          ]
+        },
+        {
+          "source": "..protocol",
+          "specifiers": [
+            "Paper"
+          ]
+        },
+        {
+          "source": "loguru",
+          "specifiers": [
+            "logger"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any"
+          ]
+        },
+        {
+          "source": "time",
+          "specifiers": [
+            "sleep"
+          ]
+        }
+      ],
+      "exports": [
+        "BiorxivRetriever"
+      ],
+      "totalLines": 61,
+      "hasStructuralAnalysis": true
+    },
+    "src/zotero_arxiv_daily/retriever/medrxiv_retriever.py": {
+      "filePath": "src/zotero_arxiv_daily/retriever/medrxiv_retriever.py",
+      "contentHash": "cd1b322db257704e2959195fcb2b134ce0160c6b1628f5f71e51d6f23f9bbf7a",
+      "functions": [],
+      "classes": [
+        {
+          "name": "MedrxivRetriever",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 2
+        }
+      ],
+      "imports": [
+        {
+          "source": ".biorxiv_retriever",
+          "specifiers": [
+            "BiorxivRetriever"
+          ]
+        },
+        {
+          "source": ".base",
+          "specifiers": [
+            "register_retriever"
+          ]
+        }
+      ],
+      "exports": [
+        "MedrxivRetriever"
+      ],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "src/zotero_arxiv_daily/utils.py": {
+      "filePath": "src/zotero_arxiv_daily/utils.py",
+      "contentHash": "43cabc5e4c32b0751d1fe5afbd1ea14b8ae601179a499c940705274aadc04839",
+      "functions": [
+        {
+          "name": "_tokenize",
+          "params": [
+            "text"
+          ],
+          "returnType": "list[str]",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "_bm25_pick",
+          "params": [
+            "query",
+            "candidates",
+            "k1",
+            "b"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 28
+        },
+        {
+          "name": "extract_tex_code_from_tar",
+          "params": [
+            "file_path",
+            "paper_id",
+            "paper_title"
+          ],
+          "returnType": "dict[str,str]",
+          "exported": true,
+          "lineCount": 78
+        },
+        {
+          "name": "extract_markdown_from_pdf",
+          "params": [
+            "file_path"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "glob_match",
+          "params": [
+            "path",
+            "pattern"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "send_email",
+          "params": [
+            "config",
+            "html"
+          ],
+          "exported": true,
+          "lineCount": 30
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "tarfile",
+          "specifiers": [
+            "tarfile"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "glob",
+          "specifiers": [
+            "glob"
+          ]
+        },
+        {
+          "source": "math",
+          "specifiers": [
+            "math"
+          ]
+        },
+        {
+          "source": "smtplib",
+          "specifiers": [
+            "smtplib"
+          ]
+        },
+        {
+          "source": "collections",
+          "specifiers": [
+            "Counter"
+          ]
+        },
+        {
+          "source": "email.header",
+          "specifiers": [
+            "Header"
+          ]
+        },
+        {
+          "source": "email.mime.text",
+          "specifiers": [
+            "MIMEText"
+          ]
+        },
+        {
+          "source": "email.utils",
+          "specifiers": [
+            "parseaddr",
+            "formataddr"
+          ]
+        },
+        {
+          "source": "loguru",
+          "specifiers": [
+            "logger"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "datetime"
+          ]
+        },
+        {
+          "source": "omegaconf",
+          "specifiers": [
+            "DictConfig"
+          ]
+        },
+        {
+          "source": "pymupdf",
+          "specifiers": [
+            "pymupdf"
+          ]
+        },
+        {
+          "source": "pymupdf.layout",
+          "specifiers": [
+            "pymupdf.layout"
+          ]
+        },
+        {
+          "source": "pymupdf4llm",
+          "specifiers": [
+            "pymupdf4llm"
+          ]
+        }
+      ],
+      "exports": [
+        "_tokenize",
+        "_bm25_pick",
+        "extract_tex_code_from_tar",
+        "extract_markdown_from_pdf",
+        "glob_match",
+        "send_email"
+      ],
+      "totalLines": 171,
+      "hasStructuralAnalysis": true
+    },
+    "tests/__init__.py": {
+      "filePath": "tests/__init__.py",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "tests/canned_responses.py": {
+      "filePath": "tests/canned_responses.py",
+      "contentHash": "4c488dd927aef96bed2766a7da6d52ff89ab0cd4cc06e591e121c6e4eeff9a43",
+      "functions": [
+        {
+          "name": "_make_chat_response",
+          "params": [
+            "content"
+          ],
+          "returnType": "SimpleNamespace",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "_stub_chat_create",
+          "params": [
+            "**kwargs"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "_stub_embeddings_create",
+          "params": [
+            "**kwargs"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "make_stub_openai_client",
+          "params": [],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "make_stub_zotero_client",
+          "params": [
+            "collections",
+            "items"
+          ],
+          "exported": true,
+          "lineCount": 24
+        },
+        {
+          "name": "make_stub_smtp",
+          "params": [
+            "sent_emails"
+          ],
+          "exported": true,
+          "lineCount": 28
+        },
+        {
+          "name": "make_sample_paper",
+          "params": [
+            "**overrides"
+          ],
+          "returnType": "Paper",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "make_sample_corpus",
+          "params": [
+            "n"
+          ],
+          "returnType": "list[CorpusPaper]",
+          "exported": true,
+          "lineCount": 10
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "datetime",
+          "specifiers": [
+            "datetime"
+          ]
+        },
+        {
+          "source": "types",
+          "specifiers": [
+            "SimpleNamespace"
+          ]
+        },
+        {
+          "source": "zotero_arxiv_daily.protocol",
+          "specifiers": [
+            "CorpusPaper",
+            "Paper"
+          ]
+        }
+      ],
+      "exports": [
+        "_make_chat_response",
+        "_stub_chat_create",
+        "_stub_embeddings_create",
+        "make_stub_openai_client",
+        "make_stub_zotero_client",
+        "make_stub_smtp",
+        "make_sample_paper",
+        "make_sample_corpus"
+      ],
+      "totalLines": 232,
+      "hasStructuralAnalysis": true
+    },
+    "tests/conftest.py": {
+      "filePath": "tests/conftest.py",
+      "contentHash": "49e3ff5b6f976838ea2822cbc8bff337da2bc4a768beb87f53e94f680a36dfee",
+      "functions": [
+        {
+          "name": "_base_config",
+          "params": [],
+          "exported": true,
+          "lineCount": 33
+        },
+        {
+          "name": "config",
+          "params": [
+            "_base_config"
+          ],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "copy",
+          "specifiers": [
+            "copy"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "hydra",
+          "specifiers": [
+            "compose",
+            "initialize_config_dir"
+          ]
+        },
+        {
+          "source": "hydra.core.global_hydra",
+          "specifiers": [
+            "GlobalHydra"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [
+        "_base_config",
+        "config"
+      ],
+      "totalLines": 59,
+      "hasStructuralAnalysis": true
+    },
+    "tests/reranker/__init__.py": {
+      "filePath": "tests/reranker/__init__.py",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "tests/reranker/conftest.py": {
+      "filePath": "tests/reranker/conftest.py",
+      "contentHash": "07c63163558fd5c04fe78095f540b63ae39134ac8ab75794feaf181625905d89",
+      "functions": [
+        {
+          "name": "patch_openai",
+          "params": [
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "tests.canned_responses",
+          "specifiers": [
+            "make_stub_openai_client"
+          ]
+        }
+      ],
+      "exports": [
+        "patch_openai"
+      ],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "tests/reranker/test_api_reranker.py": {
+      "filePath": "tests/reranker/test_api_reranker.py",
+      "contentHash": "eb2848aa012e1bfd8a94ad4c3436db9f70dd86a31ef845904389f9e067654467",
+      "functions": [
+        {
+          "name": "test_api_reranker_similarity_shape",
+          "params": [
+            "config",
+            "patch_openai"
+          ],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "test_api_reranker_batching",
+          "params": [
+            "config",
+            "patch_openai"
+          ],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zotero_arxiv_daily.reranker.api",
+          "specifiers": [
+            "ApiReranker"
+          ]
+        }
+      ],
+      "exports": [
+        "test_api_reranker_similarity_shape",
+        "test_api_reranker_batching"
+      ],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "tests/reranker/test_base_reranker.py": {
+      "filePath": "tests/reranker/test_base_reranker.py",
+      "contentHash": "69949acb60aaf239914bb28dbcd6fea79fb8914e8cd758609dba8559d7f379a0",
+      "functions": [
+        {
+          "name": "test_rerank_scores_and_sorts",
+          "params": [],
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "test_rerank_time_decay_weighting",
+          "params": [],
+          "exported": true,
+          "lineCount": 19
+        },
+        {
+          "name": "test_rerank_single_candidate_single_corpus",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_get_reranker_cls_unknown",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [
+        {
+          "name": "StubReranker",
+          "methods": [
+            "__init__",
+            "get_similarity_score"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "imports": [
+        {
+          "source": "numpy",
+          "specifiers": [
+            "np"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "zotero_arxiv_daily.reranker.base",
+          "specifiers": [
+            "BaseReranker",
+            "get_reranker_cls"
+          ]
+        },
+        {
+          "source": "tests.canned_responses",
+          "specifiers": [
+            "make_sample_paper",
+            "make_sample_corpus"
+          ]
+        }
+      ],
+      "exports": [
+        "StubReranker",
+        "test_rerank_scores_and_sorts",
+        "test_rerank_time_decay_weighting",
+        "test_rerank_single_candidate_single_corpus",
+        "test_get_reranker_cls_unknown"
+      ],
+      "totalLines": 71,
+      "hasStructuralAnalysis": true
+    },
+    "tests/reranker/test_local_reranker.py": {
+      "filePath": "tests/reranker/test_local_reranker.py",
+      "contentHash": "aa1726ab8f217d8e5c1e3c73816498999ab174f1d9acd48f6aa1373ee3917a2d",
+      "functions": [
+        {
+          "name": "test_local_reranker",
+          "params": [
+            "config"
+          ],
+          "exported": true,
+          "lineCount": 4
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "zotero_arxiv_daily.reranker.local",
+          "specifiers": [
+            "LocalReranker"
+          ]
+        }
+      ],
+      "exports": [
+        "test_local_reranker"
+      ],
+      "totalLines": 13,
+      "hasStructuralAnalysis": true
+    },
+    "tests/retriever/__init__.py": {
+      "filePath": "tests/retriever/__init__.py",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "tests/retriever/arxiv_rss_example.xml": {
+      "filePath": "tests/retriever/arxiv_rss_example.xml",
+      "contentHash": "5127bb27026a2c53596838127bf53477be907a2fb7fc7b5c76db8d36ac507de7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 107,
+      "hasStructuralAnalysis": false
+    },
+    "tests/retriever/conftest.py": {
+      "filePath": "tests/retriever/conftest.py",
+      "contentHash": "b695b1449fe1ee15364788c3ff30ceaac9251491030ed755d8bfef567862ad24",
+      "functions": [
+        {
+          "name": "mock_feedparser",
+          "params": [
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "mock_biorxiv_api",
+          "params": [
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 19
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "feedparser",
+          "specifiers": [
+            "feedparser"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        }
+      ],
+      "exports": [
+        "mock_feedparser",
+        "mock_biorxiv_api"
+      ],
+      "totalLines": 51,
+      "hasStructuralAnalysis": true
+    },
+    "tests/retriever/test_arxiv_retriever.py": {
+      "filePath": "tests/retriever/test_arxiv_retriever.py",
+      "contentHash": "74d24e124ef5e62a596de65e1d208cd34b55fe4ccb0df236d734274de729933d",
+      "functions": [
+        {
+          "name": "_sleep_and_return",
+          "params": [
+            "value",
+            "delay_seconds"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "_raise_runtime_error",
+          "params": [],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "test_arxiv_retriever",
+          "params": [
+            "config",
+            "mock_feedparser",
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 43
+        },
+        {
+          "name": "test_run_with_hard_timeout_returns_value",
+          "params": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "test_run_with_hard_timeout_returns_none_on_timeout",
+          "params": [
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_run_with_hard_timeout_returns_none_on_failure",
+          "params": [
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "time",
+          "specifiers": [
+            "time"
+          ]
+        },
+        {
+          "source": "types",
+          "specifiers": [
+            "SimpleNamespace"
+          ]
+        },
+        {
+          "source": "feedparser",
+          "specifiers": [
+            "feedparser"
+          ]
+        },
+        {
+          "source": "zotero_arxiv_daily.retriever.arxiv_retriever",
+          "specifiers": [
+            "ArxivRetriever",
+            "_run_with_hard_timeout"
+          ]
+        },
+        {
+          "source": "zotero_arxiv_daily.retriever.arxiv_retriever",
+          "specifiers": [
+            "arxiv_retriever"
+          ]
+        }
+      ],
+      "exports": [
+        "_sleep_and_return",
+        "_raise_runtime_error",
+        "test_arxiv_retriever",
+        "test_run_with_hard_timeout_returns_value",
+        "test_run_with_hard_timeout_returns_none_on_timeout",
+        "test_run_with_hard_timeout_returns_none_on_failure"
+      ],
+      "totalLines": 91,
+      "hasStructuralAnalysis": true
+    },
+    "tests/retriever/test_base_retriever.py": {
+      "filePath": "tests/retriever/test_base_retriever.py",
+      "contentHash": "1e901ed0c168620ff6a90f3de4ed85bec7ab8d51e45b0fc9deda08a9c746e4c5",
+      "functions": [
+        {
+          "name": "test_retrieve_papers_skips_conversion_errors",
+          "params": [
+            "config",
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "test_retrieve_papers_runs_serially",
+          "params": [
+            "config",
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "test_retrieve_papers_skips_none_results",
+          "params": [
+            "config",
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "test_retrieve_papers_empty_raw",
+          "params": [
+            "config",
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "test_get_retriever_cls_unknown",
+          "params": [],
+          "exported": true,
+          "lineCount": 4
+        }
+      ],
+      "classes": [
+        {
+          "name": "FailingTestRetriever",
+          "methods": [
+            "_retrieve_raw_papers",
+            "convert_to_paper"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 23
+        },
+        {
+          "name": "SerialTestRetriever",
+          "methods": [
+            "__init__",
+            "_retrieve_raw_papers",
+            "convert_to_paper"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "NoneRetriever",
+          "methods": [
+            "_retrieve_raw_papers",
+            "convert_to_paper"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "imports": [
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "types",
+          "specifiers": [
+            "SimpleNamespace"
+          ]
+        },
+        {
+          "source": "urllib.error",
+          "specifiers": [
+            "HTTPError"
+          ]
+        },
+        {
+          "source": "omegaconf",
+          "specifiers": [
+            "open_dict"
+          ]
+        },
+        {
+          "source": "zotero_arxiv_daily.retriever.base",
+          "specifiers": [
+            "BaseRetriever",
+            "register_retriever",
+            "get_retriever_cls"
+          ]
+        },
+        {
+          "source": "zotero_arxiv_daily.protocol",
+          "specifiers": [
+            "Paper"
+          ]
+        }
+      ],
+      "exports": [
+        "FailingTestRetriever",
+        "SerialTestRetriever",
+        "NoneRetriever",
+        "test_retrieve_papers_skips_conversion_errors",
+        "test_retrieve_papers_runs_serially",
+        "test_retrieve_papers_skips_none_results",
+        "test_retrieve_papers_empty_raw",
+        "test_get_retriever_cls_unknown"
+      ],
+      "totalLines": 128,
+      "hasStructuralAnalysis": true
+    },
+    "tests/retriever/test_biorxiv_retriever.py": {
+      "filePath": "tests/retriever/test_biorxiv_retriever.py",
+      "contentHash": "af28d93181d292b4b2572f7735eca7e8744a9487b0fe5635cf2583f15078a460",
+      "functions": [
+        {
+          "name": "test_biorxiv_retrieve",
+          "params": [
+            "config",
+            "mock_biorxiv_api",
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "test_biorxiv_empty_response",
+          "params": [
+            "config",
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 19
+        },
+        {
+          "name": "test_biorxiv_convert_to_paper",
+          "params": [
+            "config"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "test_biorxiv_requires_category",
+          "params": [
+            "config"
+          ],
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "omegaconf",
+          "specifiers": [
+            "open_dict"
+          ]
+        },
+        {
+          "source": "zotero_arxiv_daily.retriever.biorxiv_retriever",
+          "specifiers": [
+            "BiorxivRetriever"
+          ]
+        },
+        {
+          "source": "tests.canned_responses",
+          "specifiers": [
+            "SAMPLE_BIORXIV_API_RESPONSE"
+          ]
+        }
+      ],
+      "exports": [
+        "test_biorxiv_retrieve",
+        "test_biorxiv_empty_response",
+        "test_biorxiv_convert_to_paper",
+        "test_biorxiv_requires_category"
+      ],
+      "totalLines": 59,
+      "hasStructuralAnalysis": true
+    },
+    "tests/retriever/test_medrxiv_retriever.py": {
+      "filePath": "tests/retriever/test_medrxiv_retriever.py",
+      "contentHash": "9551e0570fbb1424877232a00f062c70ebaafe51d7b4e8619817762c079a8324",
+      "functions": [
+        {
+          "name": "test_medrxiv_server_attribute",
+          "params": [
+            "config"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "test_medrxiv_pdf_url",
+          "params": [
+            "config"
+          ],
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "omegaconf",
+          "specifiers": [
+            "open_dict"
+          ]
+        },
+        {
+          "source": "zotero_arxiv_daily.retriever.medrxiv_retriever",
+          "specifiers": [
+            "MedrxivRetriever"
+          ]
+        }
+      ],
+      "exports": [
+        "test_medrxiv_server_attribute",
+        "test_medrxiv_pdf_url"
+      ],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_construct_email.py": {
+      "filePath": "tests/test_construct_email.py",
+      "contentHash": "d20f8670561bebcbc70ab9ff3b258374f8e12823917a240e7c57e9d6fc58d196",
+      "functions": [
+        {
+          "name": "test_render_email_with_papers",
+          "params": [],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "test_render_email_empty_list",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "test_render_email_author_truncation",
+          "params": [],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "test_render_email_affiliation_truncation",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_render_email_no_affiliations",
+          "params": [],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "test_get_stars_low_score",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "test_get_stars_high_score",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "test_get_stars_mid_score",
+          "params": [],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "test_get_block_html_contains_all_fields",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_get_empty_html",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zotero_arxiv_daily.construct_email",
+          "specifiers": [
+            "render_email",
+            "get_stars",
+            "get_block_html",
+            "get_empty_html"
+          ]
+        },
+        {
+          "source": "tests.canned_responses",
+          "specifiers": [
+            "make_sample_paper"
+          ]
+        }
+      ],
+      "exports": [
+        "test_render_email_with_papers",
+        "test_render_email_empty_list",
+        "test_render_email_author_truncation",
+        "test_render_email_affiliation_truncation",
+        "test_render_email_no_affiliations",
+        "test_get_stars_low_score",
+        "test_get_stars_high_score",
+        "test_get_stars_mid_score",
+        "test_get_block_html_contains_all_fields",
+        "test_get_empty_html"
+      ],
+      "totalLines": 79,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_executor.py": {
+      "filePath": "tests/test_executor.py",
+      "contentHash": "e7598343ba70bad40c0f301809c7ee6ba5cbacd0ea440b0d6762b0b0ffe0ba45",
+      "functions": [
+        {
+          "name": "test_normalize_path_patterns_rejects_single_string_for_include_path",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "test_normalize_path_patterns_accepts_list_config_for_include_path",
+          "params": [],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "test_normalize_path_patterns_rejects_single_string_for_ignore_path",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "test_normalize_path_patterns_accepts_list_config_for_ignore_path",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "test_normalize_path_patterns_accepts_empty_list",
+          "params": [],
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "test_normalize_path_patterns_accepts_none",
+          "params": [],
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "_make_executor",
+          "params": [
+            "include_patterns",
+            "ignore_patterns"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "test_filter_corpus_matches_any_path_against_any_pattern",
+          "params": [],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "test_filter_corpus_excludes_papers_matching_ignore_path",
+          "params": [],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "test_filter_corpus_ignore_path_takes_precedence_over_include_path",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_filter_corpus_no_filters_returns_all",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_fetch_zotero_corpus",
+          "params": [
+            "config",
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "test_fetch_zotero_corpus_paper_with_zero_collections",
+          "params": [
+            "config",
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "test_run_end_to_end",
+          "params": [
+            "config",
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 59
+        },
+        {
+          "name": "test_run_no_papers_send_empty_false",
+          "params": [
+            "config",
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 34
+        },
+        {
+          "name": "test_run_no_papers_send_empty_true",
+          "params": [
+            "config",
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 36
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "datetime",
+          "specifiers": [
+            "datetime"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "omegaconf",
+          "specifiers": [
+            "OmegaConf"
+          ]
+        },
+        {
+          "source": "zotero_arxiv_daily.executor",
+          "specifiers": [
+            "Executor",
+            "normalize_path_patterns"
+          ]
+        },
+        {
+          "source": "zotero_arxiv_daily.protocol",
+          "specifiers": [
+            "CorpusPaper"
+          ]
+        }
+      ],
+      "exports": [
+        "test_normalize_path_patterns_rejects_single_string_for_include_path",
+        "test_normalize_path_patterns_accepts_list_config_for_include_path",
+        "test_normalize_path_patterns_rejects_single_string_for_ignore_path",
+        "test_normalize_path_patterns_accepts_list_config_for_ignore_path",
+        "test_normalize_path_patterns_accepts_empty_list",
+        "test_normalize_path_patterns_accepts_none",
+        "_make_executor",
+        "test_filter_corpus_matches_any_path_against_any_pattern",
+        "test_filter_corpus_excludes_papers_matching_ignore_path",
+        "test_filter_corpus_ignore_path_takes_precedence_over_include_path",
+        "test_filter_corpus_no_filters_returns_all",
+        "test_fetch_zotero_corpus",
+        "test_fetch_zotero_corpus_paper_with_zero_collections",
+        "test_run_end_to_end",
+        "test_run_no_papers_send_empty_false",
+        "test_run_no_papers_send_empty_true"
+      ],
+      "totalLines": 284,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_main.py": {
+      "filePath": "tests/test_main.py",
+      "contentHash": "fc66bbea4c75370048f06c6d31da7afe84a1ce56ae44955cf238894e01993e7f",
+      "functions": [
+        {
+          "name": "_clear_hydra",
+          "params": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "test_main_creates_executor_and_runs",
+          "params": [
+            "config",
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "test_main_debug_logging",
+          "params": [
+            "config",
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 19
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "hydra.core.global_hydra",
+          "specifiers": [
+            "GlobalHydra"
+          ]
+        }
+      ],
+      "exports": [
+        "_clear_hydra",
+        "test_main_creates_executor_and_runs",
+        "test_main_debug_logging"
+      ],
+      "totalLines": 62,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_protocol.py": {
+      "filePath": "tests/test_protocol.py",
+      "contentHash": "4c4d0a2938dd6fc946f8913fd58b59ad17905a34bcb52989226675dd1e1a0729",
+      "functions": [
+        {
+          "name": "llm_params",
+          "params": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "test_tldr_returns_response",
+          "params": [
+            "llm_params"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "test_tldr_without_abstract_or_fulltext",
+          "params": [
+            "llm_params"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "test_tldr_falls_back_to_abstract_on_error",
+          "params": [
+            "llm_params"
+          ],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "test_tldr_truncates_long_prompt",
+          "params": [
+            "llm_params"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "test_affiliations_returns_parsed_list",
+          "params": [
+            "llm_params"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "test_affiliations_none_without_fulltext",
+          "params": [
+            "llm_params"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "test_affiliations_deduplicates",
+          "params": [
+            "llm_params"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_affiliations_malformed_llm_output",
+          "params": [
+            "llm_params"
+          ],
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "test_affiliations_error_returns_none",
+          "params": [
+            "llm_params"
+          ],
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "tests.canned_responses",
+          "specifiers": [
+            "make_sample_paper",
+            "make_stub_openai_client"
+          ]
+        }
+      ],
+      "exports": [
+        "llm_params",
+        "test_tldr_returns_response",
+        "test_tldr_without_abstract_or_fulltext",
+        "test_tldr_falls_back_to_abstract_on_error",
+        "test_tldr_truncates_long_prompt",
+        "test_affiliations_returns_parsed_list",
+        "test_affiliations_none_without_fulltext",
+        "test_affiliations_deduplicates",
+        "test_affiliations_malformed_llm_output",
+        "test_affiliations_error_returns_none"
+      ],
+      "totalLines": 125,
+      "hasStructuralAnalysis": true
+    },
+    "tests/test_utils.py": {
+      "filePath": "tests/test_utils.py",
+      "contentHash": "21b6d3224d424db18b2652d36c1746c4a855e05b6a93d84133b7b7c9c01e0df0",
+      "functions": [
+        {
+          "name": "test_send_email_starttls_success",
+          "params": [
+            "config",
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "test_send_email_falls_back_to_ssl",
+          "params": [
+            "config",
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 19
+        },
+        {
+          "name": "test_send_email_falls_back_to_plain",
+          "params": [
+            "config",
+            "monkeypatch"
+          ],
+          "exported": true,
+          "lineCount": 30
+        },
+        {
+          "name": "make_tar",
+          "params": [
+            "tmp_path"
+          ],
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "test_extract_tex_single_file",
+          "params": [
+            "make_tar"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "test_extract_tex_with_input_resolution",
+          "params": [
+            "make_tar"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_extract_tex_no_tex_files",
+          "params": [
+            "make_tar"
+          ],
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "test_extract_tex_not_a_tar",
+          "params": [
+            "tmp_path"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "test_extract_tex_multiple_tex_no_bbl",
+          "params": [
+            "make_tar"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "test_extract_tex_multiple_document_blocks_bm25",
+          "params": [
+            "make_tar"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "test_extract_tex_multiple_document_blocks_no_title",
+          "params": [
+            "make_tar"
+          ],
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "classes": [
+        {
+          "name": "TestGlobMatch",
+          "methods": [
+            "test_exact_match",
+            "test_wildcard_asterisk",
+            "test_wildcard_question_mark",
+            "test_character_classes",
+            "test_path_separators",
+            "test_complex_patterns",
+            "test_edge_cases",
+            "test_partial_matches",
+            "test_special_glob_characters",
+            "test_numeric_patterns",
+            "test_extension_patterns",
+            "test_recursive_wildcard"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 99
+        },
+        {
+          "name": "TestBm25Pick",
+          "methods": [
+            "test_picks_best_match",
+            "test_single_candidate",
+            "test_empty_query_returns_first"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 16
+        }
+      ],
+      "imports": [
+        {
+          "source": "smtplib",
+          "specifiers": [
+            "smtplib"
+          ]
+        },
+        {
+          "source": "tarfile",
+          "specifiers": [
+            "tarfile"
+          ]
+        },
+        {
+          "source": "io",
+          "specifiers": [
+            "io"
+          ]
+        },
+        {
+          "source": "pytest",
+          "specifiers": [
+            "pytest"
+          ]
+        },
+        {
+          "source": "zotero_arxiv_daily.utils",
+          "specifiers": [
+            "glob_match",
+            "send_email",
+            "extract_tex_code_from_tar",
+            "_bm25_pick"
+          ]
+        },
+        {
+          "source": "tests.canned_responses",
+          "specifiers": [
+            "make_stub_smtp"
+          ]
+        }
+      ],
+      "exports": [
+        "TestGlobMatch",
+        "test_send_email_starttls_success",
+        "test_send_email_falls_back_to_ssl",
+        "test_send_email_falls_back_to_plain",
+        "make_tar",
+        "test_extract_tex_single_file",
+        "test_extract_tex_with_input_resolution",
+        "test_extract_tex_no_tex_files",
+        "test_extract_tex_not_a_tar",
+        "test_extract_tex_multiple_tex_no_bbl",
+        "test_extract_tex_multiple_document_blocks_bm25",
+        "test_extract_tex_multiple_document_blocks_no_title",
+        "TestBm25Pick"
+      ],
+      "totalLines": 291,
+      "hasStructuralAnalysis": true
+    },
+    "tests/utils/mock_openai/Dockerfile": {
+      "filePath": "tests/utils/mock_openai/Dockerfile",
+      "contentHash": "de17a10f714e7e7a2b71923e57a66318d3bdeb398836c17022ecf15369295b03",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "tests/utils/mock_openai/openai_server.py": {
+      "filePath": "tests/utils/mock_openai/openai_server.py",
+      "contentHash": "1d6b7ded8cf5041afe932575dc8f9579fde5747d678526a60decc5c27efd500a",
+      "functions": [
+        {
+          "name": "chat_completions",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 34
+        },
+        {
+          "name": "embeddings",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "fastapi",
+          "specifiers": [
+            "FastAPI"
+          ]
+        },
+        {
+          "source": "uvicorn",
+          "specifiers": [
+            "run"
+          ]
+        }
+      ],
+      "exports": [
+        "chat_completions",
+        "embeddings"
+      ],
+      "totalLines": 53,
+      "hasStructuralAnalysis": true
+    },
+    "tests/utils/mock_zotero/Dockerfile": {
+      "filePath": "tests/utils/mock_zotero/Dockerfile",
+      "contentHash": "35ac2c8ed4e714d44bd95a4b68e832c52c4da1dda2c7b75474d872097e901e5a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 31,
+      "hasStructuralAnalysis": true
+    }
+  }
+}

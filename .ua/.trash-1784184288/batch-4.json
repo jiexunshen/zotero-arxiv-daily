@@ -1,0 +1,340 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/zotero_arxiv_daily/reranker/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/zotero_arxiv_daily/reranker/__init__.py",
+      "summary": "Implements embedding-based reranking over candidate papers using local models or OpenAI-compatible APIs.",
+      "tags": [
+        "python",
+        "code",
+        "reranker"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 2,
+      "sizeLines": 2
+    },
+    {
+      "id": "file:src/zotero_arxiv_daily/reranker/api.py",
+      "type": "file",
+      "name": "api.py",
+      "filePath": "src/zotero_arxiv_daily/reranker/api.py",
+      "summary": "Implements embedding-based reranking over candidate papers using local models or OpenAI-compatible APIs.",
+      "tags": [
+        "python",
+        "code",
+        "reranker",
+        "classes"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 23,
+      "sizeLines": 23
+    },
+    {
+      "id": "class:src/zotero_arxiv_daily/reranker/api.py:ApiReranker",
+      "type": "class",
+      "name": "ApiReranker",
+      "filePath": "src/zotero_arxiv_daily/reranker/api.py",
+      "summary": "Class ApiReranker in src/zotero_arxiv_daily/reranker/api.py with methods get_similarity_score.",
+      "tags": [
+        "class",
+        "python",
+        "get_similarity_score"
+      ],
+      "complexity": "simple",
+      "startLine": 5,
+      "endLine": 23
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/reranker/api.py:ApiReranker.get_similarity_score",
+      "type": "function",
+      "name": "ApiReranker.get_similarity_score",
+      "filePath": "src/zotero_arxiv_daily/reranker/api.py",
+      "summary": "Method get_similarity_score on class ApiReranker.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 5,
+      "endLine": 23
+    },
+    {
+      "id": "file:src/zotero_arxiv_daily/reranker/base.py",
+      "type": "file",
+      "name": "base.py",
+      "filePath": "src/zotero_arxiv_daily/reranker/base.py",
+      "summary": "Implements embedding-based reranking over candidate papers using local models or OpenAI-compatible APIs.",
+      "tags": [
+        "python",
+        "code",
+        "reranker",
+        "classes",
+        "functions"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 37,
+      "sizeLines": 37
+    },
+    {
+      "id": "class:src/zotero_arxiv_daily/reranker/base.py:BaseReranker",
+      "type": "class",
+      "name": "BaseReranker",
+      "filePath": "src/zotero_arxiv_daily/reranker/base.py",
+      "summary": "Class BaseReranker in src/zotero_arxiv_daily/reranker/base.py with methods __init__, rerank, get_similarity_score.",
+      "tags": [
+        "class",
+        "python",
+        "__init__",
+        "rerank",
+        "get_similarity_score"
+      ],
+      "complexity": "simple",
+      "startLine": 6,
+      "endLine": 24
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/reranker/base.py:BaseReranker.__init__",
+      "type": "function",
+      "name": "BaseReranker.__init__",
+      "filePath": "src/zotero_arxiv_daily/reranker/base.py",
+      "summary": "Method __init__ on class BaseReranker.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 6,
+      "endLine": 24
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/reranker/base.py:BaseReranker.rerank",
+      "type": "function",
+      "name": "BaseReranker.rerank",
+      "filePath": "src/zotero_arxiv_daily/reranker/base.py",
+      "summary": "Method rerank on class BaseReranker.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 6,
+      "endLine": 24
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/reranker/base.py:BaseReranker.get_similarity_score",
+      "type": "function",
+      "name": "BaseReranker.get_similarity_score",
+      "filePath": "src/zotero_arxiv_daily/reranker/base.py",
+      "summary": "Method get_similarity_score on class BaseReranker.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 6,
+      "endLine": 24
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/reranker/base.py:register_reranker",
+      "type": "function",
+      "name": "register_reranker",
+      "filePath": "src/zotero_arxiv_daily/reranker/base.py",
+      "summary": "Function register_reranker with parameters name.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 28,
+      "endLine": 32
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/reranker/base.py:get_reranker_cls",
+      "type": "function",
+      "name": "get_reranker_cls",
+      "filePath": "src/zotero_arxiv_daily/reranker/base.py",
+      "summary": "Function get_reranker_cls with parameters name.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 34,
+      "endLine": 37
+    },
+    {
+      "id": "file:src/zotero_arxiv_daily/reranker/local.py",
+      "type": "file",
+      "name": "local.py",
+      "filePath": "src/zotero_arxiv_daily/reranker/local.py",
+      "summary": "Implements embedding-based reranking over candidate papers using local models or OpenAI-compatible APIs.",
+      "tags": [
+        "python",
+        "code",
+        "reranker",
+        "classes"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 30,
+      "sizeLines": 30
+    },
+    {
+      "id": "class:src/zotero_arxiv_daily/reranker/local.py:LocalReranker",
+      "type": "class",
+      "name": "LocalReranker",
+      "filePath": "src/zotero_arxiv_daily/reranker/local.py",
+      "summary": "Class LocalReranker in src/zotero_arxiv_daily/reranker/local.py with methods get_similarity_score.",
+      "tags": [
+        "class",
+        "python",
+        "get_similarity_score"
+      ],
+      "complexity": "simple",
+      "startLine": 6,
+      "endLine": 30
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/reranker/local.py:LocalReranker.get_similarity_score",
+      "type": "function",
+      "name": "LocalReranker.get_similarity_score",
+      "filePath": "src/zotero_arxiv_daily/reranker/local.py",
+      "summary": "Method get_similarity_score on class LocalReranker.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 6,
+      "endLine": 30
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/zotero_arxiv_daily/reranker/api.py",
+      "target": "class:src/zotero_arxiv_daily/reranker/api.py:ApiReranker",
+      "type": "contains",
+      "weight": 1,
+      "description": "api.py defines class ApiReranker."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/reranker/api.py:ApiReranker",
+      "target": "function:src/zotero_arxiv_daily/reranker/api.py:ApiReranker.get_similarity_score",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class ApiReranker contains method get_similarity_score."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/reranker/base.py",
+      "target": "class:src/zotero_arxiv_daily/reranker/base.py:BaseReranker",
+      "type": "contains",
+      "weight": 1,
+      "description": "base.py defines class BaseReranker."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/reranker/base.py:BaseReranker",
+      "target": "function:src/zotero_arxiv_daily/reranker/base.py:BaseReranker.__init__",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class BaseReranker contains method __init__."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/reranker/base.py:BaseReranker",
+      "target": "function:src/zotero_arxiv_daily/reranker/base.py:BaseReranker.rerank",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class BaseReranker contains method rerank."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/reranker/base.py:BaseReranker",
+      "target": "function:src/zotero_arxiv_daily/reranker/base.py:BaseReranker.get_similarity_score",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class BaseReranker contains method get_similarity_score."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/reranker/base.py",
+      "target": "function:src/zotero_arxiv_daily/reranker/base.py:register_reranker",
+      "type": "contains",
+      "weight": 1,
+      "description": "base.py defines function register_reranker."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/reranker/base.py",
+      "target": "function:src/zotero_arxiv_daily/reranker/base.py:get_reranker_cls",
+      "type": "contains",
+      "weight": 1,
+      "description": "base.py defines function get_reranker_cls."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/reranker/local.py",
+      "target": "class:src/zotero_arxiv_daily/reranker/local.py:LocalReranker",
+      "type": "contains",
+      "weight": 1,
+      "description": "local.py defines class LocalReranker."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/reranker/local.py:LocalReranker",
+      "target": "function:src/zotero_arxiv_daily/reranker/local.py:LocalReranker.get_similarity_score",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class LocalReranker contains method get_similarity_score."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/reranker/__init__.py",
+      "target": "file:src/zotero_arxiv_daily/reranker/api.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/reranker/__init__.py imports src/zotero_arxiv_daily/reranker/api.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/reranker/__init__.py",
+      "target": "file:src/zotero_arxiv_daily/reranker/base.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/reranker/__init__.py imports src/zotero_arxiv_daily/reranker/base.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/reranker/__init__.py",
+      "target": "file:src/zotero_arxiv_daily/reranker/local.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/reranker/__init__.py imports src/zotero_arxiv_daily/reranker/local.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/reranker/api.py",
+      "target": "file:src/zotero_arxiv_daily/reranker/base.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/reranker/api.py imports src/zotero_arxiv_daily/reranker/base.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/reranker/base.py",
+      "target": "file:src/zotero_arxiv_daily/protocol.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/reranker/base.py imports src/zotero_arxiv_daily/protocol.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/reranker/local.py",
+      "target": "file:src/zotero_arxiv_daily/reranker/base.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/reranker/local.py imports src/zotero_arxiv_daily/reranker/base.py."
+    }
+  ]
+}

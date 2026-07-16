@@ -1,0 +1,65 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 1,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "tests/utils/mock_openai/Dockerfile",
+      "language": "dockerfile",
+      "fileCategory": "infra",
+      "totalLines": 6,
+      "nonEmptyLines": 6,
+      "services": [
+        {
+          "name": "python",
+          "image": "python:3.12-alpine",
+          "ports": [
+            30000
+          ],
+          "startLine": 1,
+          "endLine": 6
+        }
+      ],
+      "steps": [
+        {
+          "name": "FROM python:3.12-alpine",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "name": "WORKDIR /app",
+          "startLine": 2,
+          "endLine": 2
+        },
+        {
+          "name": "RUN pip install fastapi uvicorn",
+          "startLine": 3,
+          "endLine": 3
+        },
+        {
+          "name": "COPY ./openai_server.py .",
+          "startLine": 4,
+          "endLine": 4
+        },
+        {
+          "name": "EXPOSE 30000",
+          "startLine": 5,
+          "endLine": 5
+        },
+        {
+          "name": "CMD [\"python\", \"openai_server.py\"]",
+          "startLine": 6,
+          "endLine": 6
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "serviceCount": 1,
+        "stepCount": 6
+      }
+    }
+  ]
+}

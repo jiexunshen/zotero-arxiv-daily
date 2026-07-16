@@ -1,0 +1,844 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 54,
+  "totalBatches": 11,
+  "exportsByPath": {
+    ".python-version": [],
+    "src/zotero_arxiv_daily/__init__.py": [],
+    "src/zotero_arxiv_daily/construct_email.py": [
+      "get_empty_html",
+      "get_block_html",
+      "get_stars",
+      "render_email"
+    ],
+    "src/zotero_arxiv_daily/executor.py": [
+      "normalize_path_patterns",
+      "Executor"
+    ],
+    "src/zotero_arxiv_daily/main.py": [
+      "main"
+    ],
+    "src/zotero_arxiv_daily/protocol.py": [
+      "Paper",
+      "CorpusPaper"
+    ],
+    "src/zotero_arxiv_daily/reranker/__init__.py": [],
+    "src/zotero_arxiv_daily/reranker/api.py": [
+      "ApiReranker"
+    ],
+    "src/zotero_arxiv_daily/reranker/base.py": [
+      "BaseReranker",
+      "register_reranker",
+      "get_reranker_cls"
+    ],
+    "src/zotero_arxiv_daily/reranker/local.py": [
+      "LocalReranker"
+    ],
+    "src/zotero_arxiv_daily/retriever/__init__.py": [],
+    "src/zotero_arxiv_daily/retriever/arxiv_retriever.py": [
+      "_download_file",
+      "_run_in_subprocess",
+      "_run_with_hard_timeout",
+      "_extract_text_from_pdf_worker",
+      "_extract_text_from_html_worker",
+      "_extract_text_from_tar_worker",
+      "ArxivRetriever",
+      "extract_text_from_html",
+      "extract_text_from_pdf",
+      "extract_text_from_tar"
+    ],
+    "src/zotero_arxiv_daily/retriever/base.py": [
+      "BaseRetriever",
+      "register_retriever",
+      "get_retriever_cls"
+    ],
+    "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py": [
+      "BiorxivRetriever"
+    ],
+    "src/zotero_arxiv_daily/retriever/medrxiv_retriever.py": [
+      "MedrxivRetriever"
+    ],
+    "src/zotero_arxiv_daily/utils.py": [
+      "_tokenize",
+      "_bm25_pick",
+      "extract_tex_code_from_tar",
+      "extract_markdown_from_pdf",
+      "glob_match",
+      "send_email"
+    ],
+    "tests/__init__.py": [],
+    "tests/canned_responses.py": [
+      "_make_chat_response",
+      "_stub_chat_create",
+      "_stub_embeddings_create",
+      "make_stub_openai_client",
+      "make_stub_zotero_client",
+      "make_stub_smtp",
+      "make_sample_paper",
+      "make_sample_corpus"
+    ],
+    "tests/conftest.py": [
+      "_base_config",
+      "config"
+    ],
+    "tests/reranker/__init__.py": [],
+    "tests/reranker/conftest.py": [
+      "patch_openai"
+    ],
+    "tests/reranker/test_api_reranker.py": [
+      "test_api_reranker_similarity_shape",
+      "test_api_reranker_batching"
+    ],
+    "tests/reranker/test_base_reranker.py": [
+      "StubReranker",
+      "test_rerank_scores_and_sorts",
+      "test_rerank_time_decay_weighting",
+      "test_rerank_single_candidate_single_corpus",
+      "test_get_reranker_cls_unknown"
+    ],
+    "tests/reranker/test_local_reranker.py": [
+      "test_local_reranker"
+    ],
+    "tests/retriever/__init__.py": [],
+    "tests/retriever/conftest.py": [
+      "mock_feedparser",
+      "mock_biorxiv_api"
+    ],
+    "tests/retriever/test_arxiv_retriever.py": [
+      "_sleep_and_return",
+      "_raise_runtime_error",
+      "test_arxiv_retriever",
+      "test_run_with_hard_timeout_returns_value",
+      "test_run_with_hard_timeout_returns_none_on_timeout",
+      "test_run_with_hard_timeout_returns_none_on_failure"
+    ],
+    "tests/retriever/test_base_retriever.py": [
+      "FailingTestRetriever",
+      "SerialTestRetriever",
+      "NoneRetriever",
+      "test_retrieve_papers_skips_conversion_errors",
+      "test_retrieve_papers_runs_serially",
+      "test_retrieve_papers_skips_none_results",
+      "test_retrieve_papers_empty_raw",
+      "test_get_retriever_cls_unknown"
+    ],
+    "tests/retriever/test_biorxiv_retriever.py": [
+      "test_biorxiv_retrieve",
+      "test_biorxiv_empty_response",
+      "test_biorxiv_convert_to_paper",
+      "test_biorxiv_requires_category"
+    ],
+    "tests/retriever/test_medrxiv_retriever.py": [
+      "test_medrxiv_server_attribute",
+      "test_medrxiv_pdf_url"
+    ],
+    "tests/test_construct_email.py": [
+      "test_render_email_with_papers",
+      "test_render_email_empty_list",
+      "test_render_email_author_truncation",
+      "test_render_email_affiliation_truncation",
+      "test_render_email_no_affiliations",
+      "test_get_stars_low_score",
+      "test_get_stars_high_score",
+      "test_get_stars_mid_score",
+      "test_get_block_html_contains_all_fields",
+      "test_get_empty_html"
+    ],
+    "tests/test_executor.py": [
+      "test_normalize_path_patterns_rejects_single_string_for_include_path",
+      "test_normalize_path_patterns_accepts_list_config_for_include_path",
+      "test_normalize_path_patterns_rejects_single_string_for_ignore_path",
+      "test_normalize_path_patterns_accepts_list_config_for_ignore_path",
+      "test_normalize_path_patterns_accepts_empty_list",
+      "test_normalize_path_patterns_accepts_none",
+      "_make_executor",
+      "test_filter_corpus_matches_any_path_against_any_pattern",
+      "test_filter_corpus_excludes_papers_matching_ignore_path",
+      "test_filter_corpus_ignore_path_takes_precedence_over_include_path",
+      "test_filter_corpus_no_filters_returns_all",
+      "test_fetch_zotero_corpus",
+      "test_fetch_zotero_corpus_paper_with_zero_collections",
+      "test_run_end_to_end",
+      "test_run_no_papers_send_empty_false",
+      "test_run_no_papers_send_empty_true"
+    ],
+    "tests/test_main.py": [
+      "_clear_hydra",
+      "test_main_creates_executor_and_runs",
+      "test_main_debug_logging"
+    ],
+    "tests/test_protocol.py": [
+      "llm_params",
+      "test_tldr_returns_response",
+      "test_tldr_without_abstract_or_fulltext",
+      "test_tldr_falls_back_to_abstract_on_error",
+      "test_tldr_truncates_long_prompt",
+      "test_affiliations_returns_parsed_list",
+      "test_affiliations_none_without_fulltext",
+      "test_affiliations_deduplicates",
+      "test_affiliations_malformed_llm_output",
+      "test_affiliations_error_returns_none"
+    ],
+    "tests/test_utils.py": [
+      "TestGlobMatch",
+      "test_send_email_starttls_success",
+      "test_send_email_falls_back_to_ssl",
+      "test_send_email_falls_back_to_plain",
+      "make_tar",
+      "test_extract_tex_single_file",
+      "test_extract_tex_with_input_resolution",
+      "test_extract_tex_no_tex_files",
+      "test_extract_tex_not_a_tar",
+      "test_extract_tex_multiple_tex_no_bbl",
+      "test_extract_tex_multiple_document_blocks_bm25",
+      "test_extract_tex_multiple_document_blocks_no_title",
+      "TestBm25Pick"
+    ],
+    "tests/utils/mock_openai/openai_server.py": [
+      "chat_completions",
+      "embeddings"
+    ]
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": "tests/canned_responses.py",
+          "language": "python",
+          "sizeLines": 231,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/reranker/conftest.py",
+          "language": "python",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/reranker/test_base_reranker.py",
+          "language": "python",
+          "sizeLines": 70,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/retriever/test_biorxiv_retriever.py",
+          "language": "python",
+          "sizeLines": 58,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_construct_email.py",
+          "language": "python",
+          "sizeLines": 78,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_protocol.py",
+          "language": "python",
+          "sizeLines": 124,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_utils.py",
+          "language": "python",
+          "sizeLines": 290,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "tests/canned_responses.py": [],
+        "tests/reranker/conftest.py": [
+          "tests/canned_responses.py"
+        ],
+        "tests/reranker/test_base_reranker.py": [
+          "tests/canned_responses.py"
+        ],
+        "tests/retriever/test_biorxiv_retriever.py": [
+          "tests/canned_responses.py"
+        ],
+        "tests/test_construct_email.py": [
+          "tests/canned_responses.py"
+        ],
+        "tests/test_protocol.py": [
+          "tests/canned_responses.py"
+        ],
+        "tests/test_utils.py": [
+          "tests/canned_responses.py"
+        ]
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": "src/zotero_arxiv_daily/protocol.py",
+          "language": "python",
+          "sizeLines": 110,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/zotero_arxiv_daily/retriever/__init__.py",
+          "language": "python",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+          "language": "python",
+          "sizeLines": 213,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/zotero_arxiv_daily/retriever/base.py",
+          "language": "python",
+          "sizeLines": 51,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py",
+          "language": "python",
+          "sizeLines": 60,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/zotero_arxiv_daily/retriever/medrxiv_retriever.py",
+          "language": "python",
+          "sizeLines": 5,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/zotero_arxiv_daily/protocol.py": [],
+        "src/zotero_arxiv_daily/retriever/__init__.py": [
+          "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+          "src/zotero_arxiv_daily/retriever/base.py",
+          "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py",
+          "src/zotero_arxiv_daily/retriever/medrxiv_retriever.py"
+        ],
+        "src/zotero_arxiv_daily/retriever/arxiv_retriever.py": [
+          "src/zotero_arxiv_daily/protocol.py",
+          "src/zotero_arxiv_daily/retriever/base.py",
+          "src/zotero_arxiv_daily/utils.py"
+        ],
+        "src/zotero_arxiv_daily/retriever/base.py": [
+          "src/zotero_arxiv_daily/protocol.py"
+        ],
+        "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py": [
+          "src/zotero_arxiv_daily/protocol.py",
+          "src/zotero_arxiv_daily/retriever/base.py"
+        ],
+        "src/zotero_arxiv_daily/retriever/medrxiv_retriever.py": [
+          "src/zotero_arxiv_daily/retriever/base.py",
+          "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py"
+        ]
+      },
+      "neighborMap": {
+        "src/zotero_arxiv_daily/protocol.py": [
+          {
+            "path": "src/zotero_arxiv_daily/construct_email.py",
+            "batchIndex": 3,
+            "symbols": [
+              "get_empty_html",
+              "get_block_html",
+              "get_stars",
+              "render_email"
+            ]
+          },
+          {
+            "path": "src/zotero_arxiv_daily/executor.py",
+            "batchIndex": 3,
+            "symbols": [
+              "normalize_path_patterns",
+              "Executor"
+            ]
+          },
+          {
+            "path": "src/zotero_arxiv_daily/reranker/base.py",
+            "batchIndex": 4,
+            "symbols": [
+              "BaseReranker",
+              "register_reranker",
+              "get_reranker_cls"
+            ]
+          }
+        ],
+        "src/zotero_arxiv_daily/retriever/__init__.py": [
+          {
+            "path": "src/zotero_arxiv_daily/executor.py",
+            "batchIndex": 3,
+            "symbols": [
+              "normalize_path_patterns",
+              "Executor"
+            ]
+          }
+        ],
+        "src/zotero_arxiv_daily/retriever/arxiv_retriever.py": [
+          {
+            "path": "src/zotero_arxiv_daily/utils.py",
+            "batchIndex": 3,
+            "symbols": [
+              "_tokenize",
+              "_bm25_pick",
+              "extract_tex_code_from_tar",
+              "extract_markdown_from_pdf",
+              "glob_match",
+              "send_email"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": "src/zotero_arxiv_daily/construct_email.py",
+          "language": "python",
+          "sizeLines": 131,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/zotero_arxiv_daily/executor.py",
+          "language": "python",
+          "sizeLines": 124,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/zotero_arxiv_daily/main.py",
+          "language": "python",
+          "sizeLines": 34,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/zotero_arxiv_daily/utils.py",
+          "language": "python",
+          "sizeLines": 170,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/zotero_arxiv_daily/construct_email.py": [
+          "src/zotero_arxiv_daily/protocol.py"
+        ],
+        "src/zotero_arxiv_daily/executor.py": [
+          "src/zotero_arxiv_daily/construct_email.py",
+          "src/zotero_arxiv_daily/protocol.py",
+          "src/zotero_arxiv_daily/reranker/__init__.py",
+          "src/zotero_arxiv_daily/retriever/__init__.py",
+          "src/zotero_arxiv_daily/utils.py"
+        ],
+        "src/zotero_arxiv_daily/main.py": [
+          "src/zotero_arxiv_daily/executor.py"
+        ],
+        "src/zotero_arxiv_daily/utils.py": []
+      },
+      "neighborMap": {
+        "src/zotero_arxiv_daily/construct_email.py": [
+          {
+            "path": "src/zotero_arxiv_daily/protocol.py",
+            "batchIndex": 2,
+            "symbols": [
+              "Paper",
+              "CorpusPaper"
+            ]
+          }
+        ],
+        "src/zotero_arxiv_daily/executor.py": [
+          {
+            "path": "src/zotero_arxiv_daily/protocol.py",
+            "batchIndex": 2,
+            "symbols": [
+              "Paper",
+              "CorpusPaper"
+            ]
+          },
+          {
+            "path": "src/zotero_arxiv_daily/reranker/__init__.py",
+            "batchIndex": 4,
+            "symbols": []
+          },
+          {
+            "path": "src/zotero_arxiv_daily/retriever/__init__.py",
+            "batchIndex": 2,
+            "symbols": []
+          }
+        ],
+        "src/zotero_arxiv_daily/utils.py": [
+          {
+            "path": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+            "batchIndex": 2,
+            "symbols": [
+              "_download_file",
+              "_run_in_subprocess",
+              "_run_with_hard_timeout",
+              "_extract_text_from_pdf_worker",
+              "_extract_text_from_html_worker",
+              "_extract_text_from_tar_worker",
+              "ArxivRetriever",
+              "extract_text_from_html",
+              "extract_text_from_pdf",
+              "extract_text_from_tar"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 4,
+      "files": [
+        {
+          "path": "src/zotero_arxiv_daily/reranker/__init__.py",
+          "language": "python",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/zotero_arxiv_daily/reranker/api.py",
+          "language": "python",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/zotero_arxiv_daily/reranker/base.py",
+          "language": "python",
+          "sizeLines": 36,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/zotero_arxiv_daily/reranker/local.py",
+          "language": "python",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/zotero_arxiv_daily/reranker/__init__.py": [
+          "src/zotero_arxiv_daily/reranker/api.py",
+          "src/zotero_arxiv_daily/reranker/base.py",
+          "src/zotero_arxiv_daily/reranker/local.py"
+        ],
+        "src/zotero_arxiv_daily/reranker/api.py": [
+          "src/zotero_arxiv_daily/reranker/base.py"
+        ],
+        "src/zotero_arxiv_daily/reranker/base.py": [
+          "src/zotero_arxiv_daily/protocol.py"
+        ],
+        "src/zotero_arxiv_daily/reranker/local.py": [
+          "src/zotero_arxiv_daily/reranker/base.py"
+        ]
+      },
+      "neighborMap": {
+        "src/zotero_arxiv_daily/reranker/__init__.py": [
+          {
+            "path": "src/zotero_arxiv_daily/executor.py",
+            "batchIndex": 3,
+            "symbols": [
+              "normalize_path_patterns",
+              "Executor"
+            ]
+          }
+        ],
+        "src/zotero_arxiv_daily/reranker/base.py": [
+          {
+            "path": "src/zotero_arxiv_daily/protocol.py",
+            "batchIndex": 2,
+            "symbols": [
+              "Paper",
+              "CorpusPaper"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 5,
+      "files": [
+        {
+          "path": "tests/utils/mock_openai/Dockerfile",
+          "language": "dockerfile",
+          "sizeLines": 5,
+          "fileCategory": "infra"
+        }
+      ],
+      "batchImportData": {
+        "tests/utils/mock_openai/Dockerfile": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 6,
+      "files": [
+        {
+          "path": "tests/utils/mock_zotero/Dockerfile",
+          "language": "dockerfile",
+          "sizeLines": 30,
+          "fileCategory": "infra"
+        }
+      ],
+      "batchImportData": {
+        "tests/utils/mock_zotero/Dockerfile": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 7,
+      "files": [
+        {
+          "path": ".github/workflows/ci.yml",
+          "language": "yaml",
+          "sizeLines": 24,
+          "fileCategory": "infra"
+        },
+        {
+          "path": ".github/workflows/keep-alive.yml",
+          "language": "yaml",
+          "sizeLines": 36,
+          "fileCategory": "infra"
+        },
+        {
+          "path": ".github/workflows/main.yml",
+          "language": "yaml",
+          "sizeLines": 34,
+          "fileCategory": "infra"
+        },
+        {
+          "path": ".github/workflows/test.yml",
+          "language": "yaml",
+          "sizeLines": 34,
+          "fileCategory": "infra"
+        }
+      ],
+      "batchImportData": {
+        ".github/workflows/ci.yml": [],
+        ".github/workflows/keep-alive.yml": [],
+        ".github/workflows/main.yml": [],
+        ".github/workflows/test.yml": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 8,
+      "files": [
+        {
+          "path": ".github/FUNDING.yml",
+          "language": "yaml",
+          "sizeLines": 15,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".github/copilot-instructions.md",
+          "language": "markdown",
+          "sizeLines": 74,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".github/keep-alive.txt",
+          "language": "txt",
+          "sizeLines": 2,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        ".github/FUNDING.yml": [],
+        ".github/copilot-instructions.md": [],
+        ".github/keep-alive.txt": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 9,
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "language": "markdown",
+          "sizeLines": 81,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "CLAUDE.md",
+          "language": "markdown",
+          "sizeLines": 81,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "README.md",
+          "language": "markdown",
+          "sizeLines": 211,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "pyproject.toml",
+          "language": "toml",
+          "sizeLines": 53,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "AGENTS.md": [],
+        "CLAUDE.md": [],
+        "README.md": [],
+        "pyproject.toml": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 10,
+      "files": [
+        {
+          "path": "config/base.yaml",
+          "language": "yaml",
+          "sizeLines": 51,
+          "fileCategory": "config"
+        },
+        {
+          "path": "config/custom.yaml",
+          "language": "yaml",
+          "sizeLines": 26,
+          "fileCategory": "config"
+        },
+        {
+          "path": "config/default.yaml",
+          "language": "yaml",
+          "sizeLines": 2,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "config/base.yaml": [],
+        "config/custom.yaml": [],
+        "config/default.yaml": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 11,
+      "files": [
+        {
+          "path": ".python-version",
+          "language": "unknown",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "assets/use_docker.md",
+          "language": "markdown",
+          "sizeLines": 110,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "src/zotero_arxiv_daily/__init__.py",
+          "language": "python",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/__init__.py",
+          "language": "python",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/conftest.py",
+          "language": "python",
+          "sizeLines": 58,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/reranker/__init__.py",
+          "language": "python",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/reranker/test_api_reranker.py",
+          "language": "python",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/reranker/test_local_reranker.py",
+          "language": "python",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/retriever/__init__.py",
+          "language": "python",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/retriever/arxiv_rss_example.xml",
+          "language": "xml",
+          "sizeLines": 106,
+          "fileCategory": "config"
+        },
+        {
+          "path": "tests/retriever/conftest.py",
+          "language": "python",
+          "sizeLines": 50,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/retriever/test_arxiv_retriever.py",
+          "language": "python",
+          "sizeLines": 90,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/retriever/test_base_retriever.py",
+          "language": "python",
+          "sizeLines": 127,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/retriever/test_medrxiv_retriever.py",
+          "language": "python",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_executor.py",
+          "language": "python",
+          "sizeLines": 283,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/test_main.py",
+          "language": "python",
+          "sizeLines": 61,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tests/utils/mock_openai/openai_server.py",
+          "language": "python",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        ".python-version": [],
+        "assets/use_docker.md": [],
+        "src/zotero_arxiv_daily/__init__.py": [],
+        "tests/__init__.py": [],
+        "tests/conftest.py": [],
+        "tests/reranker/__init__.py": [],
+        "tests/reranker/test_api_reranker.py": [],
+        "tests/reranker/test_local_reranker.py": [],
+        "tests/retriever/__init__.py": [],
+        "tests/retriever/arxiv_rss_example.xml": [],
+        "tests/retriever/conftest.py": [],
+        "tests/retriever/test_arxiv_retriever.py": [],
+        "tests/retriever/test_base_retriever.py": [],
+        "tests/retriever/test_medrxiv_retriever.py": [],
+        "tests/test_executor.py": [],
+        "tests/test_main.py": [],
+        "tests/utils/mock_openai/openai_server.py": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}

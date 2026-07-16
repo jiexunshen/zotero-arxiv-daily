@@ -1,0 +1,73 @@
+{
+  "nodes": [
+    {
+      "id": "pipeline:.github/workflows/ci.yml",
+      "type": "pipeline",
+      "name": "ci.yml",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "GitHub Actions or deployment automation used to run tests or the daily paper digest workflow.",
+      "tags": [
+        "yaml",
+        "infra",
+        "github-actions"
+      ],
+      "complexity": "simple",
+      "language": "yaml",
+      "startLine": 1,
+      "endLine": 24,
+      "sizeLines": 24
+    },
+    {
+      "id": "pipeline:.github/workflows/keep-alive.yml",
+      "type": "pipeline",
+      "name": "keep-alive.yml",
+      "filePath": ".github/workflows/keep-alive.yml",
+      "summary": "GitHub Actions or deployment automation used to run tests or the daily paper digest workflow.",
+      "tags": [
+        "yaml",
+        "infra",
+        "github-actions"
+      ],
+      "complexity": "simple",
+      "language": "yaml",
+      "startLine": 1,
+      "endLine": 36,
+      "sizeLines": 36
+    },
+    {
+      "id": "pipeline:.github/workflows/main.yml",
+      "type": "pipeline",
+      "name": "main.yml",
+      "filePath": ".github/workflows/main.yml",
+      "summary": "GitHub Actions or deployment automation used to run tests or the daily paper digest workflow.",
+      "tags": [
+        "yaml",
+        "infra",
+        "github-actions"
+      ],
+      "complexity": "simple",
+      "language": "yaml",
+      "startLine": 1,
+      "endLine": 34,
+      "sizeLines": 34
+    },
+    {
+      "id": "pipeline:.github/workflows/test.yml",
+      "type": "pipeline",
+      "name": "test.yml",
+      "filePath": ".github/workflows/test.yml",
+      "summary": "GitHub Actions or deployment automation used to run tests or the daily paper digest workflow.",
+      "tags": [
+        "yaml",
+        "infra",
+        "github-actions"
+      ],
+      "complexity": "simple",
+      "language": "yaml",
+      "startLine": 1,
+      "endLine": 34,
+      "sizeLines": 34
+    }
+  ],
+  "edges": []
+}

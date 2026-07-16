@@ -1,0 +1,532 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/zotero_arxiv_daily/construct_email.py",
+      "type": "file",
+      "name": "construct_email.py",
+      "filePath": "src/zotero_arxiv_daily/construct_email.py",
+      "summary": "Renders selected paper recommendations into the HTML email body.",
+      "tags": [
+        "python",
+        "code",
+        "functions"
+      ],
+      "complexity": "moderate",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 131,
+      "sizeLines": 131
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/construct_email.py:get_empty_html",
+      "type": "function",
+      "name": "get_empty_html",
+      "filePath": "src/zotero_arxiv_daily/construct_email.py",
+      "summary": "Function get_empty_html.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 43,
+      "endLine": 53
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/construct_email.py:get_block_html",
+      "type": "function",
+      "name": "get_block_html",
+      "filePath": "src/zotero_arxiv_daily/construct_email.py",
+      "summary": "Function get_block_html with parameters title, authors, rate, tldr, pdf_url, affiliations.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 55,
+      "endLine": 88
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/construct_email.py:get_stars",
+      "type": "function",
+      "name": "get_stars",
+      "filePath": "src/zotero_arxiv_daily/construct_email.py",
+      "summary": "Function get_stars with parameters score.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 90,
+      "endLine": 104
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/construct_email.py:render_email",
+      "type": "function",
+      "name": "render_email",
+      "filePath": "src/zotero_arxiv_daily/construct_email.py",
+      "summary": "Function render_email with parameters papers.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 107,
+      "endLine": 131
+    },
+    {
+      "id": "file:src/zotero_arxiv_daily/executor.py",
+      "type": "file",
+      "name": "executor.py",
+      "filePath": "src/zotero_arxiv_daily/executor.py",
+      "summary": "Coordinates the Zotero fetch, source retrieval, reranking, TLDR generation, email rendering, and SMTP delivery pipeline.",
+      "tags": [
+        "python",
+        "code",
+        "pipeline",
+        "classes",
+        "functions"
+      ],
+      "complexity": "moderate",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 124,
+      "sizeLines": 124
+    },
+    {
+      "id": "class:src/zotero_arxiv_daily/executor.py:Executor",
+      "type": "class",
+      "name": "Executor",
+      "filePath": "src/zotero_arxiv_daily/executor.py",
+      "summary": "Class Executor in src/zotero_arxiv_daily/executor.py with methods __init__, fetch_zotero_corpus, filter_corpus, run.",
+      "tags": [
+        "class",
+        "python",
+        "__init__",
+        "fetch_zotero_corpus",
+        "filter_corpus",
+        "run"
+      ],
+      "complexity": "moderate",
+      "startLine": 32,
+      "endLine": 124
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/executor.py:Executor.__init__",
+      "type": "function",
+      "name": "Executor.__init__",
+      "filePath": "src/zotero_arxiv_daily/executor.py",
+      "summary": "Method __init__ on class Executor.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 32,
+      "endLine": 124
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/executor.py:Executor.fetch_zotero_corpus",
+      "type": "function",
+      "name": "Executor.fetch_zotero_corpus",
+      "filePath": "src/zotero_arxiv_daily/executor.py",
+      "summary": "Method fetch_zotero_corpus on class Executor.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 32,
+      "endLine": 124
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/executor.py:Executor.filter_corpus",
+      "type": "function",
+      "name": "Executor.filter_corpus",
+      "filePath": "src/zotero_arxiv_daily/executor.py",
+      "summary": "Method filter_corpus on class Executor.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 32,
+      "endLine": 124
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/executor.py:Executor.run",
+      "type": "function",
+      "name": "Executor.run",
+      "filePath": "src/zotero_arxiv_daily/executor.py",
+      "summary": "Method run on class Executor.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 32,
+      "endLine": 124
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/executor.py:normalize_path_patterns",
+      "type": "function",
+      "name": "normalize_path_patterns",
+      "filePath": "src/zotero_arxiv_daily/executor.py",
+      "summary": "Function normalize_path_patterns with parameters patterns, config_key.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 16,
+      "endLine": 29
+    },
+    {
+      "id": "file:src/zotero_arxiv_daily/main.py",
+      "type": "file",
+      "name": "main.py",
+      "filePath": "src/zotero_arxiv_daily/main.py",
+      "summary": "Hydra entry point that loads configuration and starts the daily recommendation executor.",
+      "tags": [
+        "python",
+        "code",
+        "functions"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 35,
+      "sizeLines": 35
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/main.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "src/zotero_arxiv_daily/main.py",
+      "summary": "Function main with parameters config.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 13,
+      "endLine": 32
+    },
+    {
+      "id": "file:src/zotero_arxiv_daily/utils.py",
+      "type": "file",
+      "name": "utils.py",
+      "filePath": "src/zotero_arxiv_daily/utils.py",
+      "summary": "Provides shared helpers for paths, glob matching, GitHub URL discovery, caching, and subprocess timeouts.",
+      "tags": [
+        "python",
+        "code",
+        "functions"
+      ],
+      "complexity": "moderate",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 171,
+      "sizeLines": 171
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/utils.py:_tokenize",
+      "type": "function",
+      "name": "_tokenize",
+      "filePath": "src/zotero_arxiv_daily/utils.py",
+      "summary": "Function _tokenize with parameters text.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 22,
+      "endLine": 23
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/utils.py:_bm25_pick",
+      "type": "function",
+      "name": "_bm25_pick",
+      "filePath": "src/zotero_arxiv_daily/utils.py",
+      "summary": "Function _bm25_pick with parameters query, candidates, k1, b.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 26,
+      "endLine": 53
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/utils.py:extract_tex_code_from_tar",
+      "type": "function",
+      "name": "extract_tex_code_from_tar",
+      "filePath": "src/zotero_arxiv_daily/utils.py",
+      "summary": "Function extract_tex_code_from_tar with parameters file_path, paper_id, paper_title.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 56,
+      "endLine": 133
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/utils.py:extract_markdown_from_pdf",
+      "type": "function",
+      "name": "extract_markdown_from_pdf",
+      "filePath": "src/zotero_arxiv_daily/utils.py",
+      "summary": "Function extract_markdown_from_pdf with parameters file_path.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 135,
+      "endLine": 136
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/utils.py:glob_match",
+      "type": "function",
+      "name": "glob_match",
+      "filePath": "src/zotero_arxiv_daily/utils.py",
+      "summary": "Function glob_match with parameters path, pattern.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 138,
+      "endLine": 140
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/utils.py:send_email",
+      "type": "function",
+      "name": "send_email",
+      "filePath": "src/zotero_arxiv_daily/utils.py",
+      "summary": "Function send_email with parameters config, html.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 142,
+      "endLine": 171
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/zotero_arxiv_daily/construct_email.py",
+      "target": "function:src/zotero_arxiv_daily/construct_email.py:get_empty_html",
+      "type": "contains",
+      "weight": 1,
+      "description": "construct_email.py defines function get_empty_html."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/construct_email.py",
+      "target": "function:src/zotero_arxiv_daily/construct_email.py:get_block_html",
+      "type": "contains",
+      "weight": 1,
+      "description": "construct_email.py defines function get_block_html."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/construct_email.py",
+      "target": "function:src/zotero_arxiv_daily/construct_email.py:get_stars",
+      "type": "contains",
+      "weight": 1,
+      "description": "construct_email.py defines function get_stars."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/construct_email.py",
+      "target": "function:src/zotero_arxiv_daily/construct_email.py:render_email",
+      "type": "contains",
+      "weight": 1,
+      "description": "construct_email.py defines function render_email."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/executor.py",
+      "target": "class:src/zotero_arxiv_daily/executor.py:Executor",
+      "type": "contains",
+      "weight": 1,
+      "description": "executor.py defines class Executor."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/executor.py:Executor",
+      "target": "function:src/zotero_arxiv_daily/executor.py:Executor.__init__",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class Executor contains method __init__."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/executor.py:Executor",
+      "target": "function:src/zotero_arxiv_daily/executor.py:Executor.fetch_zotero_corpus",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class Executor contains method fetch_zotero_corpus."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/executor.py:Executor",
+      "target": "function:src/zotero_arxiv_daily/executor.py:Executor.filter_corpus",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class Executor contains method filter_corpus."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/executor.py:Executor",
+      "target": "function:src/zotero_arxiv_daily/executor.py:Executor.run",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class Executor contains method run."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/executor.py",
+      "target": "function:src/zotero_arxiv_daily/executor.py:normalize_path_patterns",
+      "type": "contains",
+      "weight": 1,
+      "description": "executor.py defines function normalize_path_patterns."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/main.py",
+      "target": "function:src/zotero_arxiv_daily/main.py:main",
+      "type": "contains",
+      "weight": 1,
+      "description": "main.py defines function main."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/utils.py",
+      "target": "function:src/zotero_arxiv_daily/utils.py:_tokenize",
+      "type": "contains",
+      "weight": 1,
+      "description": "utils.py defines function _tokenize."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/utils.py",
+      "target": "function:src/zotero_arxiv_daily/utils.py:_bm25_pick",
+      "type": "contains",
+      "weight": 1,
+      "description": "utils.py defines function _bm25_pick."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/utils.py",
+      "target": "function:src/zotero_arxiv_daily/utils.py:extract_tex_code_from_tar",
+      "type": "contains",
+      "weight": 1,
+      "description": "utils.py defines function extract_tex_code_from_tar."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/utils.py",
+      "target": "function:src/zotero_arxiv_daily/utils.py:extract_markdown_from_pdf",
+      "type": "contains",
+      "weight": 1,
+      "description": "utils.py defines function extract_markdown_from_pdf."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/utils.py",
+      "target": "function:src/zotero_arxiv_daily/utils.py:glob_match",
+      "type": "contains",
+      "weight": 1,
+      "description": "utils.py defines function glob_match."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/utils.py",
+      "target": "function:src/zotero_arxiv_daily/utils.py:send_email",
+      "type": "contains",
+      "weight": 1,
+      "description": "utils.py defines function send_email."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/construct_email.py",
+      "target": "file:src/zotero_arxiv_daily/protocol.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/construct_email.py imports src/zotero_arxiv_daily/protocol.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/executor.py",
+      "target": "file:src/zotero_arxiv_daily/construct_email.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/executor.py imports src/zotero_arxiv_daily/construct_email.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/executor.py",
+      "target": "file:src/zotero_arxiv_daily/protocol.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/executor.py imports src/zotero_arxiv_daily/protocol.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/executor.py",
+      "target": "file:src/zotero_arxiv_daily/reranker/__init__.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/executor.py imports src/zotero_arxiv_daily/reranker/__init__.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/executor.py",
+      "target": "file:src/zotero_arxiv_daily/retriever/__init__.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/executor.py imports src/zotero_arxiv_daily/retriever/__init__.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/executor.py",
+      "target": "file:src/zotero_arxiv_daily/utils.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/executor.py imports src/zotero_arxiv_daily/utils.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/main.py",
+      "target": "file:src/zotero_arxiv_daily/executor.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/main.py imports src/zotero_arxiv_daily/executor.py."
+    },
+    {
+      "source": "function:src/zotero_arxiv_daily/construct_email.py:render_email",
+      "target": "function:src/zotero_arxiv_daily/construct_email.py:get_empty_html",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "render_email calls get_empty_html."
+    },
+    {
+      "source": "function:src/zotero_arxiv_daily/construct_email.py:render_email",
+      "target": "function:src/zotero_arxiv_daily/construct_email.py:get_block_html",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "render_email calls get_block_html."
+    },
+    {
+      "source": "function:src/zotero_arxiv_daily/main.py:main",
+      "target": "class:src/zotero_arxiv_daily/executor.py:Executor",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "main calls Executor."
+    },
+    {
+      "source": "function:src/zotero_arxiv_daily/utils.py:_bm25_pick",
+      "target": "function:src/zotero_arxiv_daily/utils.py:_tokenize",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "_bm25_pick calls _tokenize."
+    },
+    {
+      "source": "function:src/zotero_arxiv_daily/utils.py:_bm25_pick",
+      "target": "function:src/zotero_arxiv_daily/utils.py:_tokenize",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "_bm25_pick calls _tokenize."
+    },
+    {
+      "source": "function:src/zotero_arxiv_daily/utils.py:extract_tex_code_from_tar",
+      "target": "function:src/zotero_arxiv_daily/utils.py:_bm25_pick",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "extract_tex_code_from_tar calls _bm25_pick."
+    }
+  ]
+}

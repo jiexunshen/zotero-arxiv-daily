@@ -7,12 +7,44 @@ class BaseReranker(ABC):
     def __init__(self, config:DictConfig):
         self.config = config
 
+    def _analysis_top_k_similar(self) -> int:
+        if self.config is None:
+            return 5
+        llm_config = getattr(self.config, "llm", None)
+        if llm_config is None:
+            return 5
+        return int(llm_config.get("analysis_top_k_similar", 5))
+
+    def _attach_similar_corpus(
+        self,
+        candidates: list[Paper],
+        corpus: list[CorpusPaper],
+        sim: np.ndarray,
+    ) -> None:
+        top_k = self._analysis_top_k_similar()
+        if top_k <= 0:
+            for candidate in candidates:
+                candidate.similar_corpus = []
+            return
+
+        for row, candidate in zip(sim, candidates):
+            top_indices = np.argsort(row)[::-1][:top_k]
+            candidate.similar_corpus = [
+                {
+                    "title": corpus[i].title,
+                    "paths": corpus[i].paths,
+                    "similarity": float(row[i]),
+                }
+                for i in top_indices
+            ]
+
     def rerank(self, candidates:list[Paper], corpus:list[CorpusPaper]) -> list[Paper]:
         corpus = sorted(corpus,key=lambda x: x.added_date,reverse=True)
         time_decay_weight = 1 / (1 + np.log10(np.arange(len(corpus)) + 1))
         time_decay_weight: np.ndarray = time_decay_weight / time_decay_weight.sum()
         sim = self.get_similarity_score([c.abstract for c in candidates], [c.abstract for c in corpus])
         assert sim.shape == (len(candidates), len(corpus))
+        self._attach_similar_corpus(candidates, corpus, sim)
         scores = (sim * time_decay_weight).sum(axis=1) * 10 # [n_candidate]
         for s,c in zip(scores,candidates):
             c.score = s

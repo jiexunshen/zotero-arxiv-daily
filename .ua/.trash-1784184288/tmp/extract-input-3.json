@@ -1,0 +1,45 @@
+{
+  "projectRoot": "E:\\Code\\zotero-arxiv-daily",
+  "batchFiles": [
+    {
+      "path": "src/zotero_arxiv_daily/construct_email.py",
+      "language": "python",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/executor.py",
+      "language": "python",
+      "sizeLines": 124,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/main.py",
+      "language": "python",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/utils.py",
+      "language": "python",
+      "sizeLines": 170,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "src/zotero_arxiv_daily/construct_email.py": [
+      "src/zotero_arxiv_daily/protocol.py"
+    ],
+    "src/zotero_arxiv_daily/executor.py": [
+      "src/zotero_arxiv_daily/construct_email.py",
+      "src/zotero_arxiv_daily/protocol.py",
+      "src/zotero_arxiv_daily/reranker/__init__.py",
+      "src/zotero_arxiv_daily/retriever/__init__.py",
+      "src/zotero_arxiv_daily/utils.py"
+    ],
+    "src/zotero_arxiv_daily/main.py": [
+      "src/zotero_arxiv_daily/executor.py"
+    ],
+    "src/zotero_arxiv_daily/utils.py": []
+  }
+}

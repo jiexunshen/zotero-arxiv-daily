@@ -1,0 +1,476 @@
+{
+  "projectName": "zotero-arxiv-daily",
+  "projectDescription": "Recommend new arXiv, bioRxiv, and medRxiv papers based on a user Zotero library, rerank them by embedding similarity, generate TLDRs, and email daily digests.",
+  "languages": [
+    "markdown",
+    "yaml",
+    "txt",
+    "toml",
+    "python",
+    "xml",
+    "dockerfile"
+  ],
+  "frameworks": [
+    "Hydra",
+    "OmegaConf",
+    "pytest",
+    "GitHub Actions",
+    "OpenAI-compatible APIs"
+  ],
+  "scriptCompleted": true,
+  "files": [
+    {
+      "path": ".github/copilot-instructions.md",
+      "language": "markdown",
+      "sizeLines": 74,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/FUNDING.yml",
+      "language": "yaml",
+      "sizeLines": 15,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".github/keep-alive.txt",
+      "language": "txt",
+      "sizeLines": 2,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "language": "yaml",
+      "sizeLines": 24,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/keep-alive.yml",
+      "language": "yaml",
+      "sizeLines": 36,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/main.yml",
+      "language": "yaml",
+      "sizeLines": 34,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".github/workflows/test.yml",
+      "language": "yaml",
+      "sizeLines": 34,
+      "fileCategory": "infra"
+    },
+    {
+      "path": ".python-version",
+      "language": "unknown",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "AGENTS.md",
+      "language": "markdown",
+      "sizeLines": 81,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "assets/use_docker.md",
+      "language": "markdown",
+      "sizeLines": 110,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "CLAUDE.md",
+      "language": "markdown",
+      "sizeLines": 81,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "config/base.yaml",
+      "language": "yaml",
+      "sizeLines": 51,
+      "fileCategory": "config"
+    },
+    {
+      "path": "config/custom.yaml",
+      "language": "yaml",
+      "sizeLines": 26,
+      "fileCategory": "config"
+    },
+    {
+      "path": "config/default.yaml",
+      "language": "yaml",
+      "sizeLines": 2,
+      "fileCategory": "config"
+    },
+    {
+      "path": "pyproject.toml",
+      "language": "toml",
+      "sizeLines": 53,
+      "fileCategory": "config"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 211,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/__init__.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/construct_email.py",
+      "language": "python",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/executor.py",
+      "language": "python",
+      "sizeLines": 124,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/main.py",
+      "language": "python",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/protocol.py",
+      "language": "python",
+      "sizeLines": 110,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/reranker/__init__.py",
+      "language": "python",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/reranker/api.py",
+      "language": "python",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/reranker/base.py",
+      "language": "python",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/reranker/local.py",
+      "language": "python",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/retriever/__init__.py",
+      "language": "python",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "language": "python",
+      "sizeLines": 213,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/retriever/base.py",
+      "language": "python",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py",
+      "language": "python",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/retriever/medrxiv_retriever.py",
+      "language": "python",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/zotero_arxiv_daily/utils.py",
+      "language": "python",
+      "sizeLines": 170,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/__init__.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/canned_responses.py",
+      "language": "python",
+      "sizeLines": 231,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/conftest.py",
+      "language": "python",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/reranker/__init__.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/reranker/conftest.py",
+      "language": "python",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/reranker/test_api_reranker.py",
+      "language": "python",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/reranker/test_base_reranker.py",
+      "language": "python",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/reranker/test_local_reranker.py",
+      "language": "python",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/retriever/__init__.py",
+      "language": "python",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/retriever/arxiv_rss_example.xml",
+      "language": "xml",
+      "sizeLines": 106,
+      "fileCategory": "config"
+    },
+    {
+      "path": "tests/retriever/conftest.py",
+      "language": "python",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/retriever/test_arxiv_retriever.py",
+      "language": "python",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/retriever/test_base_retriever.py",
+      "language": "python",
+      "sizeLines": 127,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/retriever/test_biorxiv_retriever.py",
+      "language": "python",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/retriever/test_medrxiv_retriever.py",
+      "language": "python",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_construct_email.py",
+      "language": "python",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_executor.py",
+      "language": "python",
+      "sizeLines": 283,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_main.py",
+      "language": "python",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_protocol.py",
+      "language": "python",
+      "sizeLines": 124,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_utils.py",
+      "language": "python",
+      "sizeLines": 290,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/utils/mock_openai/Dockerfile",
+      "language": "dockerfile",
+      "sizeLines": 5,
+      "fileCategory": "infra"
+    },
+    {
+      "path": "tests/utils/mock_openai/openai_server.py",
+      "language": "python",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/utils/mock_zotero/Dockerfile",
+      "language": "dockerfile",
+      "sizeLines": 30,
+      "fileCategory": "infra"
+    }
+  ],
+  "totalFiles": 54,
+  "filteredByIgnore": 3,
+  "estimatedComplexity": "moderate",
+  "stats": {
+    "filesScanned": 54,
+    "byCategory": {
+      "docs": 6,
+      "config": 6,
+      "infra": 6,
+      "code": 36
+    },
+    "byLanguage": {
+      "markdown": 5,
+      "yaml": 8,
+      "txt": 1,
+      "unknown": 1,
+      "toml": 1,
+      "python": 35,
+      "xml": 1,
+      "dockerfile": 2
+    }
+  },
+  "importMap": {
+    ".github/copilot-instructions.md": [],
+    ".github/FUNDING.yml": [],
+    ".github/keep-alive.txt": [],
+    ".github/workflows/ci.yml": [],
+    ".github/workflows/keep-alive.yml": [],
+    ".github/workflows/main.yml": [],
+    ".github/workflows/test.yml": [],
+    ".python-version": [],
+    "AGENTS.md": [],
+    "assets/use_docker.md": [],
+    "CLAUDE.md": [],
+    "config/base.yaml": [],
+    "config/custom.yaml": [],
+    "config/default.yaml": [],
+    "pyproject.toml": [],
+    "README.md": [],
+    "src/zotero_arxiv_daily/__init__.py": [],
+    "src/zotero_arxiv_daily/construct_email.py": [
+      "src/zotero_arxiv_daily/protocol.py"
+    ],
+    "src/zotero_arxiv_daily/executor.py": [
+      "src/zotero_arxiv_daily/construct_email.py",
+      "src/zotero_arxiv_daily/protocol.py",
+      "src/zotero_arxiv_daily/reranker/__init__.py",
+      "src/zotero_arxiv_daily/retriever/__init__.py",
+      "src/zotero_arxiv_daily/utils.py"
+    ],
+    "src/zotero_arxiv_daily/main.py": [
+      "src/zotero_arxiv_daily/executor.py"
+    ],
+    "src/zotero_arxiv_daily/protocol.py": [],
+    "src/zotero_arxiv_daily/reranker/__init__.py": [
+      "src/zotero_arxiv_daily/reranker/api.py",
+      "src/zotero_arxiv_daily/reranker/base.py",
+      "src/zotero_arxiv_daily/reranker/local.py"
+    ],
+    "src/zotero_arxiv_daily/reranker/api.py": [
+      "src/zotero_arxiv_daily/reranker/base.py"
+    ],
+    "src/zotero_arxiv_daily/reranker/base.py": [
+      "src/zotero_arxiv_daily/protocol.py"
+    ],
+    "src/zotero_arxiv_daily/reranker/local.py": [
+      "src/zotero_arxiv_daily/reranker/base.py"
+    ],
+    "src/zotero_arxiv_daily/retriever/__init__.py": [
+      "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "src/zotero_arxiv_daily/retriever/base.py",
+      "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py",
+      "src/zotero_arxiv_daily/retriever/medrxiv_retriever.py"
+    ],
+    "src/zotero_arxiv_daily/retriever/arxiv_retriever.py": [
+      "src/zotero_arxiv_daily/protocol.py",
+      "src/zotero_arxiv_daily/retriever/base.py",
+      "src/zotero_arxiv_daily/utils.py"
+    ],
+    "src/zotero_arxiv_daily/retriever/base.py": [
+      "src/zotero_arxiv_daily/protocol.py"
+    ],
+    "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py": [
+      "src/zotero_arxiv_daily/protocol.py",
+      "src/zotero_arxiv_daily/retriever/base.py"
+    ],
+    "src/zotero_arxiv_daily/retriever/medrxiv_retriever.py": [
+      "src/zotero_arxiv_daily/retriever/base.py",
+      "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py"
+    ],
+    "src/zotero_arxiv_daily/utils.py": [],
+    "tests/__init__.py": [],
+    "tests/canned_responses.py": [],
+    "tests/conftest.py": [],
+    "tests/reranker/__init__.py": [],
+    "tests/reranker/conftest.py": [
+      "tests/canned_responses.py"
+    ],
+    "tests/reranker/test_api_reranker.py": [],
+    "tests/reranker/test_base_reranker.py": [
+      "tests/canned_responses.py"
+    ],
+    "tests/reranker/test_local_reranker.py": [],
+    "tests/retriever/__init__.py": [],
+    "tests/retriever/arxiv_rss_example.xml": [],
+    "tests/retriever/conftest.py": [],
+    "tests/retriever/test_arxiv_retriever.py": [],
+    "tests/retriever/test_base_retriever.py": [],
+    "tests/retriever/test_biorxiv_retriever.py": [
+      "tests/canned_responses.py"
+    ],
+    "tests/retriever/test_medrxiv_retriever.py": [],
+    "tests/test_construct_email.py": [
+      "tests/canned_responses.py"
+    ],
+    "tests/test_executor.py": [],
+    "tests/test_main.py": [],
+    "tests/test_protocol.py": [
+      "tests/canned_responses.py"
+    ],
+    "tests/test_utils.py": [
+      "tests/canned_responses.py"
+    ],
+    "tests/utils/mock_openai/Dockerfile": [],
+    "tests/utils/mock_openai/openai_server.py": [],
+    "tests/utils/mock_zotero/Dockerfile": []
+  },
+  "readmeHead": "<p align=\"center\">\r\n  <a href=\"\" rel=\"noopener\">\r\n <img width=200px height=200px src=\"assets/logo.svg\" alt=\"logo\"></a>\r\n</p>\r\n\r\n<h3 align=\"center\">Zotero-arXiv-Daily</h3>\r\n\r\n<div align=\"center\">\r\n\r\n  [![Status](https://img.shields.io/badge/status-active-success.svg)]()\r\n  ![Stars](https://img.shields.io/github/stars/TideDra/zotero-arxiv-daily?style=flat)\r\n  [![GitHub Issues](https://img.shields.io/github/issues/TideDra/zotero-arxiv-daily)](https://github.com/TideDra/zotero-arxiv-daily/issues)\r\n  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/TideDra/zotero-arxiv-daily)](https://github.com/TideDra/zotero-arxiv-daily/pulls)\r\n  [![License](https://img.shields.io/github/license/TideDra/zotero-arxiv-daily)](/LICENSE)\r\n  [<img src=\"https://api.gitsponsors.com/api/badge/img?id=893025857\" height=\"20\">](https://api.gitsponsors.com/api/badge/link?p=PKMtRut1dWWuC1oFdJweyDSvJg454/GkdIx4IinvBblaX2AY4rQ7FYKAK1ZjApoiNhYEeduIEhfeZVIwoIVlvcwdJXVFD2nV2EE5j6lYXaT/RHrcsQbFl3aKe1F3hliP26OMayXOoZVDidl05wj+yg==)\r\n\r\n</div>\r\n\r\n---\r\n\r\n<p align=\"center\"> Recommend new arxiv papers of your interest daily according to your Zotero library.\r\n    <br> \r\n</p>\r\n\r\n> [!IMPORTANT]\r\n> Please keep an eye on this repo, and merge your forked repo in time when there is any update of this upstream, in order to enjoy new features and fix found bugs.\r\n\r\n## 🧐 About <a name = \"about\"></a>\r\n\r\n> Track new scientific researches of your interest by just forking (and staring) this repo!😊\r\n\r\n*Zotero-arXiv-Daily* finds arxiv papers that may attract you based on the context of your Zotero library, and then sends the result to your mailbox📮. It can be deployed as Github Action Workflow with **zero cost**, **no installation**, and **few configuration** of Github Action environment variables for daily **automatic** delivery.\r\n\r\n## ✨ Features\r\n- Totally free! All the calculation can be done in the Github Action runner locally within its quota (for public repo).\r\n- AI-generated TL;DR for you to quickly pick up target papers.\r\n- Affiliations of the paper are resolved and presented.\r\n- Links of PDF and code implementation (if any) presented in the e-mail.\r\n- List of papers sorted by relevance with your recent research interest.\r\n- Fast deployment via fork this repo and set environment variables in the Github Action Page.\r\n- Support LLM API for generating TL;DR of papers.\r\n- Ignore unwanted Zotero papers using a list of glob patterns.\r\n- Support multiple sources of papers to retrieve:\r\n  - arxiv\r\n  - biorxiv\r\n  - medrxiv\r\n\r\n## 📷 Screenshot\r\n![screenshot](./assets/screenshot.png)\r\n\r\n## 🚀 Usage\r\n### Quick Start\r\n1. Fork (and star😘) this repo.\r\n![fork](./assets/fork.png)\r\n\r\n2. Set Github Action environment variables.\r\n![secrets](./assets/secrets.png)\r\n\r\nBelow are all the secrets you need to set. They are invisible to anyone including you once they are set, for security.\r\n\r\n| Key |Description | Example |\r\n| :---  | :---  | :--- |\r\n| ZOTERO_ID  | User ID of your Zotero account. **User ID i",
+  "manifest": "[build-system]\r\nrequires = [\"uv_build>=0.8.5,<0.9.0\"]\r\nbuild-backend = \"uv_build\"\r\n\r\n[project]\r\nname = \"zotero-arxiv-daily\"\r\nversion = \"1.0.0\"\r\ndescription = \"Add your description here\"\r\nreadme = \"README.md\"\r\nrequires-python = \">=3.13\"\r\ndependencies = [\r\n    \"gitignore-parser>=0.1.11\",\r\n    \"tiktoken>=0.8.0\",\r\n    \"feedparser>=6.0.11\",\r\n    \"hydra-core>=1.3.2\",\r\n    \"aiosmtpd>=1.4.6\",\r\n    \"loguru>=0.7.3\",\r\n    \"pyzotero>=1.10.0\",\r\n    \"scikit-learn>=1.7.1\",\r\n    \"sentence-transformers>=5.2.3\",\r\n    \"torch\",\r\n    \"openai>=2.24.0\",\r\n    \"arxiv>=2.4.0\",\r\n    \"pymupdf4llm>=0.3.4\",\r\n    \"pymupdf-layout>=1.27.1\",\r\n    \"dotenv>=0.9.9\",\r\n    \"peft>=0.18.1\",\r\n    \"trafilatura>=2.0.0\",\r\n]\r\n\r\n[tool.uv.sources]\r\ntorch = { index = \"pytorch\" }\r\n\r\n[[tool.uv.index]]\r\nname = \"pytorch\"\r\nurl = \"https://download.pytorch.org/whl/cpu\"\r\nexplicit = true\r\n\r\n[tool.pytest.ini_options]\r\naddopts = \"-m 'not slow'\"\r\nmarkers = [\r\n    \"slow: tests that are slow (e.g. download models)\",\r\n]\r\nfilterwarnings = [\r\n    \"ignore::DeprecationWarning:multiprocessing\",\r\n]\r\n\r\n[dependency-groups]\r\ndev = [\r\n    \"ipykernel>=7.1.0\",\r\n    \"pytest>=8.4.1\",\r\n    \"pytest-cov>=6.0\",\r\n]\r\n"
+}

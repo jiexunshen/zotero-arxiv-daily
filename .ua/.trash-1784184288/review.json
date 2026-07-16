@@ -1,0 +1,48 @@
+{
+  "issues": [],
+  "warnings": [
+    "orphan service:tests/utils/mock_openai/Dockerfile",
+    "orphan service:tests/utils/mock_zotero/Dockerfile",
+    "orphan pipeline:.github/workflows/ci.yml",
+    "orphan pipeline:.github/workflows/keep-alive.yml",
+    "orphan pipeline:.github/workflows/main.yml",
+    "orphan pipeline:.github/workflows/test.yml",
+    "orphan config:.github/FUNDING.yml",
+    "orphan document:.github/copilot-instructions.md",
+    "orphan document:.github/keep-alive.txt",
+    "orphan document:AGENTS.md",
+    "orphan document:CLAUDE.md",
+    "orphan document:README.md",
+    "orphan config:pyproject.toml",
+    "orphan config:config/base.yaml",
+    "orphan config:config/custom.yaml",
+    "orphan config:config/default.yaml",
+    "orphan file:.python-version",
+    "orphan document:assets/use_docker.md",
+    "orphan file:src/zotero_arxiv_daily/__init__.py",
+    "orphan file:tests/__init__.py",
+    "orphan file:tests/reranker/__init__.py",
+    "orphan file:tests/retriever/__init__.py",
+    "orphan config:tests/retriever/arxiv_rss_example.xml"
+  ],
+  "stats": {
+    "totalNodes": 231,
+    "totalEdges": 264,
+    "totalLayers": 8,
+    "tourSteps": 7,
+    "nodeTypes": {
+      "file": 36,
+      "function": 161,
+      "class": 16,
+      "service": 2,
+      "pipeline": 4,
+      "config": 6,
+      "document": 6
+    },
+    "edgeTypes": {
+      "contains": 177,
+      "imports": 31,
+      "calls": 56
+    }
+  }
+}

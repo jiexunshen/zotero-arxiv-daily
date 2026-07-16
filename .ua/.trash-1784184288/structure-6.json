@@ -1,0 +1,107 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 1,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "tests/utils/mock_zotero/Dockerfile",
+      "language": "dockerfile",
+      "fileCategory": "infra",
+      "totalLines": 31,
+      "nonEmptyLines": 20,
+      "services": [
+        {
+          "name": "builder",
+          "image": "node:25.2.1-bookworm-slim",
+          "ports": [],
+          "startLine": 1,
+          "endLine": 9
+        },
+        {
+          "name": "debian",
+          "image": "debian:bookworm-slim",
+          "ports": [
+            23119
+          ],
+          "startLine": 10,
+          "endLine": 31
+        }
+      ],
+      "steps": [
+        {
+          "name": "FROM node:25.2.1-bookworm-slim as builder",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "name": "RUN apt-get update && apt-get install -y git git-lfs perl python",
+          "startLine": 2,
+          "endLine": 2
+        },
+        {
+          "name": "RUN git clone --recursive -b enable_api https://github.com/TideD",
+          "startLine": 3,
+          "endLine": 3
+        },
+        {
+          "name": "WORKDIR /zotero",
+          "startLine": 5,
+          "endLine": 5
+        },
+        {
+          "name": "RUN npm i && npm run build && app/scripts/dir_build -p l",
+          "startLine": 7,
+          "endLine": 7
+        },
+        {
+          "name": "FROM debian:bookworm-slim",
+          "startLine": 10,
+          "endLine": 10
+        },
+        {
+          "name": "COPY --from=builder /zotero/app/staging/Zotero_linux-x86_64/ /zot",
+          "startLine": 12,
+          "endLine": 12
+        },
+        {
+          "name": "COPY ./zotero.sqlite /root/Zotero/zotero.sqlite",
+          "startLine": 13,
+          "endLine": 13
+        },
+        {
+          "name": "WORKDIR /zotero",
+          "startLine": 14,
+          "endLine": 14
+        },
+        {
+          "name": "RUN apt-get update && apt-get install -y \\",
+          "startLine": 17,
+          "endLine": 17
+        },
+        {
+          "name": "ENV DISPLAY=:99",
+          "startLine": 25,
+          "endLine": 25
+        },
+        {
+          "name": "EXPOSE 23119",
+          "startLine": 28,
+          "endLine": 28
+        },
+        {
+          "name": "CMD [\"sh\", \"-c\", \"Xvfb :99 -screen 0 1024x768x24 & ./zotero\"]",
+          "startLine": 31,
+          "endLine": 31
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "serviceCount": 2,
+        "stepCount": 13
+      }
+    }
+  ]
+}

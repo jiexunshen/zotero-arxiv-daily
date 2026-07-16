@@ -1,0 +1,913 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/zotero_arxiv_daily/protocol.py",
+      "type": "file",
+      "name": "protocol.py",
+      "filePath": "src/zotero_arxiv_daily/protocol.py",
+      "summary": "Defines Paper and CorpusPaper models, including LLM-backed TLDR and affiliation generation methods.",
+      "tags": [
+        "python",
+        "code",
+        "data-model",
+        "classes"
+      ],
+      "complexity": "moderate",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 111,
+      "sizeLines": 111
+    },
+    {
+      "id": "class:src/zotero_arxiv_daily/protocol.py:Paper",
+      "type": "class",
+      "name": "Paper",
+      "filePath": "src/zotero_arxiv_daily/protocol.py",
+      "summary": "Class Paper in src/zotero_arxiv_daily/protocol.py with methods _generate_tldr_with_llm, generate_tldr, _generate_affiliations_with_llm, generate_affiliations.",
+      "tags": [
+        "class",
+        "python",
+        "_generate_tldr_with_llm",
+        "generate_tldr",
+        "_generate_affiliations_with_llm",
+        "generate_affiliations"
+      ],
+      "complexity": "moderate",
+      "startLine": 12,
+      "endLine": 105
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/protocol.py:Paper._generate_tldr_with_llm",
+      "type": "function",
+      "name": "Paper._generate_tldr_with_llm",
+      "filePath": "src/zotero_arxiv_daily/protocol.py",
+      "summary": "Method _generate_tldr_with_llm on class Paper.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 12,
+      "endLine": 105
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/protocol.py:Paper.generate_tldr",
+      "type": "function",
+      "name": "Paper.generate_tldr",
+      "filePath": "src/zotero_arxiv_daily/protocol.py",
+      "summary": "Method generate_tldr on class Paper.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 12,
+      "endLine": 105
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/protocol.py:Paper._generate_affiliations_with_llm",
+      "type": "function",
+      "name": "Paper._generate_affiliations_with_llm",
+      "filePath": "src/zotero_arxiv_daily/protocol.py",
+      "summary": "Method _generate_affiliations_with_llm on class Paper.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 12,
+      "endLine": 105
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/protocol.py:Paper.generate_affiliations",
+      "type": "function",
+      "name": "Paper.generate_affiliations",
+      "filePath": "src/zotero_arxiv_daily/protocol.py",
+      "summary": "Method generate_affiliations on class Paper.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 12,
+      "endLine": 105
+    },
+    {
+      "id": "class:src/zotero_arxiv_daily/protocol.py:CorpusPaper",
+      "type": "class",
+      "name": "CorpusPaper",
+      "filePath": "src/zotero_arxiv_daily/protocol.py",
+      "summary": "Class CorpusPaper in src/zotero_arxiv_daily/protocol.py.",
+      "tags": [
+        "class",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 107,
+      "endLine": 111
+    },
+    {
+      "id": "file:src/zotero_arxiv_daily/retriever/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "src/zotero_arxiv_daily/retriever/__init__.py",
+      "summary": "Implements paper retrieval abstractions and source-specific retrievers for arXiv, bioRxiv, and medRxiv.",
+      "tags": [
+        "python",
+        "code",
+        "retriever"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 2,
+      "sizeLines": 2
+    },
+    {
+      "id": "file:src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "type": "file",
+      "name": "arxiv_retriever.py",
+      "filePath": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "summary": "Implements paper retrieval abstractions and source-specific retrievers for arXiv, bioRxiv, and medRxiv.",
+      "tags": [
+        "python",
+        "code",
+        "retriever",
+        "classes",
+        "functions"
+      ],
+      "complexity": "moderate",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 213,
+      "sizeLines": 213
+    },
+    {
+      "id": "class:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:ArxivRetriever",
+      "type": "class",
+      "name": "ArxivRetriever",
+      "filePath": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "summary": "Class ArxivRetriever in src/zotero_arxiv_daily/retriever/arxiv_retriever.py with methods __init__, _retrieve_raw_papers, convert_to_paper.",
+      "tags": [
+        "class",
+        "python",
+        "__init__",
+        "_retrieve_raw_papers",
+        "convert_to_paper"
+      ],
+      "complexity": "simple",
+      "startLine": 110,
+      "endLine": 177
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:ArxivRetriever.__init__",
+      "type": "function",
+      "name": "ArxivRetriever.__init__",
+      "filePath": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "summary": "Method __init__ on class ArxivRetriever.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 110,
+      "endLine": 177
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:ArxivRetriever._retrieve_raw_papers",
+      "type": "function",
+      "name": "ArxivRetriever._retrieve_raw_papers",
+      "filePath": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "summary": "Method _retrieve_raw_papers on class ArxivRetriever.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 110,
+      "endLine": 177
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:ArxivRetriever.convert_to_paper",
+      "type": "function",
+      "name": "ArxivRetriever.convert_to_paper",
+      "filePath": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "summary": "Method convert_to_paper on class ArxivRetriever.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 110,
+      "endLine": 177
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_download_file",
+      "type": "function",
+      "name": "_download_file",
+      "filePath": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "summary": "Function _download_file with parameters url, path.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 24,
+      "endLine": 30
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_run_in_subprocess",
+      "type": "function",
+      "name": "_run_in_subprocess",
+      "filePath": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "summary": "Function _run_in_subprocess with parameters result_queue, func, args.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 33,
+      "endLine": 41
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_run_with_hard_timeout",
+      "type": "function",
+      "name": "_run_with_hard_timeout",
+      "filePath": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "summary": "Function _run_with_hard_timeout with parameters func, args, timeout, operation, paper_title.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 44,
+      "endLine": 77
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_extract_text_from_pdf_worker",
+      "type": "function",
+      "name": "_extract_text_from_pdf_worker",
+      "filePath": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "summary": "Function _extract_text_from_pdf_worker with parameters pdf_url.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 80,
+      "endLine": 84
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_extract_text_from_html_worker",
+      "type": "function",
+      "name": "_extract_text_from_html_worker",
+      "filePath": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "summary": "Function _extract_text_from_html_worker with parameters html_url.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 87,
+      "endLine": 96
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_extract_text_from_tar_worker",
+      "type": "function",
+      "name": "_extract_text_from_tar_worker",
+      "filePath": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "summary": "Function _extract_text_from_tar_worker with parameters source_url, paper_id, paper_title.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 99,
+      "endLine": 106
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:extract_text_from_html",
+      "type": "function",
+      "name": "extract_text_from_html",
+      "filePath": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "summary": "Function extract_text_from_html with parameters paper.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 180,
+      "endLine": 186
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:extract_text_from_pdf",
+      "type": "function",
+      "name": "extract_text_from_pdf",
+      "filePath": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "summary": "Function extract_text_from_pdf with parameters paper.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 189,
+      "endLine": 199
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:extract_text_from_tar",
+      "type": "function",
+      "name": "extract_text_from_tar",
+      "filePath": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "summary": "Function extract_text_from_tar with parameters paper.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 202,
+      "endLine": 213
+    },
+    {
+      "id": "file:src/zotero_arxiv_daily/retriever/base.py",
+      "type": "file",
+      "name": "base.py",
+      "filePath": "src/zotero_arxiv_daily/retriever/base.py",
+      "summary": "Implements paper retrieval abstractions and source-specific retrievers for arXiv, bioRxiv, and medRxiv.",
+      "tags": [
+        "python",
+        "code",
+        "retriever",
+        "classes",
+        "functions"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 51,
+      "sizeLines": 51
+    },
+    {
+      "id": "class:src/zotero_arxiv_daily/retriever/base.py:BaseRetriever",
+      "type": "class",
+      "name": "BaseRetriever",
+      "filePath": "src/zotero_arxiv_daily/retriever/base.py",
+      "summary": "Class BaseRetriever in src/zotero_arxiv_daily/retriever/base.py with methods __init__, _retrieve_raw_papers, convert_to_paper, retrieve_papers.",
+      "tags": [
+        "class",
+        "python",
+        "__init__",
+        "_retrieve_raw_papers",
+        "convert_to_paper",
+        "retrieve_papers"
+      ],
+      "complexity": "simple",
+      "startLine": 10,
+      "endLine": 37
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/base.py:BaseRetriever.__init__",
+      "type": "function",
+      "name": "BaseRetriever.__init__",
+      "filePath": "src/zotero_arxiv_daily/retriever/base.py",
+      "summary": "Method __init__ on class BaseRetriever.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 10,
+      "endLine": 37
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/base.py:BaseRetriever._retrieve_raw_papers",
+      "type": "function",
+      "name": "BaseRetriever._retrieve_raw_papers",
+      "filePath": "src/zotero_arxiv_daily/retriever/base.py",
+      "summary": "Method _retrieve_raw_papers on class BaseRetriever.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 10,
+      "endLine": 37
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/base.py:BaseRetriever.convert_to_paper",
+      "type": "function",
+      "name": "BaseRetriever.convert_to_paper",
+      "filePath": "src/zotero_arxiv_daily/retriever/base.py",
+      "summary": "Method convert_to_paper on class BaseRetriever.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 10,
+      "endLine": 37
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/base.py:BaseRetriever.retrieve_papers",
+      "type": "function",
+      "name": "BaseRetriever.retrieve_papers",
+      "filePath": "src/zotero_arxiv_daily/retriever/base.py",
+      "summary": "Method retrieve_papers on class BaseRetriever.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 10,
+      "endLine": 37
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/base.py:register_retriever",
+      "type": "function",
+      "name": "register_retriever",
+      "filePath": "src/zotero_arxiv_daily/retriever/base.py",
+      "summary": "Function register_retriever with parameters name.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 41,
+      "endLine": 46
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/base.py:get_retriever_cls",
+      "type": "function",
+      "name": "get_retriever_cls",
+      "filePath": "src/zotero_arxiv_daily/retriever/base.py",
+      "summary": "Function get_retriever_cls with parameters name.",
+      "tags": [
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 48,
+      "endLine": 51
+    },
+    {
+      "id": "file:src/zotero_arxiv_daily/retriever/biorxiv_retriever.py",
+      "type": "file",
+      "name": "biorxiv_retriever.py",
+      "filePath": "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py",
+      "summary": "Implements paper retrieval abstractions and source-specific retrievers for arXiv, bioRxiv, and medRxiv.",
+      "tags": [
+        "python",
+        "code",
+        "retriever",
+        "classes"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 61,
+      "sizeLines": 61
+    },
+    {
+      "id": "class:src/zotero_arxiv_daily/retriever/biorxiv_retriever.py:BiorxivRetriever",
+      "type": "class",
+      "name": "BiorxivRetriever",
+      "filePath": "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py",
+      "summary": "Class BiorxivRetriever in src/zotero_arxiv_daily/retriever/biorxiv_retriever.py with methods __init__, _retrieve_raw_papers, convert_to_paper.",
+      "tags": [
+        "class",
+        "python",
+        "__init__",
+        "_retrieve_raw_papers",
+        "convert_to_paper"
+      ],
+      "complexity": "simple",
+      "startLine": 9,
+      "endLine": 61
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/biorxiv_retriever.py:BiorxivRetriever.__init__",
+      "type": "function",
+      "name": "BiorxivRetriever.__init__",
+      "filePath": "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py",
+      "summary": "Method __init__ on class BiorxivRetriever.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 9,
+      "endLine": 61
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/biorxiv_retriever.py:BiorxivRetriever._retrieve_raw_papers",
+      "type": "function",
+      "name": "BiorxivRetriever._retrieve_raw_papers",
+      "filePath": "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py",
+      "summary": "Method _retrieve_raw_papers on class BiorxivRetriever.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 9,
+      "endLine": 61
+    },
+    {
+      "id": "function:src/zotero_arxiv_daily/retriever/biorxiv_retriever.py:BiorxivRetriever.convert_to_paper",
+      "type": "function",
+      "name": "BiorxivRetriever.convert_to_paper",
+      "filePath": "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py",
+      "summary": "Method convert_to_paper on class BiorxivRetriever.",
+      "tags": [
+        "method",
+        "function",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 9,
+      "endLine": 61
+    },
+    {
+      "id": "file:src/zotero_arxiv_daily/retriever/medrxiv_retriever.py",
+      "type": "file",
+      "name": "medrxiv_retriever.py",
+      "filePath": "src/zotero_arxiv_daily/retriever/medrxiv_retriever.py",
+      "summary": "Implements paper retrieval abstractions and source-specific retrievers for arXiv, bioRxiv, and medRxiv.",
+      "tags": [
+        "python",
+        "code",
+        "retriever",
+        "classes"
+      ],
+      "complexity": "simple",
+      "language": "python",
+      "startLine": 1,
+      "endLine": 6,
+      "sizeLines": 6
+    },
+    {
+      "id": "class:src/zotero_arxiv_daily/retriever/medrxiv_retriever.py:MedrxivRetriever",
+      "type": "class",
+      "name": "MedrxivRetriever",
+      "filePath": "src/zotero_arxiv_daily/retriever/medrxiv_retriever.py",
+      "summary": "Class MedrxivRetriever in src/zotero_arxiv_daily/retriever/medrxiv_retriever.py.",
+      "tags": [
+        "class",
+        "python"
+      ],
+      "complexity": "simple",
+      "startLine": 5,
+      "endLine": 6
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/zotero_arxiv_daily/protocol.py",
+      "target": "class:src/zotero_arxiv_daily/protocol.py:Paper",
+      "type": "contains",
+      "weight": 1,
+      "description": "protocol.py defines class Paper."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/protocol.py:Paper",
+      "target": "function:src/zotero_arxiv_daily/protocol.py:Paper._generate_tldr_with_llm",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class Paper contains method _generate_tldr_with_llm."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/protocol.py:Paper",
+      "target": "function:src/zotero_arxiv_daily/protocol.py:Paper.generate_tldr",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class Paper contains method generate_tldr."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/protocol.py:Paper",
+      "target": "function:src/zotero_arxiv_daily/protocol.py:Paper._generate_affiliations_with_llm",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class Paper contains method _generate_affiliations_with_llm."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/protocol.py:Paper",
+      "target": "function:src/zotero_arxiv_daily/protocol.py:Paper.generate_affiliations",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class Paper contains method generate_affiliations."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/protocol.py",
+      "target": "class:src/zotero_arxiv_daily/protocol.py:CorpusPaper",
+      "type": "contains",
+      "weight": 1,
+      "description": "protocol.py defines class CorpusPaper."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "target": "class:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:ArxivRetriever",
+      "type": "contains",
+      "weight": 1,
+      "description": "arxiv_retriever.py defines class ArxivRetriever."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:ArxivRetriever",
+      "target": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:ArxivRetriever.__init__",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class ArxivRetriever contains method __init__."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:ArxivRetriever",
+      "target": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:ArxivRetriever._retrieve_raw_papers",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class ArxivRetriever contains method _retrieve_raw_papers."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:ArxivRetriever",
+      "target": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:ArxivRetriever.convert_to_paper",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class ArxivRetriever contains method convert_to_paper."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "target": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_download_file",
+      "type": "contains",
+      "weight": 1,
+      "description": "arxiv_retriever.py defines function _download_file."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "target": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_run_in_subprocess",
+      "type": "contains",
+      "weight": 1,
+      "description": "arxiv_retriever.py defines function _run_in_subprocess."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "target": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_run_with_hard_timeout",
+      "type": "contains",
+      "weight": 1,
+      "description": "arxiv_retriever.py defines function _run_with_hard_timeout."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "target": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_extract_text_from_pdf_worker",
+      "type": "contains",
+      "weight": 1,
+      "description": "arxiv_retriever.py defines function _extract_text_from_pdf_worker."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "target": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_extract_text_from_html_worker",
+      "type": "contains",
+      "weight": 1,
+      "description": "arxiv_retriever.py defines function _extract_text_from_html_worker."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "target": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_extract_text_from_tar_worker",
+      "type": "contains",
+      "weight": 1,
+      "description": "arxiv_retriever.py defines function _extract_text_from_tar_worker."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "target": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:extract_text_from_html",
+      "type": "contains",
+      "weight": 1,
+      "description": "arxiv_retriever.py defines function extract_text_from_html."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "target": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:extract_text_from_pdf",
+      "type": "contains",
+      "weight": 1,
+      "description": "arxiv_retriever.py defines function extract_text_from_pdf."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "target": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:extract_text_from_tar",
+      "type": "contains",
+      "weight": 1,
+      "description": "arxiv_retriever.py defines function extract_text_from_tar."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/base.py",
+      "target": "class:src/zotero_arxiv_daily/retriever/base.py:BaseRetriever",
+      "type": "contains",
+      "weight": 1,
+      "description": "base.py defines class BaseRetriever."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/retriever/base.py:BaseRetriever",
+      "target": "function:src/zotero_arxiv_daily/retriever/base.py:BaseRetriever.__init__",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class BaseRetriever contains method __init__."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/retriever/base.py:BaseRetriever",
+      "target": "function:src/zotero_arxiv_daily/retriever/base.py:BaseRetriever._retrieve_raw_papers",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class BaseRetriever contains method _retrieve_raw_papers."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/retriever/base.py:BaseRetriever",
+      "target": "function:src/zotero_arxiv_daily/retriever/base.py:BaseRetriever.convert_to_paper",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class BaseRetriever contains method convert_to_paper."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/retriever/base.py:BaseRetriever",
+      "target": "function:src/zotero_arxiv_daily/retriever/base.py:BaseRetriever.retrieve_papers",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class BaseRetriever contains method retrieve_papers."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/base.py",
+      "target": "function:src/zotero_arxiv_daily/retriever/base.py:register_retriever",
+      "type": "contains",
+      "weight": 1,
+      "description": "base.py defines function register_retriever."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/base.py",
+      "target": "function:src/zotero_arxiv_daily/retriever/base.py:get_retriever_cls",
+      "type": "contains",
+      "weight": 1,
+      "description": "base.py defines function get_retriever_cls."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/biorxiv_retriever.py",
+      "target": "class:src/zotero_arxiv_daily/retriever/biorxiv_retriever.py:BiorxivRetriever",
+      "type": "contains",
+      "weight": 1,
+      "description": "biorxiv_retriever.py defines class BiorxivRetriever."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/retriever/biorxiv_retriever.py:BiorxivRetriever",
+      "target": "function:src/zotero_arxiv_daily/retriever/biorxiv_retriever.py:BiorxivRetriever.__init__",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class BiorxivRetriever contains method __init__."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/retriever/biorxiv_retriever.py:BiorxivRetriever",
+      "target": "function:src/zotero_arxiv_daily/retriever/biorxiv_retriever.py:BiorxivRetriever._retrieve_raw_papers",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class BiorxivRetriever contains method _retrieve_raw_papers."
+    },
+    {
+      "source": "class:src/zotero_arxiv_daily/retriever/biorxiv_retriever.py:BiorxivRetriever",
+      "target": "function:src/zotero_arxiv_daily/retriever/biorxiv_retriever.py:BiorxivRetriever.convert_to_paper",
+      "type": "contains",
+      "weight": 1,
+      "description": "Class BiorxivRetriever contains method convert_to_paper."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/medrxiv_retriever.py",
+      "target": "class:src/zotero_arxiv_daily/retriever/medrxiv_retriever.py:MedrxivRetriever",
+      "type": "contains",
+      "weight": 1,
+      "description": "medrxiv_retriever.py defines class MedrxivRetriever."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/__init__.py",
+      "target": "file:src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/retriever/__init__.py imports src/zotero_arxiv_daily/retriever/arxiv_retriever.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/__init__.py",
+      "target": "file:src/zotero_arxiv_daily/retriever/base.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/retriever/__init__.py imports src/zotero_arxiv_daily/retriever/base.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/__init__.py",
+      "target": "file:src/zotero_arxiv_daily/retriever/biorxiv_retriever.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/retriever/__init__.py imports src/zotero_arxiv_daily/retriever/biorxiv_retriever.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/__init__.py",
+      "target": "file:src/zotero_arxiv_daily/retriever/medrxiv_retriever.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/retriever/__init__.py imports src/zotero_arxiv_daily/retriever/medrxiv_retriever.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "target": "file:src/zotero_arxiv_daily/protocol.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py imports src/zotero_arxiv_daily/protocol.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "target": "file:src/zotero_arxiv_daily/retriever/base.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py imports src/zotero_arxiv_daily/retriever/base.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/arxiv_retriever.py",
+      "target": "file:src/zotero_arxiv_daily/utils.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/retriever/arxiv_retriever.py imports src/zotero_arxiv_daily/utils.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/base.py",
+      "target": "file:src/zotero_arxiv_daily/protocol.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/retriever/base.py imports src/zotero_arxiv_daily/protocol.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/biorxiv_retriever.py",
+      "target": "file:src/zotero_arxiv_daily/protocol.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py imports src/zotero_arxiv_daily/protocol.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/biorxiv_retriever.py",
+      "target": "file:src/zotero_arxiv_daily/retriever/base.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/retriever/biorxiv_retriever.py imports src/zotero_arxiv_daily/retriever/base.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/medrxiv_retriever.py",
+      "target": "file:src/zotero_arxiv_daily/retriever/base.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/retriever/medrxiv_retriever.py imports src/zotero_arxiv_daily/retriever/base.py."
+    },
+    {
+      "source": "file:src/zotero_arxiv_daily/retriever/medrxiv_retriever.py",
+      "target": "file:src/zotero_arxiv_daily/retriever/biorxiv_retriever.py",
+      "type": "imports",
+      "weight": 0.7,
+      "description": "src/zotero_arxiv_daily/retriever/medrxiv_retriever.py imports src/zotero_arxiv_daily/retriever/biorxiv_retriever.py."
+    },
+    {
+      "source": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_extract_text_from_pdf_worker",
+      "target": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_download_file",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "_extract_text_from_pdf_worker calls _download_file."
+    },
+    {
+      "source": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_extract_text_from_tar_worker",
+      "target": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_download_file",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "_extract_text_from_tar_worker calls _download_file."
+    },
+    {
+      "source": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:extract_text_from_html",
+      "target": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_extract_text_from_html_worker",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "extract_text_from_html calls _extract_text_from_html_worker."
+    },
+    {
+      "source": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:extract_text_from_pdf",
+      "target": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_run_with_hard_timeout",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "extract_text_from_pdf calls _run_with_hard_timeout."
+    },
+    {
+      "source": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:extract_text_from_tar",
+      "target": "function:src/zotero_arxiv_daily/retriever/arxiv_retriever.py:_run_with_hard_timeout",
+      "type": "calls",
+      "weight": 0.8,
+      "description": "extract_text_from_tar calls _run_with_hard_timeout."
+    }
+  ]
+}

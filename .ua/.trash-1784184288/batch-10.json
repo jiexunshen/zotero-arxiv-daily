@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": "config:config/base.yaml",
+      "type": "config",
+      "name": "base.yaml",
+      "filePath": "config/base.yaml",
+      "summary": "Project configuration consumed by runtime, packaging, tests, or automation.",
+      "tags": [
+        "yaml",
+        "config",
+        "configuration"
+      ],
+      "complexity": "simple",
+      "language": "yaml",
+      "startLine": 1,
+      "endLine": 51,
+      "sizeLines": 51
+    },
+    {
+      "id": "config:config/custom.yaml",
+      "type": "config",
+      "name": "custom.yaml",
+      "filePath": "config/custom.yaml",
+      "summary": "Project configuration consumed by runtime, packaging, tests, or automation.",
+      "tags": [
+        "yaml",
+        "config",
+        "configuration"
+      ],
+      "complexity": "simple",
+      "language": "yaml",
+      "startLine": 1,
+      "endLine": 26,
+      "sizeLines": 26
+    },
+    {
+      "id": "config:config/default.yaml",
+      "type": "config",
+      "name": "default.yaml",
+      "filePath": "config/default.yaml",
+      "summary": "Project configuration consumed by runtime, packaging, tests, or automation.",
+      "tags": [
+        "yaml",
+        "config",
+        "configuration"
+      ],
+      "complexity": "simple",
+      "language": "yaml",
+      "startLine": 1,
+      "endLine": 3,
+      "sizeLines": 3
+    }
+  ],
+  "edges": []
+}

@@ -1,0 +1,266 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "AGENTS.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 81,
+      "nonEmptyLines": 50,
+      "sections": [
+        {
+          "heading": "AGENTS.md",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Project Overview",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Commands",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Architecture",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "Plugin Systems",
+          "level": 3,
+          "line": 41
+        },
+        {
+          "heading": "Configuration",
+          "level": 3,
+          "line": 47
+        },
+        {
+          "heading": "Data Classes",
+          "level": 3,
+          "line": 51
+        },
+        {
+          "heading": "Testing",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "gstack",
+          "level": 2,
+          "line": 70
+        },
+        {
+          "heading": "Git Workflow",
+          "level": 2,
+          "line": 78
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "CLAUDE.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 81,
+      "nonEmptyLines": 50,
+      "sections": [
+        {
+          "heading": "CLAUDE.md",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Project Overview",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Commands",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Architecture",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "Plugin Systems",
+          "level": 3,
+          "line": 41
+        },
+        {
+          "heading": "Configuration",
+          "level": 3,
+          "line": 47
+        },
+        {
+          "heading": "Data Classes",
+          "level": 3,
+          "line": 51
+        },
+        {
+          "heading": "Testing",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "gstack",
+          "level": 2,
+          "line": 70
+        },
+        {
+          "heading": "Git Workflow",
+          "level": 2,
+          "line": 78
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 211,
+      "nonEmptyLines": 167,
+      "sections": [
+        {
+          "heading": "🧐 About <a name = \"about\"></a>",
+          "level": 2,
+          "line": 28
+        },
+        {
+          "heading": "✨ Features",
+          "level": 2,
+          "line": 34
+        },
+        {
+          "heading": "📷 Screenshot",
+          "level": 2,
+          "line": 48
+        },
+        {
+          "heading": "🚀 Usage",
+          "level": 2,
+          "line": 51
+        },
+        {
+          "heading": "Quick Start",
+          "level": 3,
+          "line": 52
+        },
+        {
+          "heading": "Local Running",
+          "level": 3,
+          "line": 172
+        },
+        {
+          "heading": "🚀 Sync with the latest version",
+          "level": 2,
+          "line": 182
+        },
+        {
+          "heading": "📖 How it works",
+          "level": 2,
+          "line": 188
+        },
+        {
+          "heading": "📌 Limitations",
+          "level": 2,
+          "line": 191
+        },
+        {
+          "heading": "📃 License",
+          "level": 2,
+          "line": 196
+        },
+        {
+          "heading": "❤️ Acknowledgement",
+          "level": 2,
+          "line": 199
+        },
+        {
+          "heading": "☕ Buy Me A Coffee",
+          "level": 2,
+          "line": 204
+        },
+        {
+          "heading": "🌟 Star History",
+          "level": 2,
+          "line": 209
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "pyproject.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 53,
+      "nonEmptyLines": 48,
+      "sections": [
+        {
+          "heading": "build-system",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "project",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "tool.uv.sources",
+          "level": 3,
+          "line": 31
+        },
+        {
+          "heading": "[[tool.uv.index]]",
+          "level": 3,
+          "line": 34
+        },
+        {
+          "heading": "tool.pytest.ini_options",
+          "level": 3,
+          "line": 39
+        },
+        {
+          "heading": "dependency-groups",
+          "level": 1,
+          "line": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    }
+  ]
+}

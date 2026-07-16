@@ -1,0 +1,68 @@
+{
+  "projectRoot": "E:\\Code\\zotero-arxiv-daily",
+  "batchFiles": [
+    {
+      "path": "tests/canned_responses.py",
+      "language": "python",
+      "sizeLines": 231,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/reranker/conftest.py",
+      "language": "python",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/reranker/test_base_reranker.py",
+      "language": "python",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/retriever/test_biorxiv_retriever.py",
+      "language": "python",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_construct_email.py",
+      "language": "python",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_protocol.py",
+      "language": "python",
+      "sizeLines": 124,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tests/test_utils.py",
+      "language": "python",
+      "sizeLines": 290,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "tests/canned_responses.py": [],
+    "tests/reranker/conftest.py": [
+      "tests/canned_responses.py"
+    ],
+    "tests/reranker/test_base_reranker.py": [
+      "tests/canned_responses.py"
+    ],
+    "tests/retriever/test_biorxiv_retriever.py": [
+      "tests/canned_responses.py"
+    ],
+    "tests/test_construct_email.py": [
+      "tests/canned_responses.py"
+    ],
+    "tests/test_protocol.py": [
+      "tests/canned_responses.py"
+    ],
+    "tests/test_utils.py": [
+      "tests/canned_responses.py"
+    ]
+  }
+}

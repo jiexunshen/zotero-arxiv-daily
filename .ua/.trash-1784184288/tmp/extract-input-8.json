@@ -1,0 +1,28 @@
+{
+  "projectRoot": "E:\\Code\\zotero-arxiv-daily",
+  "batchFiles": [
+    {
+      "path": ".github/FUNDING.yml",
+      "language": "yaml",
+      "sizeLines": 15,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".github/copilot-instructions.md",
+      "language": "markdown",
+      "sizeLines": 74,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/keep-alive.txt",
+      "language": "txt",
+      "sizeLines": 2,
+      "fileCategory": "docs"
+    }
+  ],
+  "batchImportData": {
+    ".github/FUNDING.yml": [],
+    ".github/copilot-instructions.md": [],
+    ".github/keep-alive.txt": []
+  }
+}
