@@ -46,6 +46,10 @@ def _validate_analysis_payload(
         raise ValueError("LLM analysis response must contain category.recommended_path")
     if not isinstance(analysis.get("translation"), dict):
         analysis["translation"] = {}
+    if not isinstance(analysis.get("publication"), dict):
+        analysis["publication"] = {}
+    if not isinstance(analysis.get("open_source"), dict):
+        analysis["open_source"] = {}
     return analysis
 
 
@@ -56,7 +60,7 @@ def _has_meaningful_value(value: Any) -> bool:
 def _merge_analysis_payloads(base: dict[str, Any], update: dict[str, Any]) -> dict[str, Any]:
     """Merge expanded analysis into the initial analysis without losing required fields."""
     merged = dict(base)
-    for section_name in ("translation", "category", "analysis"):
+    for section_name in ("translation", "category", "analysis", "publication", "open_source"):
         base_section = base.get(section_name, {})
         update_section = update.get(section_name, {})
         if not isinstance(base_section, dict) or not isinstance(update_section, dict):
@@ -82,6 +86,8 @@ class Paper:
     analysis: Optional[dict[str, Any]] = None
     similar_corpus: list[dict[str, Any]] = field(default_factory=list)
     score: Optional[float] = None
+    metadata: dict[str, Any] = field(default_factory=dict)
+    code_urls: list[str] = field(default_factory=list)
 
     def _generate_tldr_with_llm(self, openai_client:OpenAI,llm_params:dict) -> str:
         lang = llm_params.get('language', 'English')
@@ -202,6 +208,18 @@ Answer in {lang}. Return only one JSON object with this exact shape:
     "method": "3-5 Chinese sentences. Explain the core method, main modules/data/training/evaluation design if available, and the key mechanism rather than only naming the method.",
     "inspiration": "2-4 concrete Chinese points or sentences. Focus on research ideas, reusable experimental design, dataset construction, evaluation angles, or limitations worth following up.",
     "reading_suggestion": "Choose one: 精读，适合学习框架并进一步实验 | 精读，适合复现实验 | 粗读即可 | 收藏观察. Then add 1-2 Chinese sentences explaining the reason."
+  }},
+  "publication": {{
+    "venue": "Use this format when published or accepted: 会议全称-会议简称-年份-CCF评级或其他公认评级-状态（已见刊或已录用未见刊）. If no venue is available, say: 暂未发表；预印本最后调整时间：YYYY-MM-DD；疑似投稿：会议或期刊（说明是根据模板和格式推断）.",
+    "first_publication_time": "YYYY-MM-DD or null",
+    "acceptance_time": "YYYY-MM-DD or null",
+    "publication_time": "YYYY-MM-DD or null",
+    "evidence": "Briefly state which metadata, journal_ref, comment, template, or formatting cues support the judgment. If unsure, say uncertainty explicitly."
+  }},
+  "open_source": {{
+    "is_open_source": true,
+    "repository_url": "GitHub repository URL or null",
+    "evidence": "Briefly state whether a repository URL is found in the paper metadata/text. If none is found, say 未发现开源仓库."
   }}
 }}
 
@@ -215,6 +233,10 @@ Recommended paper:
 Title: {self.title}
 Authors: {', '.join(self.authors)}
 Abstract: {self.abstract}
+Metadata from source API:
+{json.dumps(self.metadata, ensure_ascii=False, indent=2)}
+Detected code or repository URLs:
+{json.dumps(self.code_urls, ensure_ascii=False, indent=2)}
 Preview of main content: {self.full_text or ''}
 """
 
@@ -258,7 +280,7 @@ Preview of main content: {self.full_text or ''}
                     "role": "system",
                     "content": (
                         "Convert the user's text into one valid JSON object. "
-                        "Return only JSON with top-level keys translation, category, and analysis."
+                        "Return only JSON with top-level keys translation, category, analysis, publication, and open_source."
                     ),
                 },
                 {"role": "user", "content": content},
@@ -298,13 +320,18 @@ Make the output more detailed:
 4. Make analysis.method 3-5 Chinese sentences with concrete mechanisms, modules, data, training, or evaluation details when available.
 5. Make analysis.inspiration 2-4 concrete Chinese points or sentences.
 6. Make analysis.reading_suggestion choose one reading level and add a concise reason.
+7. Keep or improve publication and open_source. Do not invent dates or repository URLs; mark uncertain inferred venue information as inferred.
 
-Answer in {lang}. Return only one JSON object with top-level keys translation, category, and analysis.
+Answer in {lang}. Return only one JSON object with top-level keys translation, category, analysis, publication, and open_source.
 
 Paper:
 Title: {self.title}
 Authors: {', '.join(self.authors)}
 Abstract: {self.abstract}
+Metadata from source API:
+{json.dumps(self.metadata, ensure_ascii=False, indent=2)}
+Detected code or repository URLs:
+{json.dumps(self.code_urls, ensure_ascii=False, indent=2)}
 Preview of main content: {self.full_text or ''}
 
 Initial analysis:

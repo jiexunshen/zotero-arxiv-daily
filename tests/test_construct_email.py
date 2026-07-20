@@ -67,6 +67,18 @@ def test_render_email_includes_deep_analysis():
                 "inspiration": "Try separating planning evaluation from tool-use evaluation.",
                 "reading_suggestion": "精读，适合学习框架并进一步实验",
             },
+            "publication": {
+                "venue": "暂未发表；预印本最后调整时间：2026-01-03；疑似投稿：NeurIPS 2026（根据模板推断）",
+                "first_publication_time": "2026-01-01",
+                "acceptance_time": None,
+                "publication_time": None,
+                "evidence": "No journal_ref in arXiv metadata.",
+            },
+            "open_source": {
+                "is_open_source": True,
+                "repository_url": "https://github.com/example/planning-paper",
+                "evidence": "GitHub URL found in paper.",
+            },
         },
     )
 
@@ -84,6 +96,12 @@ def test_render_email_includes_deep_analysis():
     assert "How can agents plan over long horizons?" in html
     assert "科研启发" in html
     assert "精读" in html
+    assert "发表信息" in html
+    assert "NeurIPS 2026" in html
+    assert "首次发表时间" in html
+    assert "2026-01-01" in html
+    assert "Github" in html
+    assert "https://github.com/example/planning-paper" in html
 
 
 def test_render_email_uses_clear_label_when_category_path_missing():

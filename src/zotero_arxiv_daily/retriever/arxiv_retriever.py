@@ -8,6 +8,7 @@ import feedparser
 from tqdm import tqdm
 import multiprocessing
 import os
+import re
 from queue import Empty
 from time import sleep
 from typing import Any, Callable, TypeVar
@@ -19,6 +20,28 @@ T = TypeVar("T")
 DOWNLOAD_TIMEOUT = (10, 60)
 PDF_EXTRACT_TIMEOUT = 180
 TAR_EXTRACT_TIMEOUT = 180
+GITHUB_URL_RE = re.compile(r"https?://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+/?")
+
+
+def _format_metadata_date(value: Any) -> str | None:
+    if value is None:
+        return None
+    isoformat = getattr(value, "isoformat", None)
+    if callable(isoformat):
+        return isoformat()
+    return str(value)
+
+
+def _extract_github_urls(*texts: str | None) -> list[str]:
+    urls: list[str] = []
+    for text in texts:
+        if not text:
+            continue
+        for match in GITHUB_URL_RE.findall(text):
+            url = match.rstrip("/.,);]")
+            if url not in urls:
+                urls.append(url)
+    return urls
 
 
 def _download_file(url: str, path: str) -> None:
@@ -166,6 +189,12 @@ class ArxivRetriever(BaseRetriever):
             full_text = extract_text_from_html(raw_paper)
         if full_text is None:
             full_text = extract_text_from_pdf(raw_paper)
+        metadata = {
+            "published": _format_metadata_date(getattr(raw_paper, "published", None)),
+            "updated": _format_metadata_date(getattr(raw_paper, "updated", None)),
+            "journal_ref": getattr(raw_paper, "journal_ref", None),
+            "comment": getattr(raw_paper, "comment", None),
+        }
         return Paper(
             source=self.name,
             title=title,
@@ -174,6 +203,8 @@ class ArxivRetriever(BaseRetriever):
             url=raw_paper.entry_id,
             pdf_url=pdf_url,
             full_text=full_text,
+            metadata=metadata,
+            code_urls=_extract_github_urls(abstract, full_text, metadata.get("comment")),
         )
 
 

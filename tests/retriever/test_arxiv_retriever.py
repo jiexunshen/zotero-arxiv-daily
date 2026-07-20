@@ -1,6 +1,7 @@
 """Tests for ArxivRetriever."""
 
 import time
+from datetime import datetime, timezone
 from types import SimpleNamespace
 
 import feedparser
@@ -61,6 +62,34 @@ def test_arxiv_retriever(config, mock_feedparser, monkeypatch):
 
     assert len(papers) == len(new_entries)
     assert set(p.title for p in papers) == set(e.title for e in new_entries)
+
+
+def test_convert_to_paper_preserves_publication_metadata_and_github_url(config, monkeypatch):
+    monkeypatch.setattr(arxiv_retriever, "extract_text_from_tar", lambda paper: "Code: https://github.com/example/project.")
+    monkeypatch.setattr(arxiv_retriever, "extract_text_from_html", lambda paper: None)
+    monkeypatch.setattr(arxiv_retriever, "extract_text_from_pdf", lambda paper: None)
+
+    raw_paper = SimpleNamespace(
+        title="Metadata Paper",
+        authors=[SimpleNamespace(name="Test Author")],
+        summary="Abstract with https://github.com/example/abstract-code.",
+        pdf_url="https://arxiv.org/pdf/2026.00001",
+        entry_id="https://arxiv.org/abs/2026.00001",
+        published=datetime(2026, 1, 1, tzinfo=timezone.utc),
+        updated=datetime(2026, 1, 3, tzinfo=timezone.utc),
+        journal_ref=None,
+        comment="Submitted to NeurIPS 2026",
+        source_url=lambda: "https://arxiv.org/e-print/2026.00001",
+    )
+
+    retriever = ArxivRetriever(config)
+    paper = retriever.convert_to_paper(raw_paper)
+
+    assert paper.metadata["published"].startswith("2026-01-01")
+    assert paper.metadata["updated"].startswith("2026-01-03")
+    assert paper.metadata["comment"] == "Submitted to NeurIPS 2026"
+    assert "https://github.com/example/project" in paper.code_urls
+    assert "https://github.com/example/abstract-code" in paper.code_urls
 
 
 def test_run_with_hard_timeout_returns_value():

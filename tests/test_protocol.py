@@ -82,6 +82,9 @@ def test_analysis_returns_structured_category_and_reading_guidance(llm_params):
     assert result["category"]["is_new"] is False
     assert result["translation"]["title_zh"] == "面向长程规划的样例论文标题"
     assert "结构化反馈机制" in result["translation"]["abstract_zh"]
+    assert "暂未发表" in result["publication"]["venue"]
+    assert result["publication"]["first_publication_time"] == "2026-01-01"
+    assert result["open_source"]["repository_url"] == "https://github.com/example/planning-paper"
     assert "long-horizon planning" in result["analysis"]["problem"]
     assert "精读" in result["analysis"]["reading_suggestion"]
     assert paper.analysis == result

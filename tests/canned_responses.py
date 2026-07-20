@@ -31,6 +31,18 @@ _ANALYSIS_RESPONSE = """
     "method": "It introduces a structured planning framework with iterative feedback. The framework separates plan generation, execution monitoring, and feedback revision so that each stage can be inspected independently.",
     "inspiration": "It suggests evaluating planning modules separately from tool-use modules. It also motivates follow-up experiments that compare planning quality, execution quality, and recovery behavior under the same benchmark.",
     "reading_suggestion": "精读，适合学习框架并进一步实验。它的模块拆分和评估方式可以作为后续智能体规划实验的参考。"
+  },
+  "publication": {
+    "venue": "暂未发表；预印本最后调整时间：2026-01-03；疑似投稿：NeurIPS 2026（根据论文模板和实验组织方式推断）",
+    "first_publication_time": "2026-01-01",
+    "acceptance_time": null,
+    "publication_time": null,
+    "evidence": "arXiv metadata has no journal_ref, while the manuscript style resembles an ML conference submission."
+  },
+  "open_source": {
+    "is_open_source": true,
+    "repository_url": "https://github.com/example/planning-paper",
+    "evidence": "A GitHub URL is mentioned in the paper text."
   }
 }
 """
@@ -202,6 +214,13 @@ def make_sample_paper(**overrides) -> Paper:
         analysis=None,
         similar_corpus=[],
         score=None,
+        metadata={
+            "published": "2026-01-01",
+            "updated": "2026-01-03",
+            "journal_ref": None,
+            "comment": "Submitted to NeurIPS 2026",
+        },
+        code_urls=["https://github.com/example/planning-paper"],
     )
     defaults.update(overrides)
     return Paper(**defaults)

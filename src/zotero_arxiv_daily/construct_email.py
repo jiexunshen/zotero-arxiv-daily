@@ -80,15 +80,32 @@ def get_analysis_html(analysis: dict | None, abstract: str | None = None) -> str
     translation = analysis.get("translation", {})
     category = analysis.get("category", {})
     detail = analysis.get("analysis", {})
+    publication = analysis.get("publication", {})
+    open_source = analysis.get("open_source", {})
     abstract_zh = translation.get("abstract_zh", "") if isinstance(translation, dict) else ""
     recommended_path = category.get("recommended_path") or "分类推荐生成失败"
     category_reason = category.get("reason", "")
     is_new = category.get("is_new", False)
     new_label = "（建议新增分类）" if is_new else ""
+    repository_url = open_source.get("repository_url") if isinstance(open_source, dict) else None
+    open_source_status = ""
+    if isinstance(open_source, dict):
+        if open_source.get("is_open_source") is True:
+            open_source_status = f"已开源：{repository_url}" if repository_url else "已开源，但未提供仓库地址"
+        elif open_source.get("is_open_source") is False:
+            open_source_status = "未发现开源仓库"
+        elif open_source.get("evidence"):
+            open_source_status = str(open_source.get("evidence"))
 
     rows = [
         ("英文摘要", abstract),
         ("中文摘要", abstract_zh),
+        ("发表信息", publication.get("venue", "") if isinstance(publication, dict) else ""),
+        ("首次发表时间", publication.get("first_publication_time", "") if isinstance(publication, dict) else ""),
+        ("录用时间", publication.get("acceptance_time", "") if isinstance(publication, dict) else ""),
+        ("见刊时间", publication.get("publication_time", "") if isinstance(publication, dict) else ""),
+        ("发表信息依据", publication.get("evidence", "") if isinstance(publication, dict) else ""),
+        ("开源情况", open_source_status),
         ("推荐分类", f"{recommended_path} {new_label}".strip()),
         ("分类理由", category_reason),
         ("它想解决的问题", detail.get("problem", "")),
@@ -116,6 +133,20 @@ def get_analysis_html(analysis: dict | None, abstract: str | None = None) -> str
         </td>
     </tr>
     {rows_html}
+    """
+
+
+def get_github_button_html(analysis: dict | None) -> str:
+    if not analysis:
+        return ""
+    open_source = analysis.get("open_source", {})
+    if not isinstance(open_source, dict):
+        return ""
+    repository_url = open_source.get("repository_url")
+    if not repository_url:
+        return ""
+    return f"""
+            <a href="{escape(str(repository_url), quote=True)}" style="display: inline-block; text-decoration: none; font-size: 14px; font-weight: bold; color: #fff; background-color: #111; padding: 8px 16px; border-radius: 4px; margin-left: 8px;">Github</a>
     """
 
 
@@ -150,6 +181,7 @@ def get_block_html(title:str, authors:str, rate:str, tldr:str, pdf_url:str, affi
     <tr>
         <td style="padding: 8px 0;">
             <a href="{pdf_url}" style="display: inline-block; text-decoration: none; font-size: 14px; font-weight: bold; color: #fff; background-color: #d9534f; padding: 8px 16px; border-radius: 4px;">PDF</a>
+            {github_button_html}
         </td>
     </tr>
 </table>
@@ -163,6 +195,7 @@ def get_block_html(title:str, authors:str, rate:str, tldr:str, pdf_url:str, affi
         affiliations=affiliations,
         title_translation_html=get_title_translation_html(analysis),
         analysis_html=get_analysis_html(analysis, abstract),
+        github_button_html=get_github_button_html(analysis),
     )
 
 def get_stars(score:float):
