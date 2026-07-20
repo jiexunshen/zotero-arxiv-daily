@@ -35,10 +35,38 @@ def _analysis_generation_kwargs(llm_params: dict, *, prefer_json: bool = True) -
     return kwargs
 
 
-def _validate_analysis_payload(analysis: dict[str, Any]) -> dict[str, Any]:
+def _validate_analysis_payload(
+    analysis: dict[str, Any],
+    *,
+    require_recommended_path: bool = True,
+) -> dict[str, Any]:
     if not isinstance(analysis.get("category"), dict) or not isinstance(analysis.get("analysis"), dict):
         raise ValueError("LLM analysis response must contain category and analysis objects")
+    if require_recommended_path and not analysis["category"].get("recommended_path"):
+        raise ValueError("LLM analysis response must contain category.recommended_path")
+    if not isinstance(analysis.get("translation"), dict):
+        analysis["translation"] = {}
     return analysis
+
+
+def _has_meaningful_value(value: Any) -> bool:
+    return value not in (None, "", [], {})
+
+
+def _merge_analysis_payloads(base: dict[str, Any], update: dict[str, Any]) -> dict[str, Any]:
+    """Merge expanded analysis into the initial analysis without losing required fields."""
+    merged = dict(base)
+    for section_name in ("translation", "category", "analysis"):
+        base_section = base.get(section_name, {})
+        update_section = update.get(section_name, {})
+        if not isinstance(base_section, dict) or not isinstance(update_section, dict):
+            continue
+        merged_section = dict(base_section)
+        for key, value in update_section.items():
+            if _has_meaningful_value(value):
+                merged_section[key] = value
+        merged[section_name] = merged_section
+    return _validate_analysis_payload(merged)
 
 @dataclass
 class Paper:
@@ -68,7 +96,7 @@ class Paper:
             prompt += f"Preview of main content:\n {self.full_text}\n\n"
 
         if not self.full_text and not self.abstract:
-            logger.warning(f"Neither full text nor abstract is provided for {self.url}")
+            logger.warning(f"未提供全文或摘要: {self.url} | Neither full text nor abstract is provided for {self.url}")
             return "Failed to generate TLDR. Neither full text nor abstract is provided"
         
         # use gpt-4o tokenizer for estimation
@@ -96,7 +124,7 @@ class Paper:
             self.tldr = tldr
             return tldr
         except Exception as e:
-            logger.warning(f"Failed to generate tldr of {self.url}: {e}")
+            logger.warning(f"生成 TLDR 失败: {self.url} | Failed to generate tldr of {self.url}: {e}")
             tldr = self.abstract
             self.tldr = tldr
             return tldr
@@ -134,7 +162,7 @@ class Paper:
             self.affiliations = affiliations
             return affiliations
         except Exception as e:
-            logger.warning(f"Failed to generate affiliations of {self.url}: {e}")
+            logger.warning(f"生成作者机构失败: {self.url} | Failed to generate affiliations of {self.url}: {e}")
             self.affiliations = None
             return None
 
@@ -148,7 +176,7 @@ class Paper:
         lang = llm_params.get('language', 'English')
         similar_corpus = similar_corpus if similar_corpus is not None else self.similar_corpus
         prompt = f"""
-You need to recommend the best Zotero collection for a newly recommended paper and briefly interpret the paper for a researcher.
+You need to recommend the best Zotero collection for a newly recommended paper, translate the paper metadata, and interpret the paper for a researcher in enough detail to decide how to read it.
 
 Use the user's existing Zotero collection taxonomy first. Only propose a new collection when no existing collection accurately summarizes the paper. If you propose a new collection:
 1. Put it under the most appropriate existing parent path.
@@ -158,18 +186,22 @@ Use the user's existing Zotero collection taxonomy first. Only propose a new col
 
 Answer in {lang}. Return only one JSON object with this exact shape:
 {{
+  "translation": {{
+    "title_zh": "Chinese translation of the title. Keep important technical terms and model names when appropriate.",
+    "abstract_zh": "Chinese translation of the abstract. Preserve the original meaning and keep key technical terms readable."
+  }},
   "category": {{
     "recommended_path": "existing or new Zotero path",
     "is_new": false,
     "parent_path": "parent path when is_new is true, otherwise null",
     "confidence": "high|medium|low",
-    "reason": "brief reason"
+    "reason": "2-3 Chinese sentences explaining why this path is the closest match, or why a new collection is necessary"
   }},
   "analysis": {{
-    "problem": "What problem does the paper try to solve?",
-    "method": "How does it solve the problem?",
-    "inspiration": "What research inspiration can it bring?",
-    "reading_suggestion": "精读，适合学习框架并进一步实验 | 精读，适合复现实验 | 粗读即可 | 收藏观察"
+    "problem": "2-4 Chinese sentences. Explain the concrete research or engineering problem, why it matters, and what limitation in prior work it targets.",
+    "method": "3-5 Chinese sentences. Explain the core method, main modules/data/training/evaluation design if available, and the key mechanism rather than only naming the method.",
+    "inspiration": "2-4 concrete Chinese points or sentences. Focus on research ideas, reusable experimental design, dataset construction, evaluation angles, or limitations worth following up.",
+    "reading_suggestion": "Choose one: 精读，适合学习框架并进一步实验 | 精读，适合复现实验 | 粗读即可 | 收藏观察. Then add 1-2 Chinese sentences explaining the reason."
   }}
 }}
 
@@ -195,7 +227,8 @@ Preview of main content: {self.full_text or ''}
                 "role": "system",
                 "content": (
                     "You classify scientific papers into the user's Zotero taxonomy and "
-                    "write concise, researcher-facing analysis. Return valid JSON only."
+                    "write detailed, researcher-facing Chinese translations and analysis. "
+                    "Return valid JSON only."
                 ),
             },
             {"role": "user", "content": prompt},
@@ -209,7 +242,7 @@ Preview of main content: {self.full_text or ''}
         except Exception as exc:
             if "response_format" not in kwargs:
                 raise
-            logger.warning(f"Analysis JSON mode failed for {self.url}: {exc}. Retrying without response_format.")
+            logger.warning(f"深度分析 JSON mode 失败: {self.url}，将不带 response_format 重试 | Analysis JSON mode failed for {self.url}: {exc}. Retrying without response_format.")
             kwargs.pop("response_format", None)
             response = openai_client.chat.completions.create(
                 messages=messages,
@@ -219,13 +252,13 @@ Preview of main content: {self.full_text or ''}
         try:
             return _validate_analysis_payload(_parse_json_object(content))
         except Exception as parse_exc:
-            logger.warning(f"Failed to parse analysis JSON for {self.url}: {parse_exc}. Asking LLM to repair JSON.")
+            logger.warning(f"解析深度分析 JSON 失败: {self.url}，将请求 LLM 修复 JSON | Failed to parse analysis JSON for {self.url}: {parse_exc}. Asking LLM to repair JSON.")
             repair_messages = [
                 {
                     "role": "system",
                     "content": (
                         "Convert the user's text into one valid JSON object. "
-                        "Return only JSON with top-level keys category and analysis."
+                        "Return only JSON with top-level keys translation, category, and analysis."
                     ),
                 },
                 {"role": "user", "content": content},
@@ -239,7 +272,7 @@ Preview of main content: {self.full_text or ''}
             except Exception as exc:
                 if "response_format" not in repair_kwargs:
                     raise
-                logger.warning(f"Analysis JSON repair mode failed for {self.url}: {exc}. Retrying repair without response_format.")
+                logger.warning(f"深度分析 JSON 修复模式失败: {self.url}，将不带 response_format 重试修复 | Analysis JSON repair mode failed for {self.url}: {exc}. Retrying repair without response_format.")
                 repair_kwargs.pop("response_format", None)
                 repair_response = openai_client.chat.completions.create(
                     messages=repair_messages,
@@ -247,6 +280,79 @@ Preview of main content: {self.full_text or ''}
                 )
             repair_content = repair_response.choices[0].message.content
             return _validate_analysis_payload(_parse_json_object(repair_content))
+
+    def _expand_analysis_with_llm(
+        self,
+        openai_client: OpenAI,
+        llm_params: dict,
+        analysis: dict[str, Any],
+    ) -> dict[str, Any]:
+        lang = llm_params.get('language', 'English')
+        prompt = f"""
+You already have an initial structured analysis for this paper. Expand it into a richer researcher-facing version while keeping the same JSON shape and keeping the recommended Zotero category path stable unless it is clearly wrong.
+
+Make the output more detailed:
+1. Keep the English title and abstract in mind, but only return their Chinese translations in translation.title_zh and translation.abstract_zh.
+2. Make category.reason 2-3 Chinese sentences.
+3. Make analysis.problem 2-4 Chinese sentences.
+4. Make analysis.method 3-5 Chinese sentences with concrete mechanisms, modules, data, training, or evaluation details when available.
+5. Make analysis.inspiration 2-4 concrete Chinese points or sentences.
+6. Make analysis.reading_suggestion choose one reading level and add a concise reason.
+
+Answer in {lang}. Return only one JSON object with top-level keys translation, category, and analysis.
+
+Paper:
+Title: {self.title}
+Authors: {', '.join(self.authors)}
+Abstract: {self.abstract}
+Preview of main content: {self.full_text or ''}
+
+Initial analysis:
+{json.dumps(analysis, ensure_ascii=False, indent=2)}
+"""
+
+        enc = tiktoken.encoding_for_model("gpt-4o")
+        prompt_tokens = enc.encode(prompt)
+        prompt = enc.decode(prompt_tokens[:6000])
+
+        kwargs = _analysis_generation_kwargs(llm_params, prefer_json=True)
+        try:
+            response = openai_client.chat.completions.create(
+                messages=[
+                    {
+                        "role": "system",
+                        "content": (
+                            "You expand scientific paper translations and analysis for a researcher. "
+                            "Return valid JSON only."
+                        ),
+                    },
+                    {"role": "user", "content": prompt},
+                ],
+                **kwargs
+            )
+        except Exception as exc:
+            if "response_format" not in kwargs:
+                raise
+            logger.warning(f"扩写深度解读 JSON mode 失败: {self.url}，将不带 response_format 重试 | Expanded analysis JSON mode failed for {self.url}: {exc}. Retrying without response_format.")
+            kwargs.pop("response_format", None)
+            response = openai_client.chat.completions.create(
+                messages=[
+                    {
+                        "role": "system",
+                        "content": (
+                            "You expand scientific paper translations and analysis for a researcher. "
+                            "Return valid JSON only."
+                        ),
+                    },
+                    {"role": "user", "content": prompt},
+                ],
+                **kwargs
+            )
+
+        return _validate_analysis_payload(
+            _parse_json_object(response.choices[0].message.content),
+            require_recommended_path=False,
+        )
 
     def generate_analysis(
         self,
@@ -262,10 +368,16 @@ Preview of main content: {self.full_text or ''}
                 zotero_taxonomy,
                 similar_corpus,
             )
+            if llm_params.get("split_deep_analysis_requests", False):
+                try:
+                    expanded_analysis = self._expand_analysis_with_llm(openai_client, llm_params, analysis)
+                    analysis = _merge_analysis_payloads(analysis, expanded_analysis)
+                except Exception as expand_error:
+                    logger.warning(f"扩写深度解读失败: {self.url}，将使用初始解读 | Failed to expand analysis of {self.url}: {expand_error}. Using initial analysis.")
             self.analysis = analysis
             return analysis
         except Exception as e:
-            logger.warning(f"Failed to generate analysis of {self.url}: {e}")
+            logger.warning(f"生成深度解读失败: {self.url} | Failed to generate analysis of {self.url}: {e}")
             self.analysis = None
             return None
 

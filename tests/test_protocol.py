@@ -80,9 +80,90 @@ def test_analysis_returns_structured_category_and_reading_guidance(llm_params):
 
     assert result["category"]["recommended_path"] == "Agent/效率 Efficiency/规划 Planning"
     assert result["category"]["is_new"] is False
+    assert result["translation"]["title_zh"] == "面向长程规划的样例论文标题"
+    assert "结构化反馈机制" in result["translation"]["abstract_zh"]
     assert "long-horizon planning" in result["analysis"]["problem"]
     assert "精读" in result["analysis"]["reading_suggestion"]
     assert paper.analysis == result
+
+
+def test_analysis_can_expand_with_split_request(llm_params):
+    client = make_stub_openai_client()
+    paper = make_sample_paper()
+    params = {**llm_params, "split_deep_analysis_requests": True}
+
+    result = paper.generate_analysis(client, params, [])
+
+    assert result["translation"]["title_zh"] == "面向长程规划的样例论文标题"
+    assert "模块拆分" in result["analysis"]["reading_suggestion"]
+    assert paper.analysis == result
+
+
+def test_split_analysis_preserves_initial_category_when_expansion_omits_it(llm_params):
+    from types import SimpleNamespace
+
+    responses = iter([
+        """
+        {
+          "translation": {
+            "title_zh": "初始中文标题",
+            "abstract_zh": "初始中文摘要"
+          },
+          "category": {
+            "recommended_path": "Agent/效率 Efficiency/规划 Planning",
+            "is_new": false,
+            "parent_path": null,
+            "confidence": "high",
+            "reason": "This is the initial category reason."
+          },
+          "analysis": {
+            "problem": "Initial problem.",
+            "method": "Initial method.",
+            "inspiration": "Initial inspiration.",
+            "reading_suggestion": "精读，适合学习框架并进一步实验"
+          }
+        }
+        """,
+        """
+        {
+          "translation": {
+            "title_zh": "扩写后的中文标题",
+            "abstract_zh": "扩写后的中文摘要"
+          },
+          "category": {},
+          "analysis": {
+            "problem": "Expanded problem.",
+            "method": "Expanded method.",
+            "inspiration": "Expanded inspiration.",
+            "reading_suggestion": "精读，扩写后的阅读建议。"
+          }
+        }
+        """,
+    ])
+
+    def create_response(**kwargs):
+        return SimpleNamespace(
+            choices=[
+                SimpleNamespace(
+                    message=SimpleNamespace(content=next(responses)),
+                )
+            ]
+        )
+
+    client = SimpleNamespace(
+        chat=SimpleNamespace(
+            completions=SimpleNamespace(create=create_response)
+        )
+    )
+    paper = make_sample_paper()
+    params = {**llm_params, "split_deep_analysis_requests": True}
+
+    result = paper.generate_analysis(client, params, [])
+
+    assert result["translation"]["title_zh"] == "扩写后的中文标题"
+    assert result["analysis"]["problem"] == "Expanded problem."
+    assert result["category"]["recommended_path"] == "Agent/效率 Efficiency/规划 Planning"
+    assert result["category"]["confidence"] == "high"
 
 
 def test_analysis_falls_back_to_none_on_malformed_json(llm_params):

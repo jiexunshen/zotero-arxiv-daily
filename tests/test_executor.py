@@ -5,7 +5,7 @@ from datetime import datetime
 import pytest
 from omegaconf import OmegaConf
 
-from zotero_arxiv_daily.executor import Executor, build_zotero_taxonomy, normalize_path_patterns
+from zotero_arxiv_daily.executor import Executor, build_zotero_taxonomy, normalize_path_patterns, write_email_preview
 from zotero_arxiv_daily.protocol import CorpusPaper
 
 
@@ -58,6 +58,49 @@ def test_build_zotero_taxonomy_counts_existing_collection_paths():
         {"path": "Agent/效率 Efficiency/规划 Planning", "count": 2},
         {"path": "Agent/效率 Efficiency", "count": 1},
     ]
+
+
+def test_write_email_preview_writes_configured_html_path(tmp_path):
+    config = OmegaConf.create({
+        "executor": {
+            "preview_email_path": str(tmp_path / "preview" / "email.html"),
+        }
+    })
+
+    path = write_email_preview(config, "<html>深度解读</html>")
+
+    assert path == tmp_path / "preview" / "email.html"
+    assert path.read_text(encoding="utf-8") == "<html>深度解读</html>"
+
+
+def test_runtime_log_messages_are_bilingual():
+    from zotero_arxiv_daily.executor import LOG_FETCHING_ZOTERO_CORPUS
+
+    assert "正在获取 Zotero 文献库" in LOG_FETCHING_ZOTERO_CORPUS
+    assert "Fetching zotero corpus" in LOG_FETCHING_ZOTERO_CORPUS
+
+
+def test_empty_zotero_error_log_does_not_include_api_key(config, monkeypatch):
+    from types import SimpleNamespace
+
+    from omegaconf import open_dict
+
+    errors: list[str] = []
+    with open_dict(config):
+        config.zotero.api_key = "secret-zotero-key"
+
+    executor = Executor.__new__(Executor)
+    executor.config = config
+    executor.fetch_zotero_corpus = lambda: []
+    executor.filter_corpus = lambda corpus: []
+
+    monkeypatch.setattr("zotero_arxiv_daily.executor.logger", SimpleNamespace(error=errors.append))
+
+    executor.run()
+
+    assert errors
+    assert "secret-zotero-key" not in errors[0]
+    assert "api_key" not in errors[0]
 
 
 # ---------------------------------------------------------------------------

@@ -52,6 +52,10 @@ def test_render_email_includes_deep_analysis():
         score=8.2,
         tldr="ok",
         analysis={
+            "translation": {
+                "title_zh": "样例论文标题",
+                "abstract_zh": "这篇论文探索了小组件工程的一种新方法。",
+            },
             "category": {
                 "recommended_path": "Agent/效率 Efficiency/规划 Planning",
                 "is_new": False,
@@ -69,11 +73,35 @@ def test_render_email_includes_deep_analysis():
     html = render_email([paper])
 
     assert "推荐分类" in html
+    assert "Sample Paper Title" in html
+    assert "样例论文标题" in html
+    assert "英文摘要" in html
+    assert "This paper explores a novel approach to widget engineering." in html
+    assert "中文摘要" in html
+    assert "这篇论文探索了小组件工程的一种新方法。" in html
     assert "Agent/效率 Efficiency/规划 Planning" in html
     assert "它想解决的问题" in html
     assert "How can agents plan over long horizons?" in html
     assert "科研启发" in html
     assert "精读" in html
+
+
+def test_render_email_uses_clear_label_when_category_path_missing():
+    paper = make_sample_paper(
+        score=8.2,
+        tldr="ok",
+        analysis={
+            "category": {},
+            "analysis": {
+                "problem": "problem",
+            },
+        },
+    )
+
+    html = render_email([paper])
+
+    assert "分类推荐生成失败" in html
+    assert "<strong>推荐分类:</strong> Unknown" not in html
 
 
 def test_get_stars_low_score():

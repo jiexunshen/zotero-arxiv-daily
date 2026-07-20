@@ -30,6 +30,7 @@ llm:
     model: ???
   language: English # Preferred language for the TL;DR. Example: English
   enable_deep_analysis: true # Whether to generate category recommendation, detailed interpretation, and reading advice.
+  split_deep_analysis_requests: true # Whether to use a second LLM call to expand translations and detailed interpretation for each selected paper.
   analysis_top_k_similar: 5 # Number of most similar Zotero papers passed to the analysis prompt.
   analysis_generation_kwargs:
     response_format:
@@ -51,6 +52,8 @@ reranker:
 executor:
   debug: false # Whether to use debug mode. Example: true
   send_empty: false # Whether to send an empty email even if no new papers today. Example: true
+  dry_run: false # Whether to skip SMTP sending after rendering the email. Useful for local preview.
+  preview_email_path: null # Optional path to write rendered email HTML before sending. Example: outputs/email_preview.html
   max_paper_num: 100 # The maximum number of the papers presented in the email. Example: 100
   source: ??? # The sources of papers to retrieve. Example: ['arxiv','biorxiv','medrxiv']
   reranker: local # The reranker to use. Example: 'local' or 'api'

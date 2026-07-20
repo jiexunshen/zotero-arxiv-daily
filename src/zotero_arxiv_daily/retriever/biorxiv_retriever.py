@@ -27,12 +27,12 @@ class BiorxivRetriever(BaseRetriever):
                 if i == retry_num - 1:
                     raise e
                 else:
-                    logger.warning(f"Failed to retrieve papers: {str(e)}. Retry in {delay_time} seconds.")
+                    logger.warning(f"论文检索失败: {str(e)}。将在 {delay_time} 秒后重试 | Failed to retrieve papers: {str(e)}. Retry in {delay_time} seconds.")
                     sleep(delay_time)
         result = response.json()
         collection = result['collection']
         if len(collection) == 0:
-            logger.warning(f"No paper found. API Message: {result['messages']}")
+            logger.warning(f"未找到论文。API 消息: {result['messages']} | No paper found. API Message: {result['messages']}")
             return []
         all_dates = set(c['date'] for c in collection)
         latest_date = sorted(all_dates)[-1]

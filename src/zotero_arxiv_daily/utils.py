@@ -57,12 +57,12 @@ def extract_tex_code_from_tar(file_path:str, paper_id:str, paper_title:str | Non
     try:
         tar = tarfile.open(file_path)
     except tarfile.ReadError:
-        logger.debug(f"Failed to find main tex file of {paper_id}: Not a tar file.")
+        logger.debug(f"查找主 tex 文件失败: {paper_id}，不是 tar 文件 | Failed to find main tex file of {paper_id}: Not a tar file.")
         return None
  
     tex_files = [f for f in tar.getnames() if f.endswith('.tex')]
     if len(tex_files) == 0:
-        logger.debug(f"Failed to find main tex file of {paper_id}: No tex file.")
+        logger.debug(f"查找主 tex 文件失败: {paper_id}，没有 tex 文件 | Failed to find main tex file of {paper_id}: No tex file.")
         tar.close()
         return None
     
@@ -70,7 +70,7 @@ def extract_tex_code_from_tar(file_path:str, paper_id:str, paper_title:str | Non
     match len(bbl_file) :
         case 0:
             if len(tex_files) > 1:
-                logger.debug(f"Cannot find main tex file of {paper_id} from bbl: There are multiple tex files while no bbl file.")
+                logger.debug(f"无法通过 bbl 确定主 tex 文件: {paper_id}，存在多个 tex 文件但没有 bbl 文件 | Cannot find main tex file of {paper_id} from bbl: There are multiple tex files while no bbl file.")
                 main_tex = None
             else:
                 main_tex = tex_files[0]
@@ -78,14 +78,14 @@ def extract_tex_code_from_tar(file_path:str, paper_id:str, paper_title:str | Non
             main_name = bbl_file[0].replace('.bbl','')
             main_tex = f"{main_name}.tex"
             if main_tex not in tex_files:
-                logger.debug(f"Cannot find main tex file of {paper_id} from bbl: The bbl file does not match any tex file.")
+                logger.debug(f"无法通过 bbl 确定主 tex 文件: {paper_id}，bbl 文件没有匹配的 tex 文件 | Cannot find main tex file of {paper_id} from bbl: The bbl file does not match any tex file.")
                 main_tex = None
         case _:
-            logger.debug(f"Cannot find main tex file of {paper_id} from bbl: There are multiple bbl files.")
+            logger.debug(f"无法通过 bbl 确定主 tex 文件: {paper_id}，存在多个 bbl 文件 | Cannot find main tex file of {paper_id} from bbl: There are multiple bbl files.")
             main_tex = None
 
     if main_tex is None:
-        logger.debug(f"Trying to choose tex file containing the document block as main tex file of {paper_id}")
+        logger.debug(f"尝试选择包含 document block 的 tex 文件作为主文件: {paper_id} | Trying to choose tex file containing the document block as main tex file of {paper_id}")
 
     file_contents = {}
     doc_block_candidates: list[str] = []
@@ -105,14 +105,14 @@ def extract_tex_code_from_tar(file_path:str, paper_id:str, paper_title:str | Non
     if main_tex is None:
         if len(doc_block_candidates) == 1:
             main_tex = doc_block_candidates[0]
-            logger.debug(f"Choose {main_tex} as main tex file of {paper_id}")
+            logger.debug(f"选择 {main_tex} 作为 {paper_id} 的主 tex 文件 | Choose {main_tex} as main tex file of {paper_id}")
         elif len(doc_block_candidates) > 1:
             if paper_title:
                 main_tex = _bm25_pick(paper_title, {c: file_contents[c] for c in doc_block_candidates})
-                logger.debug(f"Multiple document blocks found in {paper_id}; BM25 selected {main_tex} from {doc_block_candidates}")
+                logger.debug(f"{paper_id} 中发现多个 document block；BM25 从 {doc_block_candidates} 中选择 {main_tex} | Multiple document blocks found in {paper_id}; BM25 selected {main_tex} from {doc_block_candidates}")
             else:
                 main_tex = doc_block_candidates[0]
-                logger.debug(f"Multiple document blocks found in {paper_id}; no title provided, using first candidate {main_tex}")
+                logger.debug(f"{paper_id} 中发现多个 document block；未提供标题，使用第一个候选 {main_tex} | Multiple document blocks found in {paper_id}; no title provided, using first candidate {main_tex}")
 
     if main_tex is not None:
         main_source:str = file_contents[main_tex]
@@ -126,7 +126,7 @@ def extract_tex_code_from_tar(file_path:str, paper_id:str, paper_title:str | Non
             main_source = main_source.replace(f'\\input{{{f}}}', file_contents.get(file_name, ''))
         file_contents["all"] = main_source
     else:
-        logger.debug(f"Failed to find main tex file of {paper_id}: No tex file containing the document block.")
+        logger.debug(f"查找主 tex 文件失败: {paper_id}，没有 tex 文件包含 document block | Failed to find main tex file of {paper_id}: No tex file containing the document block.")
         file_contents["all"] = None
         
     tar.close()
@@ -159,11 +159,11 @@ def send_email(config:DictConfig, html:str):
         server = smtplib.SMTP(smtp_server, smtp_port)
         server.starttls()
     except Exception as e:
-        logger.debug(f"Failed to use TLS. {e}\nTry to use SSL.")
+        logger.debug(f"使用 TLS 失败: {e}\n尝试使用 SSL | Failed to use TLS. {e}\nTry to use SSL.")
         try:
             server = smtplib.SMTP_SSL(smtp_server, smtp_port)
         except Exception as e:
-            logger.debug(f"Failed to use SSL. {e}\nTry to use plain text.")
+            logger.debug(f"使用 SSL 失败: {e}\n尝试使用明文 SMTP | Failed to use SSL. {e}\nTry to use plain text.")
             server = smtplib.SMTP(smtp_server, smtp_port)
 
     server.login(sender, password)

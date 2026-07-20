@@ -13,8 +13,13 @@ from zotero_arxiv_daily.protocol import CorpusPaper, Paper
 _AFFILIATION_MARKER = "You are an assistant who perfectly extracts affiliations"
 _AFFILIATION_RESPONSE = '["TsingHua University","Peking University"]'
 _ANALYSIS_MARKER = "recommend the best Zotero collection"
+_ANALYSIS_EXPANSION_MARKER = "Initial analysis"
 _ANALYSIS_RESPONSE = """
 {
+  "translation": {
+    "title_zh": "面向长程规划的样例论文标题",
+    "abstract_zh": "这篇论文探索了智能体长程规划任务中的结构化反馈机制，并说明如何把规划模块和工具调用模块分开评估。"
+  },
   "category": {
     "recommended_path": "Agent/效率 Efficiency/规划 Planning",
     "is_new": false,
@@ -22,10 +27,10 @@ _ANALYSIS_RESPONSE = """
     "reason": "The paper is closest to planning papers in the existing Zotero library."
   },
   "analysis": {
-    "problem": "It studies how agents solve long-horizon planning tasks.",
-    "method": "It introduces a structured planning framework with iterative feedback.",
-    "inspiration": "It suggests evaluating planning modules separately from tool-use modules.",
-    "reading_suggestion": "精读，适合学习框架并进一步实验"
+    "problem": "It studies how agents solve long-horizon planning tasks. The central issue is that many agents can make short local moves but fail to maintain a coherent plan across multiple dependent steps.",
+    "method": "It introduces a structured planning framework with iterative feedback. The framework separates plan generation, execution monitoring, and feedback revision so that each stage can be inspected independently.",
+    "inspiration": "It suggests evaluating planning modules separately from tool-use modules. It also motivates follow-up experiments that compare planning quality, execution quality, and recovery behavior under the same benchmark.",
+    "reading_suggestion": "精读，适合学习框架并进一步实验。它的模块拆分和评估方式可以作为后续智能体规划实验的参考。"
   }
 }
 """
@@ -53,7 +58,7 @@ def _stub_chat_create(**kwargs):
     request_str = str(messages)
     if _AFFILIATION_MARKER in request_str:
         return _make_chat_response(_AFFILIATION_RESPONSE)
-    if _ANALYSIS_MARKER in request_str:
+    if _ANALYSIS_MARKER in request_str or _ANALYSIS_EXPANSION_MARKER in request_str:
         return _make_chat_response(_ANALYSIS_RESPONSE)
     return _make_chat_response(_TLDR_RESPONSE)
 

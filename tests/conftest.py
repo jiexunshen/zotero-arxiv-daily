@@ -44,6 +44,8 @@ def _base_config():
                 "executor.reranker=api",
                 "executor.debug=false",
                 "executor.send_empty=false",
+                "executor.dry_run=false",
+                "executor.preview_email_path=null",
             ],
         )
     return cfg

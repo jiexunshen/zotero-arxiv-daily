@@ -26,7 +26,7 @@ def main(config:DictConfig):
         logging.getLogger(logger_name).setLevel(logging.WARNING)
 
     if config.executor.debug:
-        logger.info("Debug mode is enabled")
+        logger.info("调试模式已启用 | Debug mode is enabled")
     
     executor = Executor(config)
     executor.run()

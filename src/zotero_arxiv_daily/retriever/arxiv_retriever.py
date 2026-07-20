@@ -63,7 +63,7 @@ def _run_with_hard_timeout(
         process.join(5)
         result_queue.close()
         result_queue.join_thread()
-        logger.warning(f"{operation} timed out for {paper_title} after {timeout} seconds")
+        logger.warning(f"{operation} 对 {paper_title} 超时，已等待 {timeout} 秒 | {operation} timed out for {paper_title} after {timeout} seconds")
         return None
 
     process.join(5)
@@ -73,7 +73,7 @@ def _run_with_hard_timeout(
     if status == "ok":
         return payload
 
-    logger.warning(f"{operation} failed for {paper_title}: {payload}")
+    logger.warning(f"{operation} 对 {paper_title} 失败 | {operation} failed for {paper_title}: {payload}")
     return None
 
 
@@ -146,7 +146,7 @@ class ArxivRetriever(BaseRetriever):
                 except arxiv.HTTPError as exc:
                     if exc.status == 429 and attempt < max_batch_retries - 1:
                         wait = batch_retry_delay * (attempt + 1)
-                        logger.warning(f"arXiv API 429 on batch {i // 20}, retry {attempt + 1}/{max_batch_retries} in {wait}s")
+                        logger.warning(f"arXiv API 在批次 {i // 20} 返回 429，将在 {wait}s 后重试 {attempt + 1}/{max_batch_retries} | arXiv API 429 on batch {i // 20}, retry {attempt + 1}/{max_batch_retries} in {wait}s")
                         sleep(wait)
                     else:
                         raise
@@ -182,13 +182,13 @@ def extract_text_from_html(paper: ArxivResult) -> str | None:
     try:
         return _extract_text_from_html_worker(html_url)
     except Exception as exc:
-        logger.warning(f"HTML extraction failed for {paper.title}: {exc}")
+        logger.warning(f"HTML 正文提取失败: {paper.title} | HTML extraction failed for {paper.title}: {exc}")
         return None
 
 
 def extract_text_from_pdf(paper: ArxivResult) -> str | None:
     if paper.pdf_url is None:
-        logger.warning(f"No PDF URL available for {paper.title}")
+        logger.warning(f"没有可用的 PDF URL: {paper.title} | No PDF URL available for {paper.title}")
         return None
     return _run_with_hard_timeout(
         _extract_text_from_pdf_worker,
@@ -202,7 +202,7 @@ def extract_text_from_pdf(paper: ArxivResult) -> str | None:
 def extract_text_from_tar(paper: ArxivResult) -> str | None:
     source_url = paper.source_url()
     if source_url is None:
-        logger.warning(f"No source URL available for {paper.title}")
+        logger.warning(f"没有可用的源码 URL: {paper.title} | No source URL available for {paper.title}")
         return None
     return _run_with_hard_timeout(
         _extract_text_from_tar_worker,

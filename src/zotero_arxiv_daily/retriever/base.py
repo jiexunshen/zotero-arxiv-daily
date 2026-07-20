@@ -23,13 +23,13 @@ class BaseRetriever(ABC):
 
     def retrieve_papers(self) -> list[Paper]:
         raw_papers = self._retrieve_raw_papers()
-        logger.info("Processing papers...")
+        logger.info("正在处理论文 | Processing papers...")
         papers = []
         for raw_paper in tqdm(raw_papers, total=len(raw_papers), desc="Converting papers"):
             try:
                 paper = self.convert_to_paper(raw_paper)
             except Exception as exc:
-                logger.warning(f"Skipping paper {getattr(raw_paper, 'title', raw_paper)}: {exc}")
+                logger.warning(f"跳过论文 {getattr(raw_paper, 'title', raw_paper)} | Skipping paper {getattr(raw_paper, 'title', raw_paper)}: {exc}")
                 continue
             if paper is not None:
                 papers.append(paper)
