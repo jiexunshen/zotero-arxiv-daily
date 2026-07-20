@@ -14,13 +14,28 @@ llm:
   api:
     key: ${oc.env:OPENAI_API_KEY}
     base_url: ${oc.env:OPENAI_API_BASE}
+  language: Chinese
+  enable_deep_analysis: true
+  analysis_top_k_similar: 5
   generation_kwargs:
-    model: gpt-4o-mini
+    model: deepseek-v4-flash
 
 source:
   arxiv:
     category: ["cs.AI","cs.CV","cs.LG","cs.CL"]
 
 executor:
-  debug: ${oc.env:DEBUG,null}
+  debug: true
+  dry_run: true
+  preview_email_path: outputs/email_preview.html
   source: ['arxiv']
+  reranker: api
+  max_paper_num: 1
+
+reranker:
+  api:
+    key: ${oc.env:OPENAI_API_KEY}
+    base_url: ${oc.env:OPENAI_API_BASE}
+    model: bge-large-zh:latest
+    batch_size: 64
+
